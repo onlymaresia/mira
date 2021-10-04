@@ -8,6 +8,7 @@
 //! * function pointers
 //! * dynamic loader of instance and device commands
 //! * original names of commands, structures and macros
+//! * some simple examples
 //!
 pub mod vulkan;
 pub mod loader;

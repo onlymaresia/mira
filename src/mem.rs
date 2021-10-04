@@ -2,6 +2,12 @@ use std::os::raw::c_char;
 use std::ffi::CStr;
 use std::str::Utf8Error;
 
+/// Creates a zeroed Vec with specified `capacity`.
+///
+/// # Safety
+/// There is no guarantee that an all-zero byte-pattern represents a valid value of some type T.
+///
+/// From [std::mem::zeroed].
 pub unsafe fn zeroed_vec<T: Copy>(capacity: usize) -> Vec<T> {
     let mut vec = Vec::<T>::with_capacity(capacity);
     vec.resize(capacity, std::mem::zeroed());
@@ -9,31 +15,20 @@ pub unsafe fn zeroed_vec<T: Copy>(capacity: usize) -> Vec<T> {
     vec
 }
 
-/// Create a `String` using a string of null-terminated bytes, all bytes are copied to the heap.
+/// Create a String using a string of null-terminated bytes `cstring`.
 ///
-/// # Arguments
-///
-/// * `cstring` - A string of null-terminated bytes
-///
-/// # Examples
-/// ```rust
-/// use std::os::raw::c_char;
-/// use std::error::Error;
-/// use mira::mem::from_cstring;
-///
-/// fn main() -> Result<(), Box<dyn Error>> {
-///     let cstring = b"kyaaa!!!\0";
-///
-///     let string = unsafe { from_cstring(cstring.as_ptr() as *const c_char)? };
-///     assert_eq!(string, "kyaaa!!!");
-///
-///     Ok(())
-/// }
-/// ```
+/// # Observation
+/// All bytes are copied to the heap.
 ///
 /// # Safety
-/// `cstring` can be a null or invalid address.
+/// * There is no guarantee to the validity of pointer.
+/// * The returned lifetime is not guaranteed to be the actual lifetime of pointer.
+/// * There is no guarantee that the memory pointed to by pointer contains a valid nul terminator byte
+/// at the end of the string.
+/// * It is not guaranteed that the memory pointed by pointer won't change before the CStr has been
+/// destroyed.
 ///
+/// From [std::ffi::CStr::from_ptr].
 ///
 pub unsafe fn from_cstring(cstring: *const c_char) -> Result<String, Utf8Error> {
     let raw = CStr::from_ptr(cstring);

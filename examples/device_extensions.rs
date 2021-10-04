@@ -16,13 +16,17 @@ fn main() {
     let mut instance:VkInstance = unsafe { std::mem::zeroed() };
 
     let ci:PFN_vkCreateInstance;
-    ci = loader::instance(std::ptr::null_mut(), const_cstr!("vkCreateInstance"));
+    ci = unsafe {
+        loader::instance(std::ptr::null_mut(), const_cstr!("vkCreateInstance"))
+    };
 
     unsafe { ci(&instance_info, std::ptr::null_mut(), &mut instance) };
 
     let mut counter:u32 = 0;
     let epd:PFN_vkEnumeratePhysicalDevices;
-    epd = loader::instance(instance, const_cstr!("vkEnumeratePhysicalDevices"));
+    epd = unsafe {
+        loader::instance(instance, const_cstr!("vkEnumeratePhysicalDevices"))
+    };
 
     unsafe { epd(instance, &mut counter, std::ptr::null_mut()) };
 
@@ -36,7 +40,9 @@ fn main() {
     unsafe { epd(instance, &mut counter, devices.as_mut_ptr()) };
 
     let ede:PFN_vkEnumerateDeviceExtensionProperties;
-    ede = loader::instance(instance, const_cstr!("vkEnumerateDeviceExtensionProperties"));
+    ede = unsafe {
+        loader::instance(instance, const_cstr!("vkEnumerateDeviceExtensionProperties"))
+    };
 
     for device in devices.into_iter().enumerate() {
         println!("Device {}", device.0);

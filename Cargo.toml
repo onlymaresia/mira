@@ -7,6 +7,7 @@ license = "Apache-2.0"
 documentation = "https://docs.rs/mira"
 description = "Pure and simple Vulkan bindings generated from Vulkan-Headers!"
 repository = "https://github.com/onlymaresia/mira"
+exclude = ["generator"]
 
 [dependencies]
 libloading = "0.7.0"
