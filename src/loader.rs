@@ -19,6 +19,9 @@ const LIB_NAME:&str = "libvulkan.1.dylib";
 #[cfg(target_os = "windows")]
 const LIB_NAME:&str = "vulkan-1.dll";
 
+/// Command errors
+type CommandError = libloading::Error;
+
 /// Instance and device command loader.
 pub struct Command {
     library: Library
@@ -32,40 +35,39 @@ impl Command {
     ///
     /// From [libloading::Library::new].
     ///
-    pub unsafe fn new(lib_path:&str) -> Option<Self> {
-        let vulkan = match Library::new(lib_path) {
-            Err(_) => return None,
+    pub unsafe fn new(lib_path:&str) -> Result<Self, CommandError> {
+        let lib = match Library::new(lib_path) {
+            Err(e) => return Err(e),
             Ok(lib) => lib
         };
 
-        Some( Self {
-            library: vulkan
+        Ok( Self {
+            library: lib
         })
     }
 
     /// Gets a pointer for vkGetInstanceProcAddr.
-    pub fn instance(&self) -> Option<Symbol<PFN_vkGetInstanceProcAddr>> {
-        unsafe {
-            let i = match self.library.get::<PFN_vkGetInstanceProcAddr>(
-                b"vkGetInstanceProcAddr\0") {
+    pub fn instance(&self) -> Result<Symbol<PFN_vkGetInstanceProcAddr>, CommandError> {
+        let sym = unsafe {
+            match self.library.get::<PFN_vkGetInstanceProcAddr>(b"vkGetInstanceProcAddr\0") {
                 Ok(sym) => sym,
-                Err(_) => return None
-            };
-            Some(i)
-        }
+                Err(e) => return Err(e)
+            }
+        };
+
+        Ok(sym)
     }
 
     /// Gets a pointer for vkGetDeviceProcAddr.
-    pub fn device(&self) -> Option<Symbol<PFN_vkGetDeviceProcAddr>> {
-        unsafe {
-            let d = match self.library.get::<PFN_vkGetDeviceProcAddr>(
-                b"vkGetDeviceProcAddr\0") {
+    pub fn device(&self) -> Result<Symbol<PFN_vkGetDeviceProcAddr>, CommandError> {
+        let sym = unsafe {
+            match self.library.get::<PFN_vkGetDeviceProcAddr>(b"vkGetDeviceProcAddr\0") {
                 Ok(sym) => sym,
-                Err(_) => return None
-            };
+                Err(e) => return Err(e)
+            }
+        };
 
-            Some(d)
-        }
+        Ok(sym)
     }
 }
 

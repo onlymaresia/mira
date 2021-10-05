@@ -25,8 +25,6 @@ pub unsafe fn zeroed_vec<T: Copy>(capacity: usize) -> Vec<T> {
 /// * The returned lifetime is not guaranteed to be the actual lifetime of pointer.
 /// * There is no guarantee that the memory pointed to by pointer contains a valid nul terminator byte
 /// at the end of the string.
-/// * It is not guaranteed that the memory pointed by pointer won't change before the CStr has been
-/// destroyed.
 ///
 /// From [std::ffi::CStr::from_ptr].
 ///
