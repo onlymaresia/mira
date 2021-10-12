@@ -112,7 +112,7 @@ fn main() {
         .generate()
         .expect("Unable to generate bindings");
 
-    let out = "../src";
+    let out = "../src/vulkan/";
     let out_path = PathBuf::from(out);
 
     if std::fs::read_dir(out).is_err() {
@@ -126,7 +126,7 @@ fn main() {
 
     let mut commands = Command::new("sh");
     commands.arg("-c");
-    commands.arg(format!("cat {} | ./vulkan.sh && mv vulkan.rs {} && rm {}",
+    commands.arg(format!("cat {} | ./vulkan.sh && mv vulkan_generated.rs {} && rm {}",
                          out_path.join("bindings.rs").to_str().unwrap(),
                          out_path.to_str().unwrap(),
                          out_path.join("bindings.rs").to_str().unwrap()

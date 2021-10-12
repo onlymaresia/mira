@@ -178,7 +178,7 @@ pub const WINT_MAX: u32 = 4294967295;
 pub const VULKAN_CORE_H_: u32 = 1;
 pub const VK_VERSION_1_0: u32 = 1;
 pub const VK_USE_64_BIT_PTR_DEFINES: u32 = 1;
-pub const VK_HEADER_VERSION: u32 = 194;
+pub const VK_HEADER_VERSION: u32 = 195;
 pub const VK_UUID_SIZE: u32 = 16;
 pub const VK_ATTACHMENT_UNUSED: i32 = -1;
 pub const VK_FALSE: u32 = 0;
@@ -412,7 +412,7 @@ pub const VK_KHR_SHADER_TERMINATE_INVOCATION_SPEC_VERSION: u32 = 1;
 pub const VK_KHR_SHADER_TERMINATE_INVOCATION_EXTENSION_NAME: &'static [u8; 35usize] =
     b"VK_KHR_shader_terminate_invocation\0";
 pub const VK_KHR_fragment_shading_rate: u32 = 1;
-pub const VK_KHR_FRAGMENT_SHADING_RATE_SPEC_VERSION: u32 = 1;
+pub const VK_KHR_FRAGMENT_SHADING_RATE_SPEC_VERSION: u32 = 2;
 pub const VK_KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME: &'static [u8; 29usize] =
     b"VK_KHR_fragment_shading_rate\0";
 pub const VK_KHR_spirv_1_4: u32 = 1;
@@ -480,6 +480,13 @@ pub const VK_KHR_copy_commands2: u32 = 1;
 pub const VK_KHR_COPY_COMMANDS_2_SPEC_VERSION: u32 = 1;
 pub const VK_KHR_COPY_COMMANDS_2_EXTENSION_NAME: &'static [u8; 22usize] =
     b"VK_KHR_copy_commands2\0";
+pub const VK_KHR_format_feature_flags2: u32 = 1;
+pub const VK_KHR_FORMAT_FEATURE_FLAGS_2_SPEC_VERSION: u32 = 1;
+pub const VK_KHR_FORMAT_FEATURE_FLAGS_2_EXTENSION_NAME: &'static [u8; 29usize] =
+    b"VK_KHR_format_feature_flags2\0";
+pub const VK_KHR_maintenance4: u32 = 1;
+pub const VK_KHR_MAINTENANCE_4_SPEC_VERSION: u32 = 1;
+pub const VK_KHR_MAINTENANCE_4_EXTENSION_NAME: &'static [u8; 20usize] = b"VK_KHR_maintenance4\0";
 pub const VK_EXT_debug_report: u32 = 1;
 pub const VK_EXT_DEBUG_REPORT_SPEC_VERSION: u32 = 10;
 pub const VK_EXT_DEBUG_REPORT_EXTENSION_NAME: &'static [u8; 20usize] = b"VK_EXT_debug_report\0";
@@ -715,7 +722,7 @@ pub const VK_EXT_POST_DEPTH_COVERAGE_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_POST_DEPTH_COVERAGE_EXTENSION_NAME: &'static [u8; 27usize] =
     b"VK_EXT_post_depth_coverage\0";
 pub const VK_EXT_image_drm_format_modifier: u32 = 1;
-pub const VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_SPEC_VERSION: u32 = 2;
 pub const VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME: &'static [u8; 33usize] =
     b"VK_EXT_image_drm_format_modifier\0";
 pub const VK_EXT_validation_cache: u32 = 1;
@@ -828,7 +835,7 @@ pub const VK_AMD_DISPLAY_NATIVE_HDR_SPEC_VERSION: u32 = 1;
 pub const VK_AMD_DISPLAY_NATIVE_HDR_EXTENSION_NAME: &'static [u8; 26usize] =
     b"VK_AMD_display_native_hdr\0";
 pub const VK_EXT_fragment_density_map: u32 = 1;
-pub const VK_EXT_FRAGMENT_DENSITY_MAP_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_FRAGMENT_DENSITY_MAP_SPEC_VERSION: u32 = 2;
 pub const VK_EXT_FRAGMENT_DENSITY_MAP_EXTENSION_NAME: &'static [u8; 28usize] =
     b"VK_EXT_fragment_density_map\0";
 pub const VK_EXT_scalar_block_layout: u32 = 1;
@@ -1016,6 +1023,10 @@ pub const VK_EXT_IMAGE_ROBUSTNESS_EXTENSION_NAME: &'static [u8; 24usize] =
 pub const VK_EXT_4444_formats: u32 = 1;
 pub const VK_EXT_4444_FORMATS_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_4444_FORMATS_EXTENSION_NAME: &'static [u8; 20usize] = b"VK_EXT_4444_formats\0";
+pub const VK_EXT_rgba10x6_formats: u32 = 1;
+pub const VK_EXT_RGBA10X6_FORMATS_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_RGBA10X6_FORMATS_EXTENSION_NAME: &'static [u8; 24usize] =
+    b"VK_EXT_rgba10x6_formats\0";
 pub const VK_NV_acquire_winrt_display: u32 = 1;
 pub const VK_NV_ACQUIRE_WINRT_DISPLAY_SPEC_VERSION: u32 = 1;
 pub const VK_NV_ACQUIRE_WINRT_DISPLAY_EXTENSION_NAME: &'static [u8; 28usize] =
@@ -1073,7 +1084,7 @@ pub const VK_EXT_PAGEABLE_DEVICE_LOCAL_MEMORY_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_PAGEABLE_DEVICE_LOCAL_MEMORY_EXTENSION_NAME: &'static [u8; 36usize] =
     b"VK_EXT_pageable_device_local_memory\0";
 pub const VK_KHR_acceleration_structure: u32 = 1;
-pub const VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION: u32 = 12;
+pub const VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION: u32 = 13;
 pub const VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME: &'static [u8; 30usize] =
     b"VK_KHR_acceleration_structure\0";
 pub const VK_KHR_ray_tracing_pipeline: u32 = 1;
@@ -1847,6 +1858,8 @@ pub const VkStructureType_VK_STRUCTURE_TYPE_IMPORT_ANDROID_HARDWARE_BUFFER_INFO_
 pub const VkStructureType_VK_STRUCTURE_TYPE_MEMORY_GET_ANDROID_HARDWARE_BUFFER_INFO_ANDROID:
     VkStructureType = 1000129004;
 pub const VkStructureType_VK_STRUCTURE_TYPE_EXTERNAL_FORMAT_ANDROID: VkStructureType = 1000129005;
+pub const VkStructureType_VK_STRUCTURE_TYPE_ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_2_ANDROID:
+    VkStructureType = 1000129006;
 pub const VkStructureType_VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES_EXT:
     VkStructureType = 1000138000;
 pub const VkStructureType_VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_PROPERTIES_EXT:
@@ -1927,6 +1940,8 @@ pub const VkStructureType_VK_STRUCTURE_TYPE_IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_C
     VkStructureType = 1000158004;
 pub const VkStructureType_VK_STRUCTURE_TYPE_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT:
     VkStructureType = 1000158005;
+pub const VkStructureType_VK_STRUCTURE_TYPE_DRM_FORMAT_MODIFIER_PROPERTIES_LIST_2_EXT:
+    VkStructureType = 1000158006;
 pub const VkStructureType_VK_STRUCTURE_TYPE_VALIDATION_CACHE_CREATE_INFO_EXT: VkStructureType =
     1000160000;
 pub const VkStructureType_VK_STRUCTURE_TYPE_SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT:
@@ -2228,6 +2243,8 @@ pub const VkStructureType_VK_STRUCTURE_TYPE_BUFFER_IMAGE_COPY_2_KHR: VkStructure
 pub const VkStructureType_VK_STRUCTURE_TYPE_IMAGE_RESOLVE_2_KHR: VkStructureType = 1000337010;
 pub const VkStructureType_VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT:
     VkStructureType = 1000340000;
+pub const VkStructureType_VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_RGBA10X6_FORMATS_FEATURES_EXT:
+    VkStructureType = 1000344000;
 pub const VkStructureType_VK_STRUCTURE_TYPE_DIRECTFB_SURFACE_CREATE_INFO_EXT: VkStructureType =
     1000346000;
 pub const VkStructureType_VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE : VkStructureType = 1000351000 ;
@@ -2241,6 +2258,7 @@ pub const VkStructureType_VK_STRUCTURE_TYPE_VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2
 pub const VkStructureType_VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DRM_PROPERTIES_EXT: VkStructureType =
     1000353000;
 pub const VkStructureType_VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PRIMITIVE_TOPOLOGY_LIST_RESTART_FEATURES_EXT : VkStructureType = 1000356000 ;
+pub const VkStructureType_VK_STRUCTURE_TYPE_FORMAT_PROPERTIES_3_KHR: VkStructureType = 1000360000;
 pub const VkStructureType_VK_STRUCTURE_TYPE_IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA:
     VkStructureType = 1000364000;
 pub const VkStructureType_VK_STRUCTURE_TYPE_MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA:
@@ -2299,6 +2317,14 @@ pub const VkStructureType_VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MULTI_DRAW_FEATURES_
 pub const VkStructureType_VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT:
     VkStructureType = 1000392001;
 pub const VkStructureType_VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PAGEABLE_DEVICE_LOCAL_MEMORY_FEATURES_EXT : VkStructureType = 1000412000 ;
+pub const VkStructureType_VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MAINTENANCE_4_FEATURES_KHR:
+    VkStructureType = 1000413000;
+pub const VkStructureType_VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MAINTENANCE_4_PROPERTIES_KHR:
+    VkStructureType = 1000413001;
+pub const VkStructureType_VK_STRUCTURE_TYPE_DEVICE_BUFFER_MEMORY_REQUIREMENTS_KHR: VkStructureType =
+    1000413002;
+pub const VkStructureType_VK_STRUCTURE_TYPE_DEVICE_IMAGE_MEMORY_REQUIREMENTS_KHR: VkStructureType =
+    1000413003;
 pub const VkStructureType_VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VARIABLE_POINTER_FEATURES:
     VkStructureType = 1000120000;
 pub const VkStructureType_VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_DRAW_PARAMETER_FEATURES:
@@ -11993,6 +12019,129 @@ extern "C" {
         pResolveImageInfo: *const VkResolveImageInfo2KHR,
     );
 }
+pub type VkFormatFeatureFlags2KHR = VkFlags64;
+pub type VkFormatFeatureFlagBits2KHR = VkFlags64;
+pub const VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT_KHR: VkFormatFeatureFlagBits2KHR = 1;
+pub const VK_FORMAT_FEATURE_2_STORAGE_IMAGE_BIT_KHR: VkFormatFeatureFlagBits2KHR = 2;
+pub const VK_FORMAT_FEATURE_2_STORAGE_IMAGE_ATOMIC_BIT_KHR: VkFormatFeatureFlagBits2KHR = 4;
+pub const VK_FORMAT_FEATURE_2_UNIFORM_TEXEL_BUFFER_BIT_KHR: VkFormatFeatureFlagBits2KHR = 8;
+pub const VK_FORMAT_FEATURE_2_STORAGE_TEXEL_BUFFER_BIT_KHR: VkFormatFeatureFlagBits2KHR = 16;
+pub const VK_FORMAT_FEATURE_2_STORAGE_TEXEL_BUFFER_ATOMIC_BIT_KHR: VkFormatFeatureFlagBits2KHR = 32;
+pub const VK_FORMAT_FEATURE_2_VERTEX_BUFFER_BIT_KHR: VkFormatFeatureFlagBits2KHR = 64;
+pub const VK_FORMAT_FEATURE_2_COLOR_ATTACHMENT_BIT_KHR: VkFormatFeatureFlagBits2KHR = 128;
+pub const VK_FORMAT_FEATURE_2_COLOR_ATTACHMENT_BLEND_BIT_KHR: VkFormatFeatureFlagBits2KHR = 256;
+pub const VK_FORMAT_FEATURE_2_DEPTH_STENCIL_ATTACHMENT_BIT_KHR: VkFormatFeatureFlagBits2KHR = 512;
+pub const VK_FORMAT_FEATURE_2_BLIT_SRC_BIT_KHR: VkFormatFeatureFlagBits2KHR = 1024;
+pub const VK_FORMAT_FEATURE_2_BLIT_DST_BIT_KHR: VkFormatFeatureFlagBits2KHR = 2048;
+pub const VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_LINEAR_BIT_KHR: VkFormatFeatureFlagBits2KHR =
+    4096;
+pub const VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_CUBIC_BIT_EXT: VkFormatFeatureFlagBits2KHR =
+    8192;
+pub const VK_FORMAT_FEATURE_2_TRANSFER_SRC_BIT_KHR: VkFormatFeatureFlagBits2KHR = 16384;
+pub const VK_FORMAT_FEATURE_2_TRANSFER_DST_BIT_KHR: VkFormatFeatureFlagBits2KHR = 32768;
+pub const VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_MINMAX_BIT_KHR: VkFormatFeatureFlagBits2KHR =
+    65536;
+pub const VK_FORMAT_FEATURE_2_MIDPOINT_CHROMA_SAMPLES_BIT_KHR: VkFormatFeatureFlagBits2KHR = 131072;
+pub const VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_BIT_KHR:
+    VkFormatFeatureFlagBits2KHR = 262144;
+pub const VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_BIT_KHR : VkFormatFeatureFlagBits2KHR = 524288 ;
+pub const VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_BIT_KHR : VkFormatFeatureFlagBits2KHR = 1048576 ;
+pub const VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_BIT_KHR : VkFormatFeatureFlagBits2KHR = 2097152 ;
+pub const VK_FORMAT_FEATURE_2_DISJOINT_BIT_KHR: VkFormatFeatureFlagBits2KHR = 4194304;
+pub const VK_FORMAT_FEATURE_2_COSITED_CHROMA_SAMPLES_BIT_KHR: VkFormatFeatureFlagBits2KHR = 8388608;
+pub const VK_FORMAT_FEATURE_2_STORAGE_READ_WITHOUT_FORMAT_BIT_KHR: VkFormatFeatureFlagBits2KHR =
+    2147483648;
+pub const VK_FORMAT_FEATURE_2_STORAGE_WRITE_WITHOUT_FORMAT_BIT_KHR: VkFormatFeatureFlagBits2KHR =
+    4294967296;
+pub const VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_DEPTH_COMPARISON_BIT_KHR: VkFormatFeatureFlagBits2KHR =
+    8589934592;
+pub const VK_FORMAT_FEATURE_2_ACCELERATION_STRUCTURE_VERTEX_BUFFER_BIT_KHR:
+    VkFormatFeatureFlagBits2KHR = 536870912;
+pub const VK_FORMAT_FEATURE_2_FRAGMENT_DENSITY_MAP_BIT_EXT: VkFormatFeatureFlagBits2KHR = 16777216;
+pub const VK_FORMAT_FEATURE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR:
+    VkFormatFeatureFlagBits2KHR = 1073741824;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkFormatProperties3KHR {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub linearTilingFeatures: VkFormatFeatureFlags2KHR,
+    pub optimalTilingFeatures: VkFormatFeatureFlags2KHR,
+    pub bufferFeatures: VkFormatFeatureFlags2KHR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceMaintenance4FeaturesKHR {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub maintenance4: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceMaintenance4PropertiesKHR {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub maxBufferSize: VkDeviceSize,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkDeviceBufferMemoryRequirementsKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pCreateInfo: *const VkBufferCreateInfo,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkDeviceImageMemoryRequirementsKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pCreateInfo: *const VkImageCreateInfo,
+    pub planeAspect: VkImageAspectFlagBits,
+}
+pub type PFN_vkGetDeviceBufferMemoryRequirementsKHR = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pInfo: *const VkDeviceBufferMemoryRequirementsKHR,
+        pMemoryRequirements: *mut VkMemoryRequirements2,
+    )
+;
+pub type PFN_vkGetDeviceImageMemoryRequirementsKHR = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pInfo: *const VkDeviceImageMemoryRequirementsKHR,
+        pMemoryRequirements: *mut VkMemoryRequirements2,
+    )
+;
+pub type PFN_vkGetDeviceImageSparseMemoryRequirementsKHR = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pInfo: *const VkDeviceImageMemoryRequirementsKHR,
+        pSparseMemoryRequirementCount: *mut u32,
+        pSparseMemoryRequirements: *mut VkSparseImageMemoryRequirements2,
+    )
+;
+extern "C" {
+    pub fn vkGetDeviceBufferMemoryRequirementsKHR(
+        device: VkDevice,
+        pInfo: *const VkDeviceBufferMemoryRequirementsKHR,
+        pMemoryRequirements: *mut VkMemoryRequirements2,
+    );
+}
+extern "C" {
+    pub fn vkGetDeviceImageMemoryRequirementsKHR(
+        device: VkDevice,
+        pInfo: *const VkDeviceImageMemoryRequirementsKHR,
+        pMemoryRequirements: *mut VkMemoryRequirements2,
+    );
+}
+extern "C" {
+    pub fn vkGetDeviceImageSparseMemoryRequirementsKHR(
+        device: VkDevice,
+        pInfo: *const VkDeviceImageMemoryRequirementsKHR,
+        pSparseMemoryRequirementCount: *mut u32,
+        pSparseMemoryRequirements: *mut VkSparseImageMemoryRequirements2,
+    );
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct VkDebugReportCallbackEXT_T {
@@ -13702,6 +13851,21 @@ pub struct VkImageDrmFormatModifierPropertiesEXT {
     pub sType: VkStructureType,
     pub pNext: *mut ::std::os::raw::c_void,
     pub drmFormatModifier: u64,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkDrmFormatModifierProperties2EXT {
+    pub drmFormatModifier: u64,
+    pub drmFormatModifierPlaneCount: u32,
+    pub drmFormatModifierTilingFeatures: VkFormatFeatureFlags2KHR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkDrmFormatModifierPropertiesList2EXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub drmFormatModifierCount: u32,
+    pub pDrmFormatModifierProperties: *mut VkDrmFormatModifierProperties2EXT,
 }
 pub type PFN_vkGetImageDrmFormatModifierPropertiesEXT = 
     unsafe extern "C" fn(
@@ -16744,6 +16908,13 @@ pub struct VkPhysicalDevice4444FormatsFeaturesEXT {
     pub pNext: *mut ::std::os::raw::c_void,
     pub formatA4R4G4B4: VkBool32,
     pub formatA4B4G4R4: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub formatRgba10x6WithoutYCbCrSampler: VkBool32,
 }
 pub type PFN_vkAcquireWinrtDisplayNV = 
     unsafe extern "C" fn(physicalDevice: VkPhysicalDevice, display: VkDisplayKHR) -> VkResult

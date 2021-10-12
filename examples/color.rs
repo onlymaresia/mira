@@ -11,7 +11,6 @@ use fermium::video::*;
 use mira::*;
 use mira::mem::{from_cstring, zeroed_vec};
 use mira::vulkan::*;
-//use mira::window::*;
 
 //https://software.intel.com/content/www/us/en/develop/articles/api-without-secrets-introduction-to-vulkan-part-2.html
 fn main() {
