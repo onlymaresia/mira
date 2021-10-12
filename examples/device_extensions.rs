@@ -30,11 +30,6 @@ fn main() {
 
     unsafe { epd(instance, &mut counter, std::ptr::null_mut()) };
 
-    if counter == 0 {
-        println!("this host has 0 vulkan adapters");
-        return;
-    }
-
     let mut devices = unsafe { zeroed_vec::<VkPhysicalDevice>(counter as usize) };
 
     unsafe { epd(instance, &mut counter, devices.as_mut_ptr()) };

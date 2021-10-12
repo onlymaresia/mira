@@ -1,6 +1,6 @@
 [package]
 name = "mira"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["Maresia <https://github.com/onlymaresia>"]
 edition = "2018"
 license = "Apache-2.0"
@@ -13,4 +13,7 @@ exclude = ["generator"]
 libloading = "0.7.0"
 const-cstr = "0.3.0"
 once_cell = "1.7.2"
+
+[dev-dependencies]
+fermium = " 20014.2.0"
 

@@ -4,9 +4,9 @@ use mira::vulkan::*;
 use const_cstr::*;
 
 fn main() {
-    let eip:PFN_vkEnumerateInstanceExtensionProperties = loader::instance(
-        std::ptr::null_mut(), const_cstr!("vkEnumerateInstanceExtensionProperties")
-    );
+    let eip:PFN_vkEnumerateInstanceExtensionProperties = unsafe {
+        loader::instance(std::ptr::null_mut(), const_cstr!("vkEnumerateInstanceExtensionProperties"))
+    };
 
     let mut count = 0 as u32;
 
