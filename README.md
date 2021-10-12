@@ -45,7 +45,8 @@ fn main() {
 
         println!("extension #{} - {}", extension.0, str);
     }
-}```
+}
+```
 
 ## Examples
 Successfully tested on Linux(Lubuntu 20.04) with Intel(R) HD Graphics 620 (KBL GT2).
