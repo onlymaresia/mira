@@ -15,27 +15,26 @@ fn main() {
 
     let mut instance:VkInstance = unsafe { std::mem::zeroed() };
 
-    let ci:PFN_vkCreateInstance;
-    ci = unsafe {
+    let create_instance:PFN_vkCreateInstance;
+    create_instance = unsafe {
         loader::instance(std::ptr::null_mut(), const_cstr!("vkCreateInstance"))
     };
 
-    unsafe { ci(&instance_info, std::ptr::null_mut(), &mut instance) };
+    unsafe { create_instance(&instance_info, std::ptr::null_mut(), &mut instance) };
 
-    let mut counter:u32 = 0;
-    let epd:PFN_vkEnumeratePhysicalDevices;
-    epd = unsafe {
+    let enumerate_physical_devices:PFN_vkEnumeratePhysicalDevices;
+    enumerate_physical_devices = unsafe {
         loader::instance(instance, const_cstr!("vkEnumeratePhysicalDevices"))
     };
 
-    unsafe { epd(instance, &mut counter, std::ptr::null_mut()) };
-
+    let mut counter:u32 = 0;
+    unsafe { enumerate_physical_devices(instance, &mut counter, std::ptr::null_mut()) };
     let mut devices = unsafe { zeroed_vec::<VkPhysicalDevice>(counter as usize) };
 
-    unsafe { epd(instance, &mut counter, devices.as_mut_ptr()) };
+    unsafe { enumerate_physical_devices(instance, &mut counter, devices.as_mut_ptr()) };
 
-    let ede:PFN_vkEnumerateDeviceExtensionProperties;
-    ede = unsafe {
+    let enumerate_device_extensions:PFN_vkEnumerateDeviceExtensionProperties;
+    enumerate_device_extensions = unsafe {
         loader::instance(instance, const_cstr!("vkEnumerateDeviceExtensionProperties"))
     };
 
@@ -43,14 +42,10 @@ fn main() {
         println!("Device {}", device.0);
         println!("Extensions");
 
-        unsafe { ede(device.1, std::ptr::null(), &mut counter, std::ptr::null_mut()) };
-        if counter == 0 {
-            continue;
-        }
+        unsafe { enumerate_device_extensions(device.1, std::ptr::null(), &mut counter, std::ptr::null_mut()) };
 
-        let mut extensions;
-        extensions = unsafe { zeroed_vec::<VkExtensionProperties>(counter as usize) };
-        unsafe { ede(device.1, std::ptr::null(), &mut counter, extensions.as_mut_ptr()) };
+        let mut extensions = unsafe { zeroed_vec::<VkExtensionProperties>(counter as usize) };
+        unsafe { enumerate_device_extensions(device.1, std::ptr::null(), &mut counter, extensions.as_mut_ptr()) };
 
         for extension in extensions.into_iter().enumerate() {
             let str = match unsafe { from_cstring(extension.1.extensionName.as_ptr()) } {

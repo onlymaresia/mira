@@ -4,16 +4,16 @@ use mira::vulkan::*;
 use const_cstr::*;
 
 fn main() {
-    let eip:PFN_vkEnumerateInstanceExtensionProperties = unsafe {
+    let enumerate_instance_extensions:PFN_vkEnumerateInstanceExtensionProperties;
+    enumerate_instance_extensions = unsafe {
         loader::instance(std::ptr::null_mut(), const_cstr!("vkEnumerateInstanceExtensionProperties"))
     };
 
-    let mut count = 0 as u32;
+    let mut count:u32 = 0;
+    unsafe { enumerate_instance_extensions(std::ptr::null_mut(), &mut count, std::ptr::null_mut()) };
+    let mut extensions = unsafe { zeroed_vec::<VkExtensionProperties>(count as usize) };
 
-    unsafe { (eip)(std::ptr::null_mut(), &mut count, std::ptr::null_mut()); }
-    let mut extensions = unsafe { zeroed_vec(count as usize) };
-
-    unsafe { (eip)(std::ptr::null_mut(), &mut count, extensions.as_mut_ptr()); }
+    unsafe { enumerate_instance_extensions(std::ptr::null_mut(), &mut count, extensions.as_mut_ptr()) };
 
     println!("Instance extensions");
     for extension in extensions.iter().enumerate() {
