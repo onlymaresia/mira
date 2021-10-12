@@ -1,13 +1,14 @@
 [package]
 name = "mira"
 version = "0.1.3"
-authors = ["Maresia <https://github.com/onlymaresia>"]
+authors = ["maresia <https://github.com/onlymaresia>"]
 edition = "2018"
 license = "Apache-2.0"
 documentation = "https://docs.rs/mira"
 description = "Pure and simple Vulkan bindings generated from Vulkan-Headers!"
 repository = "https://github.com/onlymaresia/mira"
-exclude = ["generator"]
+keywords = ["vulkan", "graphics"]
+exclude = ["generator", "examples/*.png"]
 
 [dependencies]
 libloading = "0.7.0"
