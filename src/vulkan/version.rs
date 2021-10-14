@@ -1,6 +1,7 @@
 use std::fmt::{Display, Formatter};
 
-/// Vulkan version (variant, major, minor, patch)
+/// Vulkan version (major, minor, patch, variant)
+///
 /// Variant indicates the variant of the Vulkan API supported by the implementation.
 /// Variant is always 0 for the Vulkan API.
 ///

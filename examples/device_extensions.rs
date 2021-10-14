@@ -1,9 +1,10 @@
+use mira::error::MiraError;
 use mira::vulkan::*;
 use mira::loader;
 use const_cstr::*;
 use mira::mem::{zeroed_vec, from_cstring};
 
-fn main() {
+fn main() -> Result<(), MiraError> {
     let layers = vec![
         const_cstr!("VK_LAYER_KHRONOS_validation").as_ptr()
     ];
@@ -17,14 +18,14 @@ fn main() {
 
     let create_instance:PFN_vkCreateInstance;
     create_instance = unsafe {
-        loader::instance(std::ptr::null_mut(), const_cstr!("vkCreateInstance"))
+        loader::instance(std::ptr::null_mut(), const_cstr!("vkCreateInstance"))?
     };
 
     unsafe { create_instance(&instance_info, std::ptr::null_mut(), &mut instance) };
 
     let enumerate_physical_devices:PFN_vkEnumeratePhysicalDevices;
     enumerate_physical_devices = unsafe {
-        loader::instance(instance, const_cstr!("vkEnumeratePhysicalDevices"))
+        loader::instance(instance, const_cstr!("vkEnumeratePhysicalDevices"))?
     };
 
     let mut counter:u32 = 0;
@@ -35,7 +36,7 @@ fn main() {
 
     let enumerate_device_extensions:PFN_vkEnumerateDeviceExtensionProperties;
     enumerate_device_extensions = unsafe {
-        loader::instance(instance, const_cstr!("vkEnumerateDeviceExtensionProperties"))
+        loader::instance(instance, const_cstr!("vkEnumerateDeviceExtensionProperties"))?
     };
 
     for device in devices.into_iter().enumerate() {
@@ -58,4 +59,6 @@ fn main() {
 
         println!("\n");
     }
+
+    Ok(())
 }

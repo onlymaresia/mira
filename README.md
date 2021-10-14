@@ -1,6 +1,6 @@
 # mira
 [![crates.io](https://img.shields.io/crates/v/mira.svg)](https://crates.io/crates/mira)
-[![docs](https://docs.rs/mira/badge.svg)](https://docs.rs/mira)
+[![docs.rs](https://docs.rs/mira/badge.svg)](https://docs.rs/mira)
 [![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 Pure and simple Vulkan bindings generated from Vulkan-Headers!
@@ -19,15 +19,16 @@ This crate provides:
 Enumerate all instance extensions.
 
 ```rust
+use mira::error::MiraError;
 use mira::loader;
 use mira::mem::{zeroed_vec, from_cstring};
 use mira::vulkan::*;
 use const_cstr::*;
 
-fn main() {
+fn main() -> Result<(), MiraError> {
     let enumerate_instance_extensions:PFN_vkEnumerateInstanceExtensionProperties;
     enumerate_instance_extensions = unsafe {
-        loader::instance(std::ptr::null_mut(), const_cstr!("vkEnumerateInstanceExtensionProperties"))
+        loader::instance(std::ptr::null_mut(), const_cstr!("vkEnumerateInstanceExtensionProperties"))?
     };
 
     let mut count:u32 = 0;
@@ -45,6 +46,8 @@ fn main() {
 
         println!("extension #{} - {}", extension.0, str);
     }
+
+    Ok(())
 }
 ```
 

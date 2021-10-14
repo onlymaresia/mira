@@ -12,4 +12,4 @@
 pub mod vulkan;
 pub mod loader;
 pub mod mem;
-
+pub mod error;

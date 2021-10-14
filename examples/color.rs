@@ -9,11 +9,12 @@ use fermium::events::*;
 use fermium::video::*;
 
 use mira::*;
+use mira::error::MiraError;
 use mira::mem::{from_cstring, zeroed_vec};
 use mira::vulkan::*;
 
 //https://software.intel.com/content/www/us/en/develop/articles/api-without-secrets-introduction-to-vulkan-part-2.html
-fn main() {
+fn main() -> Result<(), MiraError> {
     unsafe { SDL_InitSubSystem(SDL_INIT_VIDEO);}
     
     const FLAGS:u32 = SDL_WINDOW_VULKAN.0 | SDL_WINDOW_ALLOW_HIGHDPI.0 | SDL_WINDOW_RESIZABLE.0;
@@ -21,7 +22,7 @@ fn main() {
     let window = unsafe { SDL_CreateWindow(const_cstr!("mira/color").as_ptr(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
                                             500, 500, FLAGS) };
     if window == std::ptr::null_mut() {
-        return;
+        return Ok(());
      }
 
     let window_id = unsafe { SDL_GetWindowID(window) };
@@ -74,7 +75,7 @@ fn main() {
     let cmd_pipeline_barrier:PFN_vkCmdPipelineBarrier;
     let cmd_clear_color_image:PFN_vkCmdClearColorImage;
 
-    create_instance = unsafe { loader::instance(std::ptr::null_mut(), const_cstr!("vkCreateInstance")) };
+    create_instance = unsafe { loader::instance(std::ptr::null_mut(), const_cstr!("vkCreateInstance"))? };
 
     app_info.sType = VkStructureType_VK_STRUCTURE_TYPE_APPLICATION_INFO;
     app_info.pApplicationName = const_cstr!("mira/color").as_ptr();
@@ -92,35 +93,36 @@ fn main() {
         VkResult_VK_SUCCESS => {},
         error => {
             println!("vulkan error {}", error);
-            return;
+            return Ok(());
+
         }
     }
 
     let mut surface:fermium::vulkan::VkSurfaceKHR = unsafe { std::mem::zeroed() };
     if unsafe { SDL_Vulkan_CreateSurface(window, fermium::vulkan::VkInstance(instance as *mut c_void), &mut surface) } == SDL_FALSE {
         println!("surface error");
-        return;
+        return Ok(());
     }
     let surface:VkSurfaceKHR = surface.0 as VkSurfaceKHR;
 
-    destroy_instance = unsafe { loader::instance(instance, const_cstr!("vkDestroyInstance")) };
+    destroy_instance = unsafe { loader::instance(instance, const_cstr!("vkDestroyInstance"))? };
 
-    destroy_surface = unsafe { loader::instance(instance, const_cstr!("vkDestroySurfaceKHR")) };
-    get_surface_support = unsafe { loader::instance(instance, const_cstr!("vkGetPhysicalDeviceSurfaceSupportKHR")) };
-    get_surface_capabilities = unsafe { loader::instance(instance, const_cstr!("vkGetPhysicalDeviceSurfaceCapabilitiesKHR")) };
-    get_surface_formats = unsafe { loader::instance(instance, const_cstr!("vkGetPhysicalDeviceSurfaceFormatsKHR")) };
+    destroy_surface = unsafe { loader::instance(instance, const_cstr!("vkDestroySurfaceKHR"))? };
+    get_surface_support = unsafe { loader::instance(instance, const_cstr!("vkGetPhysicalDeviceSurfaceSupportKHR"))? };
+    get_surface_capabilities = unsafe { loader::instance(instance, const_cstr!("vkGetPhysicalDeviceSurfaceCapabilitiesKHR"))? };
+    get_surface_formats = unsafe { loader::instance(instance, const_cstr!("vkGetPhysicalDeviceSurfaceFormatsKHR"))? };
 
-    enumerate_adapters = unsafe { loader::instance(instance, const_cstr!("vkEnumeratePhysicalDevices")) };
-    get_adapters_properties = unsafe { loader::instance(instance, const_cstr!("vkGetPhysicalDeviceProperties"))};
-    get_queues_properties = unsafe { loader::instance(instance, const_cstr!("vkGetPhysicalDeviceQueueFamilyProperties")) };
-    create_device = unsafe { loader::instance(instance, const_cstr!("vkCreateDevice")) };
+    enumerate_adapters = unsafe { loader::instance(instance, const_cstr!("vkEnumeratePhysicalDevices"))? };
+    get_adapters_properties = unsafe { loader::instance(instance, const_cstr!("vkGetPhysicalDeviceProperties"))? };
+    get_queues_properties = unsafe { loader::instance(instance, const_cstr!("vkGetPhysicalDeviceQueueFamilyProperties"))? };
+    create_device = unsafe { loader::instance(instance, const_cstr!("vkCreateDevice"))? };
 
     let mut count:u32 = 0;
     match unsafe { enumerate_adapters(instance, &mut count, std::ptr::null_mut()) } {
         VkResult_VK_SUCCESS => {},
         error => {
             println!("vulkan error {}", error);
-            return;
+            return Ok(());
         }
     }
 
@@ -129,7 +131,7 @@ fn main() {
         VkResult_VK_SUCCESS => {},
         error => {
             println!("vulkan error {}", error);
-            return;
+            return Ok(());
         }
     }
 
@@ -176,7 +178,7 @@ fn main() {
 
     if !selected {
         println!("adapter not found");
-        return;
+        return Ok(());
     }
 
     let mut queues_info = unsafe { zeroed_vec::<VkDeviceQueueCreateInfo>(1) };
@@ -201,29 +203,29 @@ fn main() {
         VkResult_VK_SUCCESS => {},
         error => {
             println!("vulkan error {}", error);
-            return;
+            return Ok(());
         }
     }
 
-    destroy_device = unsafe { loader::device(device, const_cstr!("vkDestroyDevice")) };
-    device_wait_idle = unsafe { loader::device(device, const_cstr!("vkDeviceWaitIdle")) };
-    get_queue = unsafe { loader::device(device, const_cstr!("vkGetDeviceQueue")) };
-    create_swapchain = unsafe { loader::device(device, const_cstr!("vkCreateSwapchainKHR")) };
-    destroy_swapchain = unsafe { loader::device(device, const_cstr!("vkDestroySwapchainKHR")) };
-    create_semaphore = unsafe { loader::device(device, const_cstr!("vkCreateSemaphore")) };
-    destroy_semaphore = unsafe { loader::device(device, const_cstr!("vkDestroySemaphore")) };
-    acquire_next_image = unsafe { loader::device(device, const_cstr!("vkAcquireNextImageKHR")) };
-    queue_submit = unsafe { loader::device(device, const_cstr!("vkQueueSubmit")) };
-    queue_present = unsafe { loader::device(device, const_cstr!("vkQueuePresentKHR")) };
-    get_swapchain_images = unsafe { loader::device(device, const_cstr!("vkGetSwapchainImagesKHR")) };
-    create_command_pool = unsafe { loader::device(device, const_cstr!("vkCreateCommandPool")) };
-    destroy_command_pool = unsafe { loader::device(device, const_cstr!("vkDestroyCommandPool")) };
-    allocate_command_buffers = unsafe { loader::device(device, const_cstr!("vkAllocateCommandBuffers")) };
-    free_command_buffers = unsafe { loader::device(device, const_cstr!("vkFreeCommandBuffers")) };
-    begin_command_buffer = unsafe { loader::device(device, const_cstr!("vkBeginCommandBuffer")) };
-    end_command_buffer = unsafe { loader::device(device, const_cstr!("vkEndCommandBuffer")) };
-    cmd_pipeline_barrier = unsafe { loader::device(device, const_cstr!("vkCmdPipelineBarrier")) };
-    cmd_clear_color_image = unsafe { loader::device(device, const_cstr!("vkCmdClearColorImage")) };
+    destroy_device = unsafe { loader::device(device, const_cstr!("vkDestroyDevice"))? };
+    device_wait_idle = unsafe { loader::device(device, const_cstr!("vkDeviceWaitIdle"))? };
+    get_queue = unsafe { loader::device(device, const_cstr!("vkGetDeviceQueue"))? };
+    create_swapchain = unsafe { loader::device(device, const_cstr!("vkCreateSwapchainKHR"))? };
+    destroy_swapchain = unsafe { loader::device(device, const_cstr!("vkDestroySwapchainKHR"))? };
+    create_semaphore = unsafe { loader::device(device, const_cstr!("vkCreateSemaphore"))? };
+    destroy_semaphore = unsafe { loader::device(device, const_cstr!("vkDestroySemaphore"))? };
+    acquire_next_image = unsafe { loader::device(device, const_cstr!("vkAcquireNextImageKHR"))? };
+    queue_submit = unsafe { loader::device(device, const_cstr!("vkQueueSubmit"))? };
+    queue_present = unsafe { loader::device(device, const_cstr!("vkQueuePresentKHR"))? };
+    get_swapchain_images = unsafe { loader::device(device, const_cstr!("vkGetSwapchainImagesKHR"))? };
+    create_command_pool = unsafe { loader::device(device, const_cstr!("vkCreateCommandPool"))? };
+    destroy_command_pool = unsafe { loader::device(device, const_cstr!("vkDestroyCommandPool"))? };
+    allocate_command_buffers = unsafe { loader::device(device, const_cstr!("vkAllocateCommandBuffers"))? };
+    free_command_buffers = unsafe { loader::device(device, const_cstr!("vkFreeCommandBuffers"))? };
+    begin_command_buffer = unsafe { loader::device(device, const_cstr!("vkBeginCommandBuffer"))? };
+    end_command_buffer = unsafe { loader::device(device, const_cstr!("vkEndCommandBuffer"))? };
+    cmd_pipeline_barrier = unsafe { loader::device(device, const_cstr!("vkCmdPipelineBarrier"))? };
+    cmd_clear_color_image = unsafe { loader::device(device, const_cstr!("vkCmdClearColorImage"))? };
 
 
     let mut queue:VkQueue = unsafe { std::mem::zeroed() };
@@ -242,7 +244,7 @@ fn main() {
         VkResult_VK_SUCCESS => {},
         error => {
             println!("vulkan error {}", error);
-            return;
+            return Ok(());
         }
     }
 
@@ -250,7 +252,7 @@ fn main() {
         VkResult_VK_SUCCESS => {},
         error => {
             println!("vulkan error {}", error);
-            return;
+            return Ok(());
         }
     }
 
@@ -266,7 +268,7 @@ fn main() {
         VkResult_VK_SUCCESS => {},
         error => {
             println!("vulkan error {}", error);
-            return;
+            return Ok(());
         }
     }
 
@@ -323,7 +325,7 @@ fn main() {
                         VkResult_VK_SUCCESS => {},
                         error => {
                             println!("vulkan error {}", error);
-                            return;
+                            return Ok(());
                         }
                     }
 
@@ -331,7 +333,7 @@ fn main() {
                     let required_image_usage:u32 = VkImageUsageFlagBits_VK_IMAGE_USAGE_TRANSFER_DST_BIT|VkImageUsageFlagBits_VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT;
                     if (surface_capabilities.supportedUsageFlags & required_image_usage) != required_image_usage {
                         println!("VK_IMAGE_USAGE_TRANSFER_DST image usage is not supported");
-                        return;
+                        return Ok(());
                     }
                     image_usage = required_image_usage;
 
@@ -352,7 +354,7 @@ fn main() {
 
                     if !selected_format.colorSpace == 0 {
                         println!("format not found");
-                        return;
+                        return Ok(());
                     }
 
                     let image_count = surface_capabilities.minImageCount + 1;
@@ -392,7 +394,7 @@ fn main() {
                         VkResult_VK_SUCCESS => {},
                         error => {
                             println!("vulkan error {}", error);
-                            return;
+                            return Ok(());
                         }
                     }
 
@@ -400,7 +402,7 @@ fn main() {
                         VkResult_VK_SUCCESS => {},
                         error => {
                             println!("vulkan error {}", error);
-                            return;
+                            return Ok(());
                         }
                     }
 
@@ -409,7 +411,7 @@ fn main() {
                         VkResult_VK_SUCCESS => {},
                         error => {
                             println!("vulkan error {}", error);
-                            return;
+                            return Ok(());
                         }
                     }
 
@@ -418,7 +420,7 @@ fn main() {
                         VkResult_VK_SUCCESS => {},
                         error => {
                             println!("vulkan error {}", error);
-                            return;
+                            return Ok(());
                         }
                     }
 
@@ -427,7 +429,7 @@ fn main() {
                         VkResult_VK_SUCCESS => {},
                         error => {
                             println!("vulkan error {}", error);
-                            return;
+                            return Ok(());
                         }
                     }
 
@@ -475,7 +477,7 @@ fn main() {
                                 VkResult_VK_SUCCESS => {},
                                 error => {
                                     println!("vulkan error {}", error);
-                                    return;
+                                    return Ok(());
                                 }
                             }
                         };
@@ -497,7 +499,7 @@ fn main() {
                         VkResult_VK_SUCCESS => {},
                         error => {
                             println!("vulkan error {}", error);
-                            return;
+                            return Ok(());
                         }
                     }
 
@@ -516,7 +518,7 @@ fn main() {
                         VkResult_VK_SUCCESS => {},
                         error => {
                             println!("vulkan error {}", error);
-                            return;
+                            return Ok(());
                         }
 
                     }
@@ -541,4 +543,6 @@ fn main() {
         destroy_surface(instance, surface, std::ptr::null_mut());
         destroy_instance(instance, std::ptr::null_mut());
     }
+
+    Ok(())
 }

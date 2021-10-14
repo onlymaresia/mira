@@ -1,6 +1,8 @@
 BEGIN {
     line = ""
     is_parsing = 0
+    remove = 0
+    reset_remove = 0
 }
 
 /)[ \t]*[->]?[ \t]*[^,]*,$/ {
@@ -21,13 +23,28 @@ BEGIN {
     sub(">;", ";", line)
 }
 
+/^extern "C" {/ {
+    remove = 1
+}
+
+/}$/ {
+    reset_remove = 1
+}
+
 {
     if(line == "") {
         line = $0
     }
 
     sub("::std::option::Option<", "", line)
-    print line
+
+    if(!remove) {
+        print line
+    }
+
+    if(reset_remove) {
+        reset_remove = remove = 0
+    }
 
     line = ""
     is_parsing = 0
