@@ -5,6 +5,8 @@ use std::fmt::{Display, Formatter};
 /// Variant indicates the variant of the Vulkan API supported by the implementation.
 /// Variant is always 0 for the Vulkan API.
 ///
+/// Default version is 1.0.0.0.
+///
 /// From <https://www.khronos.org/registry/vulkan/specs/1.2-extensions/html/vkspec.html#VK_MAKE_API_VERSION>
 #[derive(Debug, Copy, Clone)]
 pub struct Version {
@@ -12,6 +14,17 @@ pub struct Version {
     pub minor:u8,
     pub patch:u8,
     pub variant:u8,
+}
+
+impl Default for Version {
+    fn default() -> Self {
+        Self {
+            major: 1,
+            minor: 0,
+            patch: 0,
+            variant: 0
+        }
+    }
 }
 
 impl Display for Version {
