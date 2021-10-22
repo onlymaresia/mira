@@ -83,7 +83,8 @@ where
         }
     }
 }
-pub const VULKAN_H_: u32 = 1;
+pub const VULKAN_CORE_H_: u32 = 1;
+pub const VK_VERSION_1_0: u32 = 1;
 pub const _STDINT_H: u32 = 1;
 pub const _FEATURES_H: u32 = 1;
 pub const _DEFAULT_SOURCE: u32 = 1;
@@ -175,8 +176,6 @@ pub const SIG_ATOMIC_MAX: u32 = 2147483647;
 pub const SIZE_MAX: i32 = -1;
 pub const WINT_MIN: u32 = 0;
 pub const WINT_MAX: u32 = 4294967295;
-pub const VULKAN_CORE_H_: u32 = 1;
-pub const VK_VERSION_1_0: u32 = 1;
 pub const VK_USE_64_BIT_PTR_DEFINES: u32 = 1;
 pub const VK_HEADER_VERSION: u32 = 195;
 pub const VK_UUID_SIZE: u32 = 16;
@@ -1094,16 +1093,145 @@ pub const VK_KHR_RAY_TRACING_PIPELINE_EXTENSION_NAME: &'static [u8; 28usize] =
 pub const VK_KHR_ray_query: u32 = 1;
 pub const VK_KHR_RAY_QUERY_SPEC_VERSION: u32 = 1;
 pub const VK_KHR_RAY_QUERY_EXTENSION_NAME: &'static [u8; 17usize] = b"VK_KHR_ray_query\0";
-pub const VULKAN_VIDEO_CODEC_COMMON_H_: u32 = 1;
+pub const VULKAN_ANDROID_H_: u32 = 1;
+pub const VK_KHR_android_surface: u32 = 1;
+pub const VK_KHR_ANDROID_SURFACE_SPEC_VERSION: u32 = 6;
+pub const VK_KHR_ANDROID_SURFACE_EXTENSION_NAME: &'static [u8; 23usize] =
+    b"VK_KHR_android_surface\0";
+pub const VK_ANDROID_external_memory_android_hardware_buffer: u32 = 1;
+pub const VK_ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_SPEC_VERSION: u32 = 4;
+pub const VK_ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_EXTENSION_NAME: &'static [u8;
+             51usize] = b"VK_ANDROID_external_memory_android_hardware_buffer\0";
+pub const VULKAN_BETA_H_: u32 = 1;
+pub const VK_KHR_video_queue: u32 = 1;
+pub const VK_KHR_VIDEO_QUEUE_SPEC_VERSION: u32 = 2;
+pub const VK_KHR_VIDEO_QUEUE_EXTENSION_NAME: &'static [u8; 19usize] = b"VK_KHR_video_queue\0";
+pub const VK_KHR_video_decode_queue: u32 = 1;
+pub const VK_KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION: u32 = 2;
+pub const VK_KHR_VIDEO_DECODE_QUEUE_EXTENSION_NAME: &'static [u8; 26usize] =
+    b"VK_KHR_video_decode_queue\0";
+pub const VK_KHR_portability_subset: u32 = 1;
+pub const VK_KHR_PORTABILITY_SUBSET_SPEC_VERSION: u32 = 1;
+pub const VK_KHR_PORTABILITY_SUBSET_EXTENSION_NAME: &'static [u8; 26usize] =
+    b"VK_KHR_portability_subset\0";
+pub const VK_KHR_video_encode_queue: u32 = 1;
+pub const VK_KHR_VIDEO_ENCODE_QUEUE_SPEC_VERSION: u32 = 3;
+pub const VK_KHR_VIDEO_ENCODE_QUEUE_EXTENSION_NAME: &'static [u8; 26usize] =
+    b"VK_KHR_video_encode_queue\0";
+pub const VK_EXT_video_encode_h264: u32 = 1;
 pub const VULKAN_VIDEO_CODEC_H264STD_H_: u32 = 1;
+pub const VULKAN_VIDEO_CODEC_COMMON_H_: u32 = 1;
 pub const VK_STD_VULKAN_VIDEO_CODEC_H264_EXTENSION_NAME: &'static [u8; 31usize] =
     b"VK_STD_vulkan_video_codec_h264\0";
-pub const VULKAN_VIDEO_CODEC_H264STD_DECODE_H_: u32 = 1;
 pub const VULKAN_VIDEO_CODEC_H264STD_ENCODE_H_: u32 = 1;
+pub const VK_EXT_VIDEO_ENCODE_H264_SPEC_VERSION: u32 = 2;
+pub const VK_EXT_VIDEO_ENCODE_H264_EXTENSION_NAME: &'static [u8; 25usize] =
+    b"VK_EXT_video_encode_h264\0";
+pub const VK_EXT_video_decode_h264: u32 = 1;
+pub const VULKAN_VIDEO_CODEC_H264STD_DECODE_H_: u32 = 1;
+pub const VK_EXT_VIDEO_DECODE_H264_SPEC_VERSION: u32 = 3;
+pub const VK_EXT_VIDEO_DECODE_H264_EXTENSION_NAME: &'static [u8; 25usize] =
+    b"VK_EXT_video_decode_h264\0";
+pub const VK_EXT_video_decode_h265: u32 = 1;
 pub const VULKAN_VIDEO_CODEC_H265STD_H_: u32 = 1;
 pub const VK_STD_VULKAN_VIDEO_CODEC_H265_EXTENSION_NAME: &'static [u8; 31usize] =
     b"VK_STD_vulkan_video_codec_h265\0";
 pub const VULKAN_VIDEO_CODEC_H265STD_DECODE_H_: u32 = 1;
+pub const VK_EXT_VIDEO_DECODE_H265_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_VIDEO_DECODE_H265_EXTENSION_NAME: &'static [u8; 25usize] =
+    b"VK_EXT_video_decode_h265\0";
+pub const VULKAN_DIRECTFB_H_: u32 = 1;
+pub const VK_EXT_directfb_surface: u32 = 1;
+pub const VK_EXT_DIRECTFB_SURFACE_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_DIRECTFB_SURFACE_EXTENSION_NAME: &'static [u8; 24usize] =
+    b"VK_EXT_directfb_surface\0";
+pub const VULKAN_FUCHSIA_H_: u32 = 1;
+pub const VK_FUCHSIA_imagepipe_surface: u32 = 1;
+pub const VK_FUCHSIA_IMAGEPIPE_SURFACE_SPEC_VERSION: u32 = 1;
+pub const VK_FUCHSIA_IMAGEPIPE_SURFACE_EXTENSION_NAME: &'static [u8; 29usize] =
+    b"VK_FUCHSIA_imagepipe_surface\0";
+pub const VK_FUCHSIA_external_memory: u32 = 1;
+pub const VK_FUCHSIA_EXTERNAL_MEMORY_SPEC_VERSION: u32 = 1;
+pub const VK_FUCHSIA_EXTERNAL_MEMORY_EXTENSION_NAME: &'static [u8; 27usize] =
+    b"VK_FUCHSIA_external_memory\0";
+pub const VK_FUCHSIA_external_semaphore: u32 = 1;
+pub const VK_FUCHSIA_EXTERNAL_SEMAPHORE_SPEC_VERSION: u32 = 1;
+pub const VK_FUCHSIA_EXTERNAL_SEMAPHORE_EXTENSION_NAME: &'static [u8; 30usize] =
+    b"VK_FUCHSIA_external_semaphore\0";
+pub const VK_FUCHSIA_buffer_collection: u32 = 1;
+pub const VK_FUCHSIA_BUFFER_COLLECTION_SPEC_VERSION: u32 = 2;
+pub const VK_FUCHSIA_BUFFER_COLLECTION_EXTENSION_NAME: &'static [u8; 29usize] =
+    b"VK_FUCHSIA_buffer_collection\0";
+pub const VULKAN_IOS_H_: u32 = 1;
+pub const VK_MVK_ios_surface: u32 = 1;
+pub const VK_MVK_IOS_SURFACE_SPEC_VERSION: u32 = 3;
+pub const VK_MVK_IOS_SURFACE_EXTENSION_NAME: &'static [u8; 19usize] = b"VK_MVK_ios_surface\0";
+pub const VULKAN_MACOS_H_: u32 = 1;
+pub const VK_MVK_macos_surface: u32 = 1;
+pub const VK_MVK_MACOS_SURFACE_SPEC_VERSION: u32 = 3;
+pub const VK_MVK_MACOS_SURFACE_EXTENSION_NAME: &'static [u8; 21usize] = b"VK_MVK_macos_surface\0";
+pub const VULKAN_METAL_H_: u32 = 1;
+pub const VK_EXT_metal_surface: u32 = 1;
+pub const VK_EXT_METAL_SURFACE_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_METAL_SURFACE_EXTENSION_NAME: &'static [u8; 21usize] = b"VK_EXT_metal_surface\0";
+pub const VULKAN_SCREEN_H_: u32 = 1;
+pub const VK_QNX_screen_surface: u32 = 1;
+pub const VK_QNX_SCREEN_SURFACE_SPEC_VERSION: u32 = 1;
+pub const VK_QNX_SCREEN_SURFACE_EXTENSION_NAME: &'static [u8; 22usize] = b"VK_QNX_screen_surface\0";
+pub const VULKAN_VI_H_: u32 = 1;
+pub const VK_NN_vi_surface: u32 = 1;
+pub const VK_NN_VI_SURFACE_SPEC_VERSION: u32 = 1;
+pub const VK_NN_VI_SURFACE_EXTENSION_NAME: &'static [u8; 17usize] = b"VK_NN_vi_surface\0";
+pub const VULKAN_WAYLAND_H_: u32 = 1;
+pub const VK_KHR_wayland_surface: u32 = 1;
+pub const VK_KHR_WAYLAND_SURFACE_SPEC_VERSION: u32 = 6;
+pub const VK_KHR_WAYLAND_SURFACE_EXTENSION_NAME: &'static [u8; 23usize] =
+    b"VK_KHR_wayland_surface\0";
+pub const VULKAN_WIN32_H_: u32 = 1;
+pub const VK_KHR_win32_surface: u32 = 1;
+pub const VK_KHR_WIN32_SURFACE_SPEC_VERSION: u32 = 6;
+pub const VK_KHR_WIN32_SURFACE_EXTENSION_NAME: &'static [u8; 21usize] = b"VK_KHR_win32_surface\0";
+pub const VK_KHR_external_memory_win32: u32 = 1;
+pub const VK_KHR_EXTERNAL_MEMORY_WIN32_SPEC_VERSION: u32 = 1;
+pub const VK_KHR_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME: &'static [u8; 29usize] =
+    b"VK_KHR_external_memory_win32\0";
+pub const VK_KHR_win32_keyed_mutex: u32 = 1;
+pub const VK_KHR_WIN32_KEYED_MUTEX_SPEC_VERSION: u32 = 1;
+pub const VK_KHR_WIN32_KEYED_MUTEX_EXTENSION_NAME: &'static [u8; 25usize] =
+    b"VK_KHR_win32_keyed_mutex\0";
+pub const VK_KHR_external_semaphore_win32: u32 = 1;
+pub const VK_KHR_EXTERNAL_SEMAPHORE_WIN32_SPEC_VERSION: u32 = 1;
+pub const VK_KHR_EXTERNAL_SEMAPHORE_WIN32_EXTENSION_NAME: &'static [u8; 32usize] =
+    b"VK_KHR_external_semaphore_win32\0";
+pub const VK_KHR_external_fence_win32: u32 = 1;
+pub const VK_KHR_EXTERNAL_FENCE_WIN32_SPEC_VERSION: u32 = 1;
+pub const VK_KHR_EXTERNAL_FENCE_WIN32_EXTENSION_NAME: &'static [u8; 28usize] =
+    b"VK_KHR_external_fence_win32\0";
+pub const VK_NV_external_memory_win32: u32 = 1;
+pub const VK_NV_EXTERNAL_MEMORY_WIN32_SPEC_VERSION: u32 = 1;
+pub const VK_NV_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME: &'static [u8; 28usize] =
+    b"VK_NV_external_memory_win32\0";
+pub const VK_NV_win32_keyed_mutex: u32 = 1;
+pub const VK_NV_WIN32_KEYED_MUTEX_SPEC_VERSION: u32 = 2;
+pub const VK_NV_WIN32_KEYED_MUTEX_EXTENSION_NAME: &'static [u8; 24usize] =
+    b"VK_NV_win32_keyed_mutex\0";
+pub const VK_EXT_full_screen_exclusive: u32 = 1;
+pub const VK_EXT_FULL_SCREEN_EXCLUSIVE_SPEC_VERSION: u32 = 4;
+pub const VK_EXT_FULL_SCREEN_EXCLUSIVE_EXTENSION_NAME: &'static [u8; 29usize] =
+    b"VK_EXT_full_screen_exclusive\0";
+pub const VULKAN_XCB_H_: u32 = 1;
+pub const VK_KHR_xcb_surface: u32 = 1;
+pub const VK_KHR_XCB_SURFACE_SPEC_VERSION: u32 = 6;
+pub const VK_KHR_XCB_SURFACE_EXTENSION_NAME: &'static [u8; 19usize] = b"VK_KHR_xcb_surface\0";
+pub const VULKAN_XLIB_H_: u32 = 1;
+pub const VK_KHR_xlib_surface: u32 = 1;
+pub const VK_KHR_XLIB_SURFACE_SPEC_VERSION: u32 = 6;
+pub const VK_KHR_XLIB_SURFACE_EXTENSION_NAME: &'static [u8; 20usize] = b"VK_KHR_xlib_surface\0";
+pub const VULKAN_XLIB_XRANDR_H_: u32 = 1;
+pub const VK_EXT_acquire_xlib_display: u32 = 1;
+pub const VK_EXT_ACQUIRE_XLIB_DISPLAY_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_ACQUIRE_XLIB_DISPLAY_EXTENSION_NAME: &'static [u8; 28usize] =
+    b"VK_EXT_acquire_xlib_display\0";
 pub type size_t = ::std::os::raw::c_ulong;
 pub type wchar_t = ::std::os::raw::c_int;
 #[repr(C)]
@@ -14675,6 +14803,551 @@ pub struct VkPhysicalDeviceRayQueryFeaturesKHR {
     pub pNext: *mut ::std::os::raw::c_void,
     pub rayQuery: VkBool32,
 }
+pub type IDirectFB = ::std::os::raw::c_void;
+pub type IDirectFBSurface = ::std::os::raw::c_void;
+pub type zx_handle_t = u32;
+pub type DWORD = u32;
+pub type LPCWSTR = *const wchar_t;
+pub type HANDLE = *mut ::std::os::raw::c_void;
+pub type HWND = HANDLE;
+pub type HINSTANCE = HANDLE;
+pub type HMONITOR = HANDLE;
+pub type SECURITY_ATTRIBUTES = ::std::os::raw::c_void;
+pub type XID = ::std::os::raw::c_ulong;
+pub type VisualID = XID;
+pub type Window = XID;
+pub type Display = ::std::os::raw::c_void;
+pub type xcb_connection_t = ::std::os::raw::c_void;
+pub type xcb_window_t = u32;
+pub type xcb_visualid_t = u32;
+pub type RROutput = XID;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ANativeWindow {
+    _unused: [u8; 0],
+}
+pub type VkAndroidSurfaceCreateFlagsKHR = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkAndroidSurfaceCreateInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkAndroidSurfaceCreateFlagsKHR,
+    pub window: *mut ANativeWindow,
+}
+pub type PFN_vkCreateAndroidSurfaceKHR = 
+    unsafe extern "C" fn(
+        instance: VkInstance,
+        pCreateInfo: *const VkAndroidSurfaceCreateInfoKHR,
+        pAllocator: *const VkAllocationCallbacks,
+        pSurface: *mut VkSurfaceKHR,
+    ) -> VkResult
+;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct AHardwareBuffer {
+    _unused: [u8; 0],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkAndroidHardwareBufferUsageANDROID {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub androidHardwareBufferUsage: u64,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkAndroidHardwareBufferPropertiesANDROID {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub allocationSize: VkDeviceSize,
+    pub memoryTypeBits: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkAndroidHardwareBufferFormatPropertiesANDROID {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub format: VkFormat,
+    pub externalFormat: u64,
+    pub formatFeatures: VkFormatFeatureFlags,
+    pub samplerYcbcrConversionComponents: VkComponentMapping,
+    pub suggestedYcbcrModel: VkSamplerYcbcrModelConversion,
+    pub suggestedYcbcrRange: VkSamplerYcbcrRange,
+    pub suggestedXChromaOffset: VkChromaLocation,
+    pub suggestedYChromaOffset: VkChromaLocation,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImportAndroidHardwareBufferInfoANDROID {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub buffer: *mut AHardwareBuffer,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkMemoryGetAndroidHardwareBufferInfoANDROID {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub memory: VkDeviceMemory,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkExternalFormatANDROID {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub externalFormat: u64,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkAndroidHardwareBufferFormatProperties2ANDROID {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub format: VkFormat,
+    pub externalFormat: u64,
+    pub formatFeatures: VkFormatFeatureFlags2KHR,
+    pub samplerYcbcrConversionComponents: VkComponentMapping,
+    pub suggestedYcbcrModel: VkSamplerYcbcrModelConversion,
+    pub suggestedYcbcrRange: VkSamplerYcbcrRange,
+    pub suggestedXChromaOffset: VkChromaLocation,
+    pub suggestedYChromaOffset: VkChromaLocation,
+}
+pub type PFN_vkGetAndroidHardwareBufferPropertiesANDROID = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        buffer: *const AHardwareBuffer,
+        pProperties: *mut VkAndroidHardwareBufferPropertiesANDROID,
+    ) -> VkResult
+;
+pub type PFN_vkGetMemoryAndroidHardwareBufferANDROID = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pInfo: *const VkMemoryGetAndroidHardwareBufferInfoANDROID,
+        pBuffer: *mut *mut AHardwareBuffer,
+    ) -> VkResult
+;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoSessionKHR_T {
+    _unused: [u8; 0],
+}
+pub type VkVideoSessionKHR = *mut VkVideoSessionKHR_T;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoSessionParametersKHR_T {
+    _unused: [u8; 0],
+}
+pub type VkVideoSessionParametersKHR = *mut VkVideoSessionParametersKHR_T;
+pub const VkQueryResultStatusKHR_VK_QUERY_RESULT_STATUS_ERROR_KHR: VkQueryResultStatusKHR = -1;
+pub const VkQueryResultStatusKHR_VK_QUERY_RESULT_STATUS_NOT_READY_KHR: VkQueryResultStatusKHR = 0;
+pub const VkQueryResultStatusKHR_VK_QUERY_RESULT_STATUS_COMPLETE_KHR: VkQueryResultStatusKHR = 1;
+pub const VkQueryResultStatusKHR_VK_QUERY_RESULT_STATUS_MAX_ENUM_KHR: VkQueryResultStatusKHR =
+    2147483647;
+pub type VkQueryResultStatusKHR = ::std::os::raw::c_int;
+pub const VkVideoCodecOperationFlagBitsKHR_VK_VIDEO_CODEC_OPERATION_INVALID_BIT_KHR:
+    VkVideoCodecOperationFlagBitsKHR = 0;
+pub const VkVideoCodecOperationFlagBitsKHR_VK_VIDEO_CODEC_OPERATION_FLAG_BITS_MAX_ENUM_KHR:
+    VkVideoCodecOperationFlagBitsKHR = 2147483647;
+pub type VkVideoCodecOperationFlagBitsKHR = ::std::os::raw::c_uint;
+pub type VkVideoCodecOperationFlagsKHR = VkFlags;
+pub const VkVideoChromaSubsamplingFlagBitsKHR_VK_VIDEO_CHROMA_SUBSAMPLING_INVALID_BIT_KHR:
+    VkVideoChromaSubsamplingFlagBitsKHR = 0;
+pub const VkVideoChromaSubsamplingFlagBitsKHR_VK_VIDEO_CHROMA_SUBSAMPLING_MONOCHROME_BIT_KHR:
+    VkVideoChromaSubsamplingFlagBitsKHR = 1;
+pub const VkVideoChromaSubsamplingFlagBitsKHR_VK_VIDEO_CHROMA_SUBSAMPLING_420_BIT_KHR:
+    VkVideoChromaSubsamplingFlagBitsKHR = 2;
+pub const VkVideoChromaSubsamplingFlagBitsKHR_VK_VIDEO_CHROMA_SUBSAMPLING_422_BIT_KHR:
+    VkVideoChromaSubsamplingFlagBitsKHR = 4;
+pub const VkVideoChromaSubsamplingFlagBitsKHR_VK_VIDEO_CHROMA_SUBSAMPLING_444_BIT_KHR:
+    VkVideoChromaSubsamplingFlagBitsKHR = 8;
+pub const VkVideoChromaSubsamplingFlagBitsKHR_VK_VIDEO_CHROMA_SUBSAMPLING_FLAG_BITS_MAX_ENUM_KHR:
+    VkVideoChromaSubsamplingFlagBitsKHR = 2147483647;
+pub type VkVideoChromaSubsamplingFlagBitsKHR = ::std::os::raw::c_uint;
+pub type VkVideoChromaSubsamplingFlagsKHR = VkFlags;
+pub const VkVideoComponentBitDepthFlagBitsKHR_VK_VIDEO_COMPONENT_BIT_DEPTH_INVALID_KHR:
+    VkVideoComponentBitDepthFlagBitsKHR = 0;
+pub const VkVideoComponentBitDepthFlagBitsKHR_VK_VIDEO_COMPONENT_BIT_DEPTH_8_BIT_KHR:
+    VkVideoComponentBitDepthFlagBitsKHR = 1;
+pub const VkVideoComponentBitDepthFlagBitsKHR_VK_VIDEO_COMPONENT_BIT_DEPTH_10_BIT_KHR:
+    VkVideoComponentBitDepthFlagBitsKHR = 4;
+pub const VkVideoComponentBitDepthFlagBitsKHR_VK_VIDEO_COMPONENT_BIT_DEPTH_12_BIT_KHR:
+    VkVideoComponentBitDepthFlagBitsKHR = 16;
+pub const VkVideoComponentBitDepthFlagBitsKHR_VK_VIDEO_COMPONENT_BIT_DEPTH_FLAG_BITS_MAX_ENUM_KHR : VkVideoComponentBitDepthFlagBitsKHR = 2147483647 ;
+pub type VkVideoComponentBitDepthFlagBitsKHR = ::std::os::raw::c_uint;
+pub type VkVideoComponentBitDepthFlagsKHR = VkFlags;
+pub const VkVideoCapabilityFlagBitsKHR_VK_VIDEO_CAPABILITY_PROTECTED_CONTENT_BIT_KHR:
+    VkVideoCapabilityFlagBitsKHR = 1;
+pub const VkVideoCapabilityFlagBitsKHR_VK_VIDEO_CAPABILITY_SEPARATE_REFERENCE_IMAGES_BIT_KHR:
+    VkVideoCapabilityFlagBitsKHR = 2;
+pub const VkVideoCapabilityFlagBitsKHR_VK_VIDEO_CAPABILITY_FLAG_BITS_MAX_ENUM_KHR:
+    VkVideoCapabilityFlagBitsKHR = 2147483647;
+pub type VkVideoCapabilityFlagBitsKHR = ::std::os::raw::c_uint;
+pub type VkVideoCapabilityFlagsKHR = VkFlags;
+pub const VkVideoSessionCreateFlagBitsKHR_VK_VIDEO_SESSION_CREATE_DEFAULT_KHR:
+    VkVideoSessionCreateFlagBitsKHR = 0;
+pub const VkVideoSessionCreateFlagBitsKHR_VK_VIDEO_SESSION_CREATE_PROTECTED_CONTENT_BIT_KHR:
+    VkVideoSessionCreateFlagBitsKHR = 1;
+pub const VkVideoSessionCreateFlagBitsKHR_VK_VIDEO_SESSION_CREATE_FLAG_BITS_MAX_ENUM_KHR:
+    VkVideoSessionCreateFlagBitsKHR = 2147483647;
+pub type VkVideoSessionCreateFlagBitsKHR = ::std::os::raw::c_uint;
+pub type VkVideoSessionCreateFlagsKHR = VkFlags;
+pub type VkVideoBeginCodingFlagsKHR = VkFlags;
+pub type VkVideoEndCodingFlagsKHR = VkFlags;
+pub const VkVideoCodingControlFlagBitsKHR_VK_VIDEO_CODING_CONTROL_DEFAULT_KHR:
+    VkVideoCodingControlFlagBitsKHR = 0;
+pub const VkVideoCodingControlFlagBitsKHR_VK_VIDEO_CODING_CONTROL_RESET_BIT_KHR:
+    VkVideoCodingControlFlagBitsKHR = 1;
+pub const VkVideoCodingControlFlagBitsKHR_VK_VIDEO_CODING_CONTROL_FLAG_BITS_MAX_ENUM_KHR:
+    VkVideoCodingControlFlagBitsKHR = 2147483647;
+pub type VkVideoCodingControlFlagBitsKHR = ::std::os::raw::c_uint;
+pub type VkVideoCodingControlFlagsKHR = VkFlags;
+pub const VkVideoCodingQualityPresetFlagBitsKHR_VK_VIDEO_CODING_QUALITY_PRESET_NORMAL_BIT_KHR:
+    VkVideoCodingQualityPresetFlagBitsKHR = 1;
+pub const VkVideoCodingQualityPresetFlagBitsKHR_VK_VIDEO_CODING_QUALITY_PRESET_POWER_BIT_KHR:
+    VkVideoCodingQualityPresetFlagBitsKHR = 2;
+pub const VkVideoCodingQualityPresetFlagBitsKHR_VK_VIDEO_CODING_QUALITY_PRESET_QUALITY_BIT_KHR:
+    VkVideoCodingQualityPresetFlagBitsKHR = 4;
+pub const VkVideoCodingQualityPresetFlagBitsKHR_VK_VIDEO_CODING_QUALITY_PRESET_FLAG_BITS_MAX_ENUM_KHR : VkVideoCodingQualityPresetFlagBitsKHR = 2147483647 ;
+pub type VkVideoCodingQualityPresetFlagBitsKHR = ::std::os::raw::c_uint;
+pub type VkVideoCodingQualityPresetFlagsKHR = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoQueueFamilyProperties2KHR {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub videoCodecOperations: VkVideoCodecOperationFlagsKHR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoProfileKHR {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub videoCodecOperation: VkVideoCodecOperationFlagBitsKHR,
+    pub chromaSubsampling: VkVideoChromaSubsamplingFlagsKHR,
+    pub lumaBitDepth: VkVideoComponentBitDepthFlagsKHR,
+    pub chromaBitDepth: VkVideoComponentBitDepthFlagsKHR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoProfilesKHR {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub profileCount: u32,
+    pub pProfiles: *const VkVideoProfileKHR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoCapabilitiesKHR {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub capabilityFlags: VkVideoCapabilityFlagsKHR,
+    pub minBitstreamBufferOffsetAlignment: VkDeviceSize,
+    pub minBitstreamBufferSizeAlignment: VkDeviceSize,
+    pub videoPictureExtentGranularity: VkExtent2D,
+    pub minExtent: VkExtent2D,
+    pub maxExtent: VkExtent2D,
+    pub maxReferencePicturesSlotsCount: u32,
+    pub maxReferencePicturesActiveCount: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceVideoFormatInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub imageUsage: VkImageUsageFlags,
+    pub pVideoProfiles: *const VkVideoProfilesKHR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoFormatPropertiesKHR {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub format: VkFormat,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoPictureResourceKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub codedOffset: VkOffset2D,
+    pub codedExtent: VkExtent2D,
+    pub baseArrayLayer: u32,
+    pub imageViewBinding: VkImageView,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoReferenceSlotKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub slotIndex: i8,
+    pub pPictureResource: *const VkVideoPictureResourceKHR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoGetMemoryPropertiesKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub memoryBindIndex: u32,
+    pub pMemoryRequirements: *mut VkMemoryRequirements2,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoBindMemoryKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub memoryBindIndex: u32,
+    pub memory: VkDeviceMemory,
+    pub memoryOffset: VkDeviceSize,
+    pub memorySize: VkDeviceSize,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoSessionCreateInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub queueFamilyIndex: u32,
+    pub flags: VkVideoSessionCreateFlagsKHR,
+    pub pVideoProfile: *const VkVideoProfileKHR,
+    pub pictureFormat: VkFormat,
+    pub maxCodedExtent: VkExtent2D,
+    pub referencePicturesFormat: VkFormat,
+    pub maxReferencePicturesSlotsCount: u32,
+    pub maxReferencePicturesActiveCount: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoSessionParametersCreateInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub videoSessionParametersTemplate: VkVideoSessionParametersKHR,
+    pub videoSession: VkVideoSessionKHR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoSessionParametersUpdateInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub updateSequenceCount: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoBeginCodingInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkVideoBeginCodingFlagsKHR,
+    pub codecQualityPreset: VkVideoCodingQualityPresetFlagsKHR,
+    pub videoSession: VkVideoSessionKHR,
+    pub videoSessionParameters: VkVideoSessionParametersKHR,
+    pub referenceSlotCount: u32,
+    pub pReferenceSlots: *const VkVideoReferenceSlotKHR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEndCodingInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkVideoEndCodingFlagsKHR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoCodingControlInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkVideoCodingControlFlagsKHR,
+}
+pub type PFN_vkGetPhysicalDeviceVideoCapabilitiesKHR = 
+    unsafe extern "C" fn(
+        physicalDevice: VkPhysicalDevice,
+        pVideoProfile: *const VkVideoProfileKHR,
+        pCapabilities: *mut VkVideoCapabilitiesKHR,
+    ) -> VkResult
+;
+pub type PFN_vkGetPhysicalDeviceVideoFormatPropertiesKHR = 
+    unsafe extern "C" fn(
+        physicalDevice: VkPhysicalDevice,
+        pVideoFormatInfo: *const VkPhysicalDeviceVideoFormatInfoKHR,
+        pVideoFormatPropertyCount: *mut u32,
+        pVideoFormatProperties: *mut VkVideoFormatPropertiesKHR,
+    ) -> VkResult
+;
+pub type PFN_vkCreateVideoSessionKHR = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pCreateInfo: *const VkVideoSessionCreateInfoKHR,
+        pAllocator: *const VkAllocationCallbacks,
+        pVideoSession: *mut VkVideoSessionKHR,
+    ) -> VkResult
+;
+pub type PFN_vkDestroyVideoSessionKHR = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        videoSession: VkVideoSessionKHR,
+        pAllocator: *const VkAllocationCallbacks,
+    )
+;
+pub type PFN_vkGetVideoSessionMemoryRequirementsKHR = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        videoSession: VkVideoSessionKHR,
+        pVideoSessionMemoryRequirementsCount: *mut u32,
+        pVideoSessionMemoryRequirements: *mut VkVideoGetMemoryPropertiesKHR,
+    ) -> VkResult
+;
+pub type PFN_vkBindVideoSessionMemoryKHR = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        videoSession: VkVideoSessionKHR,
+        videoSessionBindMemoryCount: u32,
+        pVideoSessionBindMemories: *const VkVideoBindMemoryKHR,
+    ) -> VkResult
+;
+pub type PFN_vkCreateVideoSessionParametersKHR = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pCreateInfo: *const VkVideoSessionParametersCreateInfoKHR,
+        pAllocator: *const VkAllocationCallbacks,
+        pVideoSessionParameters: *mut VkVideoSessionParametersKHR,
+    ) -> VkResult
+;
+pub type PFN_vkUpdateVideoSessionParametersKHR = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        videoSessionParameters: VkVideoSessionParametersKHR,
+        pUpdateInfo: *const VkVideoSessionParametersUpdateInfoKHR,
+    ) -> VkResult
+;
+pub type PFN_vkDestroyVideoSessionParametersKHR = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        videoSessionParameters: VkVideoSessionParametersKHR,
+        pAllocator: *const VkAllocationCallbacks,
+    )
+;
+pub type PFN_vkCmdBeginVideoCodingKHR = 
+    unsafe extern "C" fn(
+        commandBuffer: VkCommandBuffer,
+        pBeginInfo: *const VkVideoBeginCodingInfoKHR,
+    )
+;
+pub type PFN_vkCmdEndVideoCodingKHR = 
+    unsafe extern "C" fn(
+        commandBuffer: VkCommandBuffer,
+        pEndCodingInfo: *const VkVideoEndCodingInfoKHR,
+    )
+;
+pub type PFN_vkCmdControlVideoCodingKHR = 
+    unsafe extern "C" fn(
+        commandBuffer: VkCommandBuffer,
+        pCodingControlInfo: *const VkVideoCodingControlInfoKHR,
+    )
+;
+pub const VkVideoDecodeFlagBitsKHR_VK_VIDEO_DECODE_DEFAULT_KHR: VkVideoDecodeFlagBitsKHR = 0;
+pub const VkVideoDecodeFlagBitsKHR_VK_VIDEO_DECODE_RESERVED_0_BIT_KHR: VkVideoDecodeFlagBitsKHR = 1;
+pub const VkVideoDecodeFlagBitsKHR_VK_VIDEO_DECODE_FLAG_BITS_MAX_ENUM_KHR:
+    VkVideoDecodeFlagBitsKHR = 2147483647;
+pub type VkVideoDecodeFlagBitsKHR = ::std::os::raw::c_uint;
+pub type VkVideoDecodeFlagsKHR = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkVideoDecodeFlagsKHR,
+    pub codedOffset: VkOffset2D,
+    pub codedExtent: VkExtent2D,
+    pub srcBuffer: VkBuffer,
+    pub srcBufferOffset: VkDeviceSize,
+    pub srcBufferRange: VkDeviceSize,
+    pub dstPictureResource: VkVideoPictureResourceKHR,
+    pub pSetupReferenceSlot: *const VkVideoReferenceSlotKHR,
+    pub referenceSlotCount: u32,
+    pub pReferenceSlots: *const VkVideoReferenceSlotKHR,
+}
+pub type PFN_vkCmdDecodeVideoKHR = 
+    unsafe extern "C" fn(commandBuffer: VkCommandBuffer, pFrameInfo: *const VkVideoDecodeInfoKHR)
+;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDevicePortabilitySubsetFeaturesKHR {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub constantAlphaColorBlendFactors: VkBool32,
+    pub events: VkBool32,
+    pub imageViewFormatReinterpretation: VkBool32,
+    pub imageViewFormatSwizzle: VkBool32,
+    pub imageView2DOn3DImage: VkBool32,
+    pub multisampleArrayImage: VkBool32,
+    pub mutableComparisonSamplers: VkBool32,
+    pub pointPolygons: VkBool32,
+    pub samplerMipLodBias: VkBool32,
+    pub separateStencilMaskRef: VkBool32,
+    pub shaderSampleRateInterpolationFunctions: VkBool32,
+    pub tessellationIsolines: VkBool32,
+    pub tessellationPointMode: VkBool32,
+    pub triangleFans: VkBool32,
+    pub vertexAttributeAccessBeyondStride: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDevicePortabilitySubsetPropertiesKHR {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub minVertexInputBindingStrideAlignment: u32,
+}
+pub const VkVideoEncodeFlagBitsKHR_VK_VIDEO_ENCODE_DEFAULT_KHR: VkVideoEncodeFlagBitsKHR = 0;
+pub const VkVideoEncodeFlagBitsKHR_VK_VIDEO_ENCODE_RESERVED_0_BIT_KHR: VkVideoEncodeFlagBitsKHR = 1;
+pub const VkVideoEncodeFlagBitsKHR_VK_VIDEO_ENCODE_FLAG_BITS_MAX_ENUM_KHR:
+    VkVideoEncodeFlagBitsKHR = 2147483647;
+pub type VkVideoEncodeFlagBitsKHR = ::std::os::raw::c_uint;
+pub type VkVideoEncodeFlagsKHR = VkFlags;
+pub const VkVideoEncodeRateControlFlagBitsKHR_VK_VIDEO_ENCODE_RATE_CONTROL_DEFAULT_KHR:
+    VkVideoEncodeRateControlFlagBitsKHR = 0;
+pub const VkVideoEncodeRateControlFlagBitsKHR_VK_VIDEO_ENCODE_RATE_CONTROL_RESET_BIT_KHR:
+    VkVideoEncodeRateControlFlagBitsKHR = 1;
+pub const VkVideoEncodeRateControlFlagBitsKHR_VK_VIDEO_ENCODE_RATE_CONTROL_FLAG_BITS_MAX_ENUM_KHR : VkVideoEncodeRateControlFlagBitsKHR = 2147483647 ;
+pub type VkVideoEncodeRateControlFlagBitsKHR = ::std::os::raw::c_uint;
+pub type VkVideoEncodeRateControlFlagsKHR = VkFlags;
+pub const VkVideoEncodeRateControlModeFlagBitsKHR_VK_VIDEO_ENCODE_RATE_CONTROL_MODE_NONE_BIT_KHR:
+    VkVideoEncodeRateControlModeFlagBitsKHR = 0;
+pub const VkVideoEncodeRateControlModeFlagBitsKHR_VK_VIDEO_ENCODE_RATE_CONTROL_MODE_CBR_BIT_KHR:
+    VkVideoEncodeRateControlModeFlagBitsKHR = 1;
+pub const VkVideoEncodeRateControlModeFlagBitsKHR_VK_VIDEO_ENCODE_RATE_CONTROL_MODE_VBR_BIT_KHR:
+    VkVideoEncodeRateControlModeFlagBitsKHR = 2;
+pub const VkVideoEncodeRateControlModeFlagBitsKHR_VK_VIDEO_ENCODE_RATE_CONTROL_MODE_FLAG_BITS_MAX_ENUM_KHR : VkVideoEncodeRateControlModeFlagBitsKHR = 2147483647 ;
+pub type VkVideoEncodeRateControlModeFlagBitsKHR = ::std::os::raw::c_uint;
+pub type VkVideoEncodeRateControlModeFlagsKHR = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkVideoEncodeFlagsKHR,
+    pub qualityLevel: u32,
+    pub codedExtent: VkExtent2D,
+    pub dstBitstreamBuffer: VkBuffer,
+    pub dstBitstreamBufferOffset: VkDeviceSize,
+    pub dstBitstreamBufferMaxRange: VkDeviceSize,
+    pub srcPictureResource: VkVideoPictureResourceKHR,
+    pub pSetupReferenceSlot: *const VkVideoReferenceSlotKHR,
+    pub referenceSlotCount: u32,
+    pub pReferenceSlots: *const VkVideoReferenceSlotKHR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeRateControlInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkVideoEncodeRateControlFlagsKHR,
+    pub rateControlMode: VkVideoEncodeRateControlModeFlagBitsKHR,
+    pub averageBitrate: u32,
+    pub peakToAverageBitrateRatio: u16,
+    pub frameRateNumerator: u16,
+    pub frameRateDenominator: u16,
+    pub virtualBufferSizeInMs: u32,
+}
+pub type PFN_vkCmdEncodeVideoKHR = 
+    unsafe extern "C" fn(commandBuffer: VkCommandBuffer, pEncodeInfo: *const VkVideoEncodeInfoKHR)
+;
 pub const StdVideoH264ChromaFormatIdc_std_video_h264_chroma_format_idc_monochrome:
     StdVideoH264ChromaFormatIdc = 0;
 pub const StdVideoH264ChromaFormatIdc_std_video_h264_chroma_format_idc_420:
@@ -15597,290 +16270,6 @@ pub struct StdVideoH264PictureParameterSet {
 #[repr(C)]
 #[repr(align(4))]
 #[derive(Debug, Copy, Clone)]
-pub struct StdVideoDecodeH264PictureInfoFlags {
-    pub _bitfield_align_1: [u8; 0],
-    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
-    pub __bindgen_padding_0: [u8; 3usize],
-}
-impl StdVideoDecodeH264PictureInfoFlags {
-    #[inline]
-    pub fn field_pic_flag(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_field_pic_flag(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(0usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn is_intra(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_is_intra(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(1usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn bottom_field_flag(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_bottom_field_flag(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(2usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn is_reference(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_is_reference(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(3usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn complementary_field_pair(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(4usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_complementary_field_pair(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(4usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn new_bitfield_1(
-        field_pic_flag: u32,
-        is_intra: u32,
-        bottom_field_flag: u32,
-        is_reference: u32,
-        complementary_field_pair: u32,
-    ) -> __BindgenBitfieldUnit<[u8; 1usize]> {
-        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 1usize]> = Default::default();
-        __bindgen_bitfield_unit.set(0usize, 1u8, {
-            let field_pic_flag: u32 = unsafe { ::std::mem::transmute(field_pic_flag) };
-            field_pic_flag as u64
-        });
-        __bindgen_bitfield_unit.set(1usize, 1u8, {
-            let is_intra: u32 = unsafe { ::std::mem::transmute(is_intra) };
-            is_intra as u64
-        });
-        __bindgen_bitfield_unit.set(2usize, 1u8, {
-            let bottom_field_flag: u32 = unsafe { ::std::mem::transmute(bottom_field_flag) };
-            bottom_field_flag as u64
-        });
-        __bindgen_bitfield_unit.set(3usize, 1u8, {
-            let is_reference: u32 = unsafe { ::std::mem::transmute(is_reference) };
-            is_reference as u64
-        });
-        __bindgen_bitfield_unit.set(4usize, 1u8, {
-            let complementary_field_pair: u32 =
-                unsafe { ::std::mem::transmute(complementary_field_pair) };
-            complementary_field_pair as u64
-        });
-        __bindgen_bitfield_unit
-    }
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct StdVideoDecodeH264PictureInfo {
-    pub seq_parameter_set_id: u8,
-    pub pic_parameter_set_id: u8,
-    pub reserved: u16,
-    pub frame_num: u16,
-    pub idr_pic_id: u16,
-    pub PicOrderCnt: [i32; 2usize],
-    pub flags: StdVideoDecodeH264PictureInfoFlags,
-}
-#[repr(C)]
-#[repr(align(4))]
-#[derive(Debug, Copy, Clone)]
-pub struct StdVideoDecodeH264ReferenceInfoFlags {
-    pub _bitfield_align_1: [u8; 0],
-    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
-    pub __bindgen_padding_0: [u8; 3usize],
-}
-impl StdVideoDecodeH264ReferenceInfoFlags {
-    #[inline]
-    pub fn top_field_flag(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_top_field_flag(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(0usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn bottom_field_flag(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_bottom_field_flag(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(1usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn is_long_term(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_is_long_term(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(2usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn is_non_existing(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_is_non_existing(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(3usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn new_bitfield_1(
-        top_field_flag: u32,
-        bottom_field_flag: u32,
-        is_long_term: u32,
-        is_non_existing: u32,
-    ) -> __BindgenBitfieldUnit<[u8; 1usize]> {
-        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 1usize]> = Default::default();
-        __bindgen_bitfield_unit.set(0usize, 1u8, {
-            let top_field_flag: u32 = unsafe { ::std::mem::transmute(top_field_flag) };
-            top_field_flag as u64
-        });
-        __bindgen_bitfield_unit.set(1usize, 1u8, {
-            let bottom_field_flag: u32 = unsafe { ::std::mem::transmute(bottom_field_flag) };
-            bottom_field_flag as u64
-        });
-        __bindgen_bitfield_unit.set(2usize, 1u8, {
-            let is_long_term: u32 = unsafe { ::std::mem::transmute(is_long_term) };
-            is_long_term as u64
-        });
-        __bindgen_bitfield_unit.set(3usize, 1u8, {
-            let is_non_existing: u32 = unsafe { ::std::mem::transmute(is_non_existing) };
-            is_non_existing as u64
-        });
-        __bindgen_bitfield_unit
-    }
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct StdVideoDecodeH264ReferenceInfo {
-    pub FrameNum: u16,
-    pub reserved: u16,
-    pub PicOrderCnt: [i32; 2usize],
-    pub flags: StdVideoDecodeH264ReferenceInfoFlags,
-}
-#[repr(C)]
-#[repr(align(4))]
-#[derive(Debug, Copy, Clone)]
-pub struct StdVideoDecodeH264MvcElementFlags {
-    pub _bitfield_align_1: [u8; 0],
-    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
-    pub __bindgen_padding_0: [u8; 3usize],
-}
-impl StdVideoDecodeH264MvcElementFlags {
-    #[inline]
-    pub fn non_idr(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_non_idr(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(0usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn anchor_pic(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_anchor_pic(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(1usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn inter_view(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_inter_view(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(2usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn new_bitfield_1(
-        non_idr: u32,
-        anchor_pic: u32,
-        inter_view: u32,
-    ) -> __BindgenBitfieldUnit<[u8; 1usize]> {
-        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 1usize]> = Default::default();
-        __bindgen_bitfield_unit.set(0usize, 1u8, {
-            let non_idr: u32 = unsafe { ::std::mem::transmute(non_idr) };
-            non_idr as u64
-        });
-        __bindgen_bitfield_unit.set(1usize, 1u8, {
-            let anchor_pic: u32 = unsafe { ::std::mem::transmute(anchor_pic) };
-            anchor_pic as u64
-        });
-        __bindgen_bitfield_unit.set(2usize, 1u8, {
-            let inter_view: u32 = unsafe { ::std::mem::transmute(inter_view) };
-            inter_view as u64
-        });
-        __bindgen_bitfield_unit
-    }
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct StdVideoDecodeH264MvcElement {
-    pub flags: StdVideoDecodeH264MvcElementFlags,
-    pub viewOrderIndex: u16,
-    pub viewId: u16,
-    pub temporalId: u16,
-    pub priorityId: u16,
-    pub numOfAnchorRefsInL0: u16,
-    pub viewIdOfAnchorRefsInL0: [u16; 15usize],
-    pub numOfAnchorRefsInL1: u16,
-    pub viewIdOfAnchorRefsInL1: [u16; 15usize],
-    pub numOfNonAnchorRefsInL0: u16,
-    pub viewIdOfNonAnchorRefsInL0: [u16; 15usize],
-    pub numOfNonAnchorRefsInL1: u16,
-    pub viewIdOfNonAnchorRefsInL1: [u16; 15usize],
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct StdVideoDecodeH264Mvc {
-    pub viewId0: u32,
-    pub mvcElementCount: u32,
-    pub pMvcElements: *mut StdVideoDecodeH264MvcElement,
-}
-#[repr(C)]
-#[repr(align(4))]
-#[derive(Debug, Copy, Clone)]
 pub struct StdVideoEncodeH264SliceHeaderFlags {
     pub _bitfield_align_1: [u8; 0],
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
@@ -16178,6 +16567,503 @@ pub struct StdVideoEncodeH264SliceHeader {
     pub slice_alpha_c0_offset_div2: i8,
     pub slice_beta_offset_div2: i8,
     pub pMemMgmtCtrlOperations: *mut StdVideoEncodeH264RefMemMgmtCtrlOperations,
+}
+pub const VkVideoEncodeH264CapabilityFlagBitsEXT_VK_VIDEO_ENCODE_H264_CAPABILITY_CABAC_BIT_EXT:
+    VkVideoEncodeH264CapabilityFlagBitsEXT = 1;
+pub const VkVideoEncodeH264CapabilityFlagBitsEXT_VK_VIDEO_ENCODE_H264_CAPABILITY_CAVLC_BIT_EXT:
+    VkVideoEncodeH264CapabilityFlagBitsEXT = 2;
+pub const VkVideoEncodeH264CapabilityFlagBitsEXT_VK_VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BI_PRED_IMPLICIT_BIT_EXT : VkVideoEncodeH264CapabilityFlagBitsEXT = 4 ;
+pub const VkVideoEncodeH264CapabilityFlagBitsEXT_VK_VIDEO_ENCODE_H264_CAPABILITY_TRANSFORM_8X8_BIT_EXT : VkVideoEncodeH264CapabilityFlagBitsEXT = 8 ;
+pub const VkVideoEncodeH264CapabilityFlagBitsEXT_VK_VIDEO_ENCODE_H264_CAPABILITY_CHROMA_QP_OFFSET_BIT_EXT : VkVideoEncodeH264CapabilityFlagBitsEXT = 16 ;
+pub const VkVideoEncodeH264CapabilityFlagBitsEXT_VK_VIDEO_ENCODE_H264_CAPABILITY_SECOND_CHROMA_QP_OFFSET_BIT_EXT : VkVideoEncodeH264CapabilityFlagBitsEXT = 32 ;
+pub const VkVideoEncodeH264CapabilityFlagBitsEXT_VK_VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_DISABLED_BIT_EXT : VkVideoEncodeH264CapabilityFlagBitsEXT = 64 ;
+pub const VkVideoEncodeH264CapabilityFlagBitsEXT_VK_VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_ENABLED_BIT_EXT : VkVideoEncodeH264CapabilityFlagBitsEXT = 128 ;
+pub const VkVideoEncodeH264CapabilityFlagBitsEXT_VK_VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_PARTIAL_BIT_EXT : VkVideoEncodeH264CapabilityFlagBitsEXT = 256 ;
+pub const VkVideoEncodeH264CapabilityFlagBitsEXT_VK_VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_BIT_EXT : VkVideoEncodeH264CapabilityFlagBitsEXT = 512 ;
+pub const VkVideoEncodeH264CapabilityFlagBitsEXT_VK_VIDEO_ENCODE_H264_CAPABILITY_EVENLY_DISTRIBUTED_SLICE_SIZE_BIT_EXT : VkVideoEncodeH264CapabilityFlagBitsEXT = 1024 ;
+pub const VkVideoEncodeH264CapabilityFlagBitsEXT_VK_VIDEO_ENCODE_H264_CAPABILITY_FLAG_BITS_MAX_ENUM_EXT : VkVideoEncodeH264CapabilityFlagBitsEXT = 2147483647 ;
+pub type VkVideoEncodeH264CapabilityFlagBitsEXT = ::std::os::raw::c_uint;
+pub type VkVideoEncodeH264CapabilityFlagsEXT = VkFlags;
+pub const VkVideoEncodeH264InputModeFlagBitsEXT_VK_VIDEO_ENCODE_H264_INPUT_MODE_FRAME_BIT_EXT:
+    VkVideoEncodeH264InputModeFlagBitsEXT = 1;
+pub const VkVideoEncodeH264InputModeFlagBitsEXT_VK_VIDEO_ENCODE_H264_INPUT_MODE_SLICE_BIT_EXT:
+    VkVideoEncodeH264InputModeFlagBitsEXT = 2;
+pub const VkVideoEncodeH264InputModeFlagBitsEXT_VK_VIDEO_ENCODE_H264_INPUT_MODE_NON_VCL_BIT_EXT:
+    VkVideoEncodeH264InputModeFlagBitsEXT = 4;
+pub const VkVideoEncodeH264InputModeFlagBitsEXT_VK_VIDEO_ENCODE_H264_INPUT_MODE_FLAG_BITS_MAX_ENUM_EXT : VkVideoEncodeH264InputModeFlagBitsEXT = 2147483647 ;
+pub type VkVideoEncodeH264InputModeFlagBitsEXT = ::std::os::raw::c_uint;
+pub type VkVideoEncodeH264InputModeFlagsEXT = VkFlags;
+pub const VkVideoEncodeH264OutputModeFlagBitsEXT_VK_VIDEO_ENCODE_H264_OUTPUT_MODE_FRAME_BIT_EXT:
+    VkVideoEncodeH264OutputModeFlagBitsEXT = 1;
+pub const VkVideoEncodeH264OutputModeFlagBitsEXT_VK_VIDEO_ENCODE_H264_OUTPUT_MODE_SLICE_BIT_EXT:
+    VkVideoEncodeH264OutputModeFlagBitsEXT = 2;
+pub const VkVideoEncodeH264OutputModeFlagBitsEXT_VK_VIDEO_ENCODE_H264_OUTPUT_MODE_NON_VCL_BIT_EXT : VkVideoEncodeH264OutputModeFlagBitsEXT = 4 ;
+pub const VkVideoEncodeH264OutputModeFlagBitsEXT_VK_VIDEO_ENCODE_H264_OUTPUT_MODE_FLAG_BITS_MAX_ENUM_EXT : VkVideoEncodeH264OutputModeFlagBitsEXT = 2147483647 ;
+pub type VkVideoEncodeH264OutputModeFlagBitsEXT = ::std::os::raw::c_uint;
+pub type VkVideoEncodeH264OutputModeFlagsEXT = VkFlags;
+pub const VkVideoEncodeH264CreateFlagBitsEXT_VK_VIDEO_ENCODE_H264_CREATE_DEFAULT_EXT:
+    VkVideoEncodeH264CreateFlagBitsEXT = 0;
+pub const VkVideoEncodeH264CreateFlagBitsEXT_VK_VIDEO_ENCODE_H264_CREATE_RESERVED_0_BIT_EXT:
+    VkVideoEncodeH264CreateFlagBitsEXT = 1;
+pub const VkVideoEncodeH264CreateFlagBitsEXT_VK_VIDEO_ENCODE_H264_CREATE_FLAG_BITS_MAX_ENUM_EXT:
+    VkVideoEncodeH264CreateFlagBitsEXT = 2147483647;
+pub type VkVideoEncodeH264CreateFlagBitsEXT = ::std::os::raw::c_uint;
+pub type VkVideoEncodeH264CreateFlagsEXT = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH264CapabilitiesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkVideoEncodeH264CapabilityFlagsEXT,
+    pub inputModeFlags: VkVideoEncodeH264InputModeFlagsEXT,
+    pub outputModeFlags: VkVideoEncodeH264OutputModeFlagsEXT,
+    pub minPictureSizeInMbs: VkExtent2D,
+    pub maxPictureSizeInMbs: VkExtent2D,
+    pub inputImageDataAlignment: VkExtent2D,
+    pub maxNumL0ReferenceForP: u8,
+    pub maxNumL0ReferenceForB: u8,
+    pub maxNumL1Reference: u8,
+    pub qualityLevelCount: u8,
+    pub stdExtensionVersion: VkExtensionProperties,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH264SessionCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkVideoEncodeH264CreateFlagsEXT,
+    pub maxPictureSizeInMbs: VkExtent2D,
+    pub pStdExtensionVersion: *const VkExtensionProperties,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH264SessionParametersAddInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub spsStdCount: u32,
+    pub pSpsStd: *const StdVideoH264SequenceParameterSet,
+    pub ppsStdCount: u32,
+    pub pPpsStd: *const StdVideoH264PictureParameterSet,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH264SessionParametersCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub maxSpsStdCount: u32,
+    pub maxPpsStdCount: u32,
+    pub pParametersAddInfo: *const VkVideoEncodeH264SessionParametersAddInfoEXT,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH264DpbSlotInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub slotIndex: i8,
+    pub pStdPictureInfo: *const StdVideoEncodeH264PictureInfo,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH264NaluSliceEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pSliceHeaderStd: *const StdVideoEncodeH264SliceHeader,
+    pub mbCount: u32,
+    pub refFinalList0EntryCount: u8,
+    pub pRefFinalList0Entries: *const VkVideoEncodeH264DpbSlotInfoEXT,
+    pub refFinalList1EntryCount: u8,
+    pub pRefFinalList1Entries: *const VkVideoEncodeH264DpbSlotInfoEXT,
+    pub precedingNaluBytes: u32,
+    pub minQp: u8,
+    pub maxQp: u8,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH264VclFrameInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub refDefaultFinalList0EntryCount: u8,
+    pub pRefDefaultFinalList0Entries: *const VkVideoEncodeH264DpbSlotInfoEXT,
+    pub refDefaultFinalList1EntryCount: u8,
+    pub pRefDefaultFinalList1Entries: *const VkVideoEncodeH264DpbSlotInfoEXT,
+    pub naluSliceEntryCount: u32,
+    pub pNaluSliceEntries: *const VkVideoEncodeH264NaluSliceEXT,
+    pub pCurrentPictureInfo: *const VkVideoEncodeH264DpbSlotInfoEXT,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH264EmitPictureParametersEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub spsId: u8,
+    pub emitSpsEnable: VkBool32,
+    pub ppsIdEntryCount: u32,
+    pub ppsIdEntries: *const u8,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH264ProfileEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub stdProfileIdc: StdVideoH264ProfileIdc,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoDecodeH264PictureInfoFlags {
+    pub _bitfield_align_1: [u8; 0],
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
+    pub __bindgen_padding_0: [u8; 3usize],
+}
+impl StdVideoDecodeH264PictureInfoFlags {
+    #[inline]
+    pub fn field_pic_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_field_pic_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn is_intra(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_is_intra(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn bottom_field_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_bottom_field_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(2usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn is_reference(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_is_reference(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(3usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn complementary_field_pair(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(4usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_complementary_field_pair(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(4usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        field_pic_flag: u32,
+        is_intra: u32,
+        bottom_field_flag: u32,
+        is_reference: u32,
+        complementary_field_pair: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 1usize]> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 1usize]> = Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let field_pic_flag: u32 = unsafe { ::std::mem::transmute(field_pic_flag) };
+            field_pic_flag as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let is_intra: u32 = unsafe { ::std::mem::transmute(is_intra) };
+            is_intra as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 1u8, {
+            let bottom_field_flag: u32 = unsafe { ::std::mem::transmute(bottom_field_flag) };
+            bottom_field_flag as u64
+        });
+        __bindgen_bitfield_unit.set(3usize, 1u8, {
+            let is_reference: u32 = unsafe { ::std::mem::transmute(is_reference) };
+            is_reference as u64
+        });
+        __bindgen_bitfield_unit.set(4usize, 1u8, {
+            let complementary_field_pair: u32 =
+                unsafe { ::std::mem::transmute(complementary_field_pair) };
+            complementary_field_pair as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoDecodeH264PictureInfo {
+    pub seq_parameter_set_id: u8,
+    pub pic_parameter_set_id: u8,
+    pub reserved: u16,
+    pub frame_num: u16,
+    pub idr_pic_id: u16,
+    pub PicOrderCnt: [i32; 2usize],
+    pub flags: StdVideoDecodeH264PictureInfoFlags,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoDecodeH264ReferenceInfoFlags {
+    pub _bitfield_align_1: [u8; 0],
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
+    pub __bindgen_padding_0: [u8; 3usize],
+}
+impl StdVideoDecodeH264ReferenceInfoFlags {
+    #[inline]
+    pub fn top_field_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_top_field_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn bottom_field_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_bottom_field_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn is_long_term(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_is_long_term(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(2usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn is_non_existing(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_is_non_existing(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(3usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        top_field_flag: u32,
+        bottom_field_flag: u32,
+        is_long_term: u32,
+        is_non_existing: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 1usize]> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 1usize]> = Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let top_field_flag: u32 = unsafe { ::std::mem::transmute(top_field_flag) };
+            top_field_flag as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let bottom_field_flag: u32 = unsafe { ::std::mem::transmute(bottom_field_flag) };
+            bottom_field_flag as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 1u8, {
+            let is_long_term: u32 = unsafe { ::std::mem::transmute(is_long_term) };
+            is_long_term as u64
+        });
+        __bindgen_bitfield_unit.set(3usize, 1u8, {
+            let is_non_existing: u32 = unsafe { ::std::mem::transmute(is_non_existing) };
+            is_non_existing as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoDecodeH264ReferenceInfo {
+    pub FrameNum: u16,
+    pub reserved: u16,
+    pub PicOrderCnt: [i32; 2usize],
+    pub flags: StdVideoDecodeH264ReferenceInfoFlags,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoDecodeH264MvcElementFlags {
+    pub _bitfield_align_1: [u8; 0],
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
+    pub __bindgen_padding_0: [u8; 3usize],
+}
+impl StdVideoDecodeH264MvcElementFlags {
+    #[inline]
+    pub fn non_idr(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_non_idr(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn anchor_pic(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_anchor_pic(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn inter_view(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_inter_view(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(2usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        non_idr: u32,
+        anchor_pic: u32,
+        inter_view: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 1usize]> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 1usize]> = Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let non_idr: u32 = unsafe { ::std::mem::transmute(non_idr) };
+            non_idr as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let anchor_pic: u32 = unsafe { ::std::mem::transmute(anchor_pic) };
+            anchor_pic as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 1u8, {
+            let inter_view: u32 = unsafe { ::std::mem::transmute(inter_view) };
+            inter_view as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoDecodeH264MvcElement {
+    pub flags: StdVideoDecodeH264MvcElementFlags,
+    pub viewOrderIndex: u16,
+    pub viewId: u16,
+    pub temporalId: u16,
+    pub priorityId: u16,
+    pub numOfAnchorRefsInL0: u16,
+    pub viewIdOfAnchorRefsInL0: [u16; 15usize],
+    pub numOfAnchorRefsInL1: u16,
+    pub viewIdOfAnchorRefsInL1: [u16; 15usize],
+    pub numOfNonAnchorRefsInL0: u16,
+    pub viewIdOfNonAnchorRefsInL0: [u16; 15usize],
+    pub numOfNonAnchorRefsInL1: u16,
+    pub viewIdOfNonAnchorRefsInL1: [u16; 15usize],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoDecodeH264Mvc {
+    pub viewId0: u32,
+    pub mvcElementCount: u32,
+    pub pMvcElements: *mut StdVideoDecodeH264MvcElement,
+}
+pub const VkVideoDecodeH264PictureLayoutFlagBitsEXT_VK_VIDEO_DECODE_H264_PICTURE_LAYOUT_PROGRESSIVE_EXT : VkVideoDecodeH264PictureLayoutFlagBitsEXT = 0 ;
+pub const VkVideoDecodeH264PictureLayoutFlagBitsEXT_VK_VIDEO_DECODE_H264_PICTURE_LAYOUT_INTERLACED_INTERLEAVED_LINES_BIT_EXT : VkVideoDecodeH264PictureLayoutFlagBitsEXT = 1 ;
+pub const VkVideoDecodeH264PictureLayoutFlagBitsEXT_VK_VIDEO_DECODE_H264_PICTURE_LAYOUT_INTERLACED_SEPARATE_PLANES_BIT_EXT : VkVideoDecodeH264PictureLayoutFlagBitsEXT = 2 ;
+pub const VkVideoDecodeH264PictureLayoutFlagBitsEXT_VK_VIDEO_DECODE_H264_PICTURE_LAYOUT_FLAG_BITS_MAX_ENUM_EXT : VkVideoDecodeH264PictureLayoutFlagBitsEXT = 2147483647 ;
+pub type VkVideoDecodeH264PictureLayoutFlagBitsEXT = ::std::os::raw::c_uint;
+pub type VkVideoDecodeH264PictureLayoutFlagsEXT = VkFlags;
+pub type VkVideoDecodeH264CreateFlagsEXT = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH264ProfileEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub stdProfileIdc: StdVideoH264ProfileIdc,
+    pub pictureLayout: VkVideoDecodeH264PictureLayoutFlagsEXT,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH264CapabilitiesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub maxLevel: u32,
+    pub fieldOffsetGranularity: VkOffset2D,
+    pub stdExtensionVersion: VkExtensionProperties,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH264SessionCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkVideoDecodeH264CreateFlagsEXT,
+    pub pStdExtensionVersion: *const VkExtensionProperties,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH264SessionParametersAddInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub spsStdCount: u32,
+    pub pSpsStd: *const StdVideoH264SequenceParameterSet,
+    pub ppsStdCount: u32,
+    pub pPpsStd: *const StdVideoH264PictureParameterSet,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH264SessionParametersCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub maxSpsStdCount: u32,
+    pub maxPpsStdCount: u32,
+    pub pParametersAddInfo: *const VkVideoDecodeH264SessionParametersAddInfoEXT,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH264PictureInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pStdPictureInfo: *const StdVideoDecodeH264PictureInfo,
+    pub slicesCount: u32,
+    pub pSlicesDataOffsets: *const u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH264MvcEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pStdMvc: *const StdVideoDecodeH264Mvc,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH264DpbSlotInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pStdReferenceInfo: *const StdVideoDecodeH264ReferenceInfo,
 }
 pub const StdVideoH265ChromaFormatIdc_std_video_h265_chroma_format_idc_monochrome:
     StdVideoH265ChromaFormatIdc = 0;
@@ -18029,4 +18915,795 @@ impl StdVideoDecodeH265ReferenceInfoFlags {
 pub struct StdVideoDecodeH265ReferenceInfo {
     pub PicOrderCntVal: i32,
     pub flags: StdVideoDecodeH265ReferenceInfoFlags,
+}
+pub type VkVideoDecodeH265CreateFlagsEXT = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH265ProfileEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub stdProfileIdc: StdVideoH265ProfileIdc,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH265CapabilitiesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub maxLevel: u32,
+    pub stdExtensionVersion: VkExtensionProperties,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH265SessionCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkVideoDecodeH265CreateFlagsEXT,
+    pub pStdExtensionVersion: *const VkExtensionProperties,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH265SessionParametersAddInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub spsStdCount: u32,
+    pub pSpsStd: *const StdVideoH265SequenceParameterSet,
+    pub ppsStdCount: u32,
+    pub pPpsStd: *const StdVideoH265PictureParameterSet,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH265SessionParametersCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub maxSpsStdCount: u32,
+    pub maxPpsStdCount: u32,
+    pub pParametersAddInfo: *const VkVideoDecodeH265SessionParametersAddInfoEXT,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH265PictureInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pStdPictureInfo: *mut StdVideoDecodeH265PictureInfo,
+    pub slicesCount: u32,
+    pub pSlicesDataOffsets: *const u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH265DpbSlotInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pStdReferenceInfo: *const StdVideoDecodeH265ReferenceInfo,
+}
+pub type VkDirectFBSurfaceCreateFlagsEXT = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkDirectFBSurfaceCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkDirectFBSurfaceCreateFlagsEXT,
+    pub dfb: *mut IDirectFB,
+    pub surface: *mut IDirectFBSurface,
+}
+pub type PFN_vkCreateDirectFBSurfaceEXT = 
+    unsafe extern "C" fn(
+        instance: VkInstance,
+        pCreateInfo: *const VkDirectFBSurfaceCreateInfoEXT,
+        pAllocator: *const VkAllocationCallbacks,
+        pSurface: *mut VkSurfaceKHR,
+    ) -> VkResult
+;
+pub type PFN_vkGetPhysicalDeviceDirectFBPresentationSupportEXT = 
+    unsafe extern "C" fn(
+        physicalDevice: VkPhysicalDevice,
+        queueFamilyIndex: u32,
+        dfb: *mut IDirectFB,
+    ) -> VkBool32
+;
+pub type VkImagePipeSurfaceCreateFlagsFUCHSIA = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImagePipeSurfaceCreateInfoFUCHSIA {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkImagePipeSurfaceCreateFlagsFUCHSIA,
+    pub imagePipeHandle: zx_handle_t,
+}
+pub type PFN_vkCreateImagePipeSurfaceFUCHSIA = 
+    unsafe extern "C" fn(
+        instance: VkInstance,
+        pCreateInfo: *const VkImagePipeSurfaceCreateInfoFUCHSIA,
+        pAllocator: *const VkAllocationCallbacks,
+        pSurface: *mut VkSurfaceKHR,
+    ) -> VkResult
+;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImportMemoryZirconHandleInfoFUCHSIA {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub handleType: VkExternalMemoryHandleTypeFlagBits,
+    pub handle: zx_handle_t,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkMemoryZirconHandlePropertiesFUCHSIA {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub memoryTypeBits: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkMemoryGetZirconHandleInfoFUCHSIA {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub memory: VkDeviceMemory,
+    pub handleType: VkExternalMemoryHandleTypeFlagBits,
+}
+pub type PFN_vkGetMemoryZirconHandleFUCHSIA = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pGetZirconHandleInfo: *const VkMemoryGetZirconHandleInfoFUCHSIA,
+        pZirconHandle: *mut zx_handle_t,
+    ) -> VkResult
+;
+pub type PFN_vkGetMemoryZirconHandlePropertiesFUCHSIA = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        handleType: VkExternalMemoryHandleTypeFlagBits,
+        zirconHandle: zx_handle_t,
+        pMemoryZirconHandleProperties: *mut VkMemoryZirconHandlePropertiesFUCHSIA,
+    ) -> VkResult
+;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImportSemaphoreZirconHandleInfoFUCHSIA {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub semaphore: VkSemaphore,
+    pub flags: VkSemaphoreImportFlags,
+    pub handleType: VkExternalSemaphoreHandleTypeFlagBits,
+    pub zirconHandle: zx_handle_t,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkSemaphoreGetZirconHandleInfoFUCHSIA {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub semaphore: VkSemaphore,
+    pub handleType: VkExternalSemaphoreHandleTypeFlagBits,
+}
+pub type PFN_vkImportSemaphoreZirconHandleFUCHSIA = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pImportSemaphoreZirconHandleInfo: *const VkImportSemaphoreZirconHandleInfoFUCHSIA,
+    ) -> VkResult
+;
+pub type PFN_vkGetSemaphoreZirconHandleFUCHSIA = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pGetZirconHandleInfo: *const VkSemaphoreGetZirconHandleInfoFUCHSIA,
+        pZirconHandle: *mut zx_handle_t,
+    ) -> VkResult
+;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkBufferCollectionFUCHSIA_T {
+    _unused: [u8; 0],
+}
+pub type VkBufferCollectionFUCHSIA = *mut VkBufferCollectionFUCHSIA_T;
+pub const VkImageFormatConstraintsFlagBitsFUCHSIA_VK_IMAGE_FORMAT_CONSTRAINTS_FLAG_BITS_MAX_ENUM_FUCHSIA : VkImageFormatConstraintsFlagBitsFUCHSIA = 2147483647 ;
+pub type VkImageFormatConstraintsFlagBitsFUCHSIA = ::std::os::raw::c_uint;
+pub type VkImageFormatConstraintsFlagsFUCHSIA = VkFlags;
+pub const VkImageConstraintsInfoFlagBitsFUCHSIA_VK_IMAGE_CONSTRAINTS_INFO_CPU_READ_RARELY_FUCHSIA : VkImageConstraintsInfoFlagBitsFUCHSIA = 1 ;
+pub const VkImageConstraintsInfoFlagBitsFUCHSIA_VK_IMAGE_CONSTRAINTS_INFO_CPU_READ_OFTEN_FUCHSIA:
+    VkImageConstraintsInfoFlagBitsFUCHSIA = 2;
+pub const VkImageConstraintsInfoFlagBitsFUCHSIA_VK_IMAGE_CONSTRAINTS_INFO_CPU_WRITE_RARELY_FUCHSIA : VkImageConstraintsInfoFlagBitsFUCHSIA = 4 ;
+pub const VkImageConstraintsInfoFlagBitsFUCHSIA_VK_IMAGE_CONSTRAINTS_INFO_CPU_WRITE_OFTEN_FUCHSIA : VkImageConstraintsInfoFlagBitsFUCHSIA = 8 ;
+pub const VkImageConstraintsInfoFlagBitsFUCHSIA_VK_IMAGE_CONSTRAINTS_INFO_PROTECTED_OPTIONAL_FUCHSIA : VkImageConstraintsInfoFlagBitsFUCHSIA = 16 ;
+pub const VkImageConstraintsInfoFlagBitsFUCHSIA_VK_IMAGE_CONSTRAINTS_INFO_FLAG_BITS_MAX_ENUM_FUCHSIA : VkImageConstraintsInfoFlagBitsFUCHSIA = 2147483647 ;
+pub type VkImageConstraintsInfoFlagBitsFUCHSIA = ::std::os::raw::c_uint;
+pub type VkImageConstraintsInfoFlagsFUCHSIA = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkBufferCollectionCreateInfoFUCHSIA {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub collectionToken: zx_handle_t,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImportMemoryBufferCollectionFUCHSIA {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub collection: VkBufferCollectionFUCHSIA,
+    pub index: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkBufferCollectionImageCreateInfoFUCHSIA {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub collection: VkBufferCollectionFUCHSIA,
+    pub index: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkBufferCollectionConstraintsInfoFUCHSIA {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub minBufferCount: u32,
+    pub maxBufferCount: u32,
+    pub minBufferCountForCamping: u32,
+    pub minBufferCountForDedicatedSlack: u32,
+    pub minBufferCountForSharedSlack: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkBufferConstraintsInfoFUCHSIA {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub createInfo: VkBufferCreateInfo,
+    pub requiredFormatFeatures: VkFormatFeatureFlags,
+    pub bufferCollectionConstraints: VkBufferCollectionConstraintsInfoFUCHSIA,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkBufferCollectionBufferCreateInfoFUCHSIA {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub collection: VkBufferCollectionFUCHSIA,
+    pub index: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkSysmemColorSpaceFUCHSIA {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub colorSpace: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkBufferCollectionPropertiesFUCHSIA {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub memoryTypeBits: u32,
+    pub bufferCount: u32,
+    pub createInfoIndex: u32,
+    pub sysmemPixelFormat: u64,
+    pub formatFeatures: VkFormatFeatureFlags,
+    pub sysmemColorSpaceIndex: VkSysmemColorSpaceFUCHSIA,
+    pub samplerYcbcrConversionComponents: VkComponentMapping,
+    pub suggestedYcbcrModel: VkSamplerYcbcrModelConversion,
+    pub suggestedYcbcrRange: VkSamplerYcbcrRange,
+    pub suggestedXChromaOffset: VkChromaLocation,
+    pub suggestedYChromaOffset: VkChromaLocation,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImageFormatConstraintsInfoFUCHSIA {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub imageCreateInfo: VkImageCreateInfo,
+    pub requiredFormatFeatures: VkFormatFeatureFlags,
+    pub flags: VkImageFormatConstraintsFlagsFUCHSIA,
+    pub sysmemPixelFormat: u64,
+    pub colorSpaceCount: u32,
+    pub pColorSpaces: *const VkSysmemColorSpaceFUCHSIA,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImageConstraintsInfoFUCHSIA {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub formatConstraintsCount: u32,
+    pub pFormatConstraints: *const VkImageFormatConstraintsInfoFUCHSIA,
+    pub bufferCollectionConstraints: VkBufferCollectionConstraintsInfoFUCHSIA,
+    pub flags: VkImageConstraintsInfoFlagsFUCHSIA,
+}
+pub type PFN_vkCreateBufferCollectionFUCHSIA = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pCreateInfo: *const VkBufferCollectionCreateInfoFUCHSIA,
+        pAllocator: *const VkAllocationCallbacks,
+        pCollection: *mut VkBufferCollectionFUCHSIA,
+    ) -> VkResult
+;
+pub type PFN_vkSetBufferCollectionImageConstraintsFUCHSIA = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        collection: VkBufferCollectionFUCHSIA,
+        pImageConstraintsInfo: *const VkImageConstraintsInfoFUCHSIA,
+    ) -> VkResult
+;
+pub type PFN_vkSetBufferCollectionBufferConstraintsFUCHSIA = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        collection: VkBufferCollectionFUCHSIA,
+        pBufferConstraintsInfo: *const VkBufferConstraintsInfoFUCHSIA,
+    ) -> VkResult
+;
+pub type PFN_vkDestroyBufferCollectionFUCHSIA = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        collection: VkBufferCollectionFUCHSIA,
+        pAllocator: *const VkAllocationCallbacks,
+    )
+;
+pub type PFN_vkGetBufferCollectionPropertiesFUCHSIA = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        collection: VkBufferCollectionFUCHSIA,
+        pProperties: *mut VkBufferCollectionPropertiesFUCHSIA,
+    ) -> VkResult
+;
+pub type VkIOSSurfaceCreateFlagsMVK = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkIOSSurfaceCreateInfoMVK {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkIOSSurfaceCreateFlagsMVK,
+    pub pView: *const ::std::os::raw::c_void,
+}
+pub type PFN_vkCreateIOSSurfaceMVK = 
+    unsafe extern "C" fn(
+        instance: VkInstance,
+        pCreateInfo: *const VkIOSSurfaceCreateInfoMVK,
+        pAllocator: *const VkAllocationCallbacks,
+        pSurface: *mut VkSurfaceKHR,
+    ) -> VkResult
+;
+pub type VkMacOSSurfaceCreateFlagsMVK = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkMacOSSurfaceCreateInfoMVK {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkMacOSSurfaceCreateFlagsMVK,
+    pub pView: *const ::std::os::raw::c_void,
+}
+pub type PFN_vkCreateMacOSSurfaceMVK = 
+    unsafe extern "C" fn(
+        instance: VkInstance,
+        pCreateInfo: *const VkMacOSSurfaceCreateInfoMVK,
+        pAllocator: *const VkAllocationCallbacks,
+        pSurface: *mut VkSurfaceKHR,
+    ) -> VkResult
+;
+pub type CAMetalLayer = ::std::os::raw::c_void;
+pub type VkMetalSurfaceCreateFlagsEXT = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkMetalSurfaceCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkMetalSurfaceCreateFlagsEXT,
+    pub pLayer: *const CAMetalLayer,
+}
+pub type PFN_vkCreateMetalSurfaceEXT = 
+    unsafe extern "C" fn(
+        instance: VkInstance,
+        pCreateInfo: *const VkMetalSurfaceCreateInfoEXT,
+        pAllocator: *const VkAllocationCallbacks,
+        pSurface: *mut VkSurfaceKHR,
+    ) -> VkResult
+;
+pub type VkScreenSurfaceCreateFlagsQNX = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkScreenSurfaceCreateInfoQNX {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkScreenSurfaceCreateFlagsQNX,
+    pub context: *mut _screen_context,
+    pub window: *mut _screen_window,
+}
+pub type PFN_vkCreateScreenSurfaceQNX = 
+    unsafe extern "C" fn(
+        instance: VkInstance,
+        pCreateInfo: *const VkScreenSurfaceCreateInfoQNX,
+        pAllocator: *const VkAllocationCallbacks,
+        pSurface: *mut VkSurfaceKHR,
+    ) -> VkResult
+;
+pub type PFN_vkGetPhysicalDeviceScreenPresentationSupportQNX = 
+    unsafe extern "C" fn(
+        physicalDevice: VkPhysicalDevice,
+        queueFamilyIndex: u32,
+        window: *mut _screen_window,
+    ) -> VkBool32
+;
+pub type VkViSurfaceCreateFlagsNN = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkViSurfaceCreateInfoNN {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkViSurfaceCreateFlagsNN,
+    pub window: *mut ::std::os::raw::c_void,
+}
+pub type PFN_vkCreateViSurfaceNN = 
+    unsafe extern "C" fn(
+        instance: VkInstance,
+        pCreateInfo: *const VkViSurfaceCreateInfoNN,
+        pAllocator: *const VkAllocationCallbacks,
+        pSurface: *mut VkSurfaceKHR,
+    ) -> VkResult
+;
+pub type VkWaylandSurfaceCreateFlagsKHR = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkWaylandSurfaceCreateInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkWaylandSurfaceCreateFlagsKHR,
+    pub display: *mut wl_display,
+    pub surface: *mut wl_surface,
+}
+pub type PFN_vkCreateWaylandSurfaceKHR = 
+    unsafe extern "C" fn(
+        instance: VkInstance,
+        pCreateInfo: *const VkWaylandSurfaceCreateInfoKHR,
+        pAllocator: *const VkAllocationCallbacks,
+        pSurface: *mut VkSurfaceKHR,
+    ) -> VkResult
+;
+pub type PFN_vkGetPhysicalDeviceWaylandPresentationSupportKHR = 
+    unsafe extern "C" fn(
+        physicalDevice: VkPhysicalDevice,
+        queueFamilyIndex: u32,
+        display: *mut wl_display,
+    ) -> VkBool32
+;
+pub type VkWin32SurfaceCreateFlagsKHR = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkWin32SurfaceCreateInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkWin32SurfaceCreateFlagsKHR,
+    pub hinstance: HINSTANCE,
+    pub hwnd: HWND,
+}
+pub type PFN_vkCreateWin32SurfaceKHR = 
+    unsafe extern "C" fn(
+        instance: VkInstance,
+        pCreateInfo: *const VkWin32SurfaceCreateInfoKHR,
+        pAllocator: *const VkAllocationCallbacks,
+        pSurface: *mut VkSurfaceKHR,
+    ) -> VkResult
+;
+pub type PFN_vkGetPhysicalDeviceWin32PresentationSupportKHR = 
+    unsafe extern "C" fn(physicalDevice: VkPhysicalDevice, queueFamilyIndex: u32) -> VkBool32
+;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImportMemoryWin32HandleInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub handleType: VkExternalMemoryHandleTypeFlagBits,
+    pub handle: HANDLE,
+    pub name: LPCWSTR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkExportMemoryWin32HandleInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pAttributes: *const SECURITY_ATTRIBUTES,
+    pub dwAccess: DWORD,
+    pub name: LPCWSTR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkMemoryWin32HandlePropertiesKHR {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub memoryTypeBits: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkMemoryGetWin32HandleInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub memory: VkDeviceMemory,
+    pub handleType: VkExternalMemoryHandleTypeFlagBits,
+}
+pub type PFN_vkGetMemoryWin32HandleKHR = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pGetWin32HandleInfo: *const VkMemoryGetWin32HandleInfoKHR,
+        pHandle: *mut HANDLE,
+    ) -> VkResult
+;
+pub type PFN_vkGetMemoryWin32HandlePropertiesKHR = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        handleType: VkExternalMemoryHandleTypeFlagBits,
+        handle: HANDLE,
+        pMemoryWin32HandleProperties: *mut VkMemoryWin32HandlePropertiesKHR,
+    ) -> VkResult
+;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkWin32KeyedMutexAcquireReleaseInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub acquireCount: u32,
+    pub pAcquireSyncs: *const VkDeviceMemory,
+    pub pAcquireKeys: *const u64,
+    pub pAcquireTimeouts: *const u32,
+    pub releaseCount: u32,
+    pub pReleaseSyncs: *const VkDeviceMemory,
+    pub pReleaseKeys: *const u64,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImportSemaphoreWin32HandleInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub semaphore: VkSemaphore,
+    pub flags: VkSemaphoreImportFlags,
+    pub handleType: VkExternalSemaphoreHandleTypeFlagBits,
+    pub handle: HANDLE,
+    pub name: LPCWSTR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkExportSemaphoreWin32HandleInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pAttributes: *const SECURITY_ATTRIBUTES,
+    pub dwAccess: DWORD,
+    pub name: LPCWSTR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkD3D12FenceSubmitInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub waitSemaphoreValuesCount: u32,
+    pub pWaitSemaphoreValues: *const u64,
+    pub signalSemaphoreValuesCount: u32,
+    pub pSignalSemaphoreValues: *const u64,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkSemaphoreGetWin32HandleInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub semaphore: VkSemaphore,
+    pub handleType: VkExternalSemaphoreHandleTypeFlagBits,
+}
+pub type PFN_vkImportSemaphoreWin32HandleKHR = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pImportSemaphoreWin32HandleInfo: *const VkImportSemaphoreWin32HandleInfoKHR,
+    ) -> VkResult
+;
+pub type PFN_vkGetSemaphoreWin32HandleKHR = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pGetWin32HandleInfo: *const VkSemaphoreGetWin32HandleInfoKHR,
+        pHandle: *mut HANDLE,
+    ) -> VkResult
+;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImportFenceWin32HandleInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub fence: VkFence,
+    pub flags: VkFenceImportFlags,
+    pub handleType: VkExternalFenceHandleTypeFlagBits,
+    pub handle: HANDLE,
+    pub name: LPCWSTR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkExportFenceWin32HandleInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pAttributes: *const SECURITY_ATTRIBUTES,
+    pub dwAccess: DWORD,
+    pub name: LPCWSTR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkFenceGetWin32HandleInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub fence: VkFence,
+    pub handleType: VkExternalFenceHandleTypeFlagBits,
+}
+pub type PFN_vkImportFenceWin32HandleKHR = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pImportFenceWin32HandleInfo: *const VkImportFenceWin32HandleInfoKHR,
+    ) -> VkResult
+;
+pub type PFN_vkGetFenceWin32HandleKHR = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pGetWin32HandleInfo: *const VkFenceGetWin32HandleInfoKHR,
+        pHandle: *mut HANDLE,
+    ) -> VkResult
+;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImportMemoryWin32HandleInfoNV {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub handleType: VkExternalMemoryHandleTypeFlagsNV,
+    pub handle: HANDLE,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkExportMemoryWin32HandleInfoNV {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pAttributes: *const SECURITY_ATTRIBUTES,
+    pub dwAccess: DWORD,
+}
+pub type PFN_vkGetMemoryWin32HandleNV = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        memory: VkDeviceMemory,
+        handleType: VkExternalMemoryHandleTypeFlagsNV,
+        pHandle: *mut HANDLE,
+    ) -> VkResult
+;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkWin32KeyedMutexAcquireReleaseInfoNV {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub acquireCount: u32,
+    pub pAcquireSyncs: *const VkDeviceMemory,
+    pub pAcquireKeys: *const u64,
+    pub pAcquireTimeoutMilliseconds: *const u32,
+    pub releaseCount: u32,
+    pub pReleaseSyncs: *const VkDeviceMemory,
+    pub pReleaseKeys: *const u64,
+}
+pub const VkFullScreenExclusiveEXT_VK_FULL_SCREEN_EXCLUSIVE_DEFAULT_EXT: VkFullScreenExclusiveEXT =
+    0;
+pub const VkFullScreenExclusiveEXT_VK_FULL_SCREEN_EXCLUSIVE_ALLOWED_EXT: VkFullScreenExclusiveEXT =
+    1;
+pub const VkFullScreenExclusiveEXT_VK_FULL_SCREEN_EXCLUSIVE_DISALLOWED_EXT:
+    VkFullScreenExclusiveEXT = 2;
+pub const VkFullScreenExclusiveEXT_VK_FULL_SCREEN_EXCLUSIVE_APPLICATION_CONTROLLED_EXT:
+    VkFullScreenExclusiveEXT = 3;
+pub const VkFullScreenExclusiveEXT_VK_FULL_SCREEN_EXCLUSIVE_MAX_ENUM_EXT: VkFullScreenExclusiveEXT =
+    2147483647;
+pub type VkFullScreenExclusiveEXT = ::std::os::raw::c_uint;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkSurfaceFullScreenExclusiveInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub fullScreenExclusive: VkFullScreenExclusiveEXT,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkSurfaceCapabilitiesFullScreenExclusiveEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub fullScreenExclusiveSupported: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkSurfaceFullScreenExclusiveWin32InfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub hmonitor: HMONITOR,
+}
+pub type PFN_vkGetPhysicalDeviceSurfacePresentModes2EXT = 
+    unsafe extern "C" fn(
+        physicalDevice: VkPhysicalDevice,
+        pSurfaceInfo: *const VkPhysicalDeviceSurfaceInfo2KHR,
+        pPresentModeCount: *mut u32,
+        pPresentModes: *mut VkPresentModeKHR,
+    ) -> VkResult
+;
+pub type PFN_vkAcquireFullScreenExclusiveModeEXT = 
+    unsafe extern "C" fn(device: VkDevice, swapchain: VkSwapchainKHR) -> VkResult
+;
+pub type PFN_vkReleaseFullScreenExclusiveModeEXT = 
+    unsafe extern "C" fn(device: VkDevice, swapchain: VkSwapchainKHR) -> VkResult
+;
+pub type PFN_vkGetDeviceGroupSurfacePresentModes2EXT = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pSurfaceInfo: *const VkPhysicalDeviceSurfaceInfo2KHR,
+        pModes: *mut VkDeviceGroupPresentModeFlagsKHR,
+    ) -> VkResult
+;
+pub type VkXcbSurfaceCreateFlagsKHR = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkXcbSurfaceCreateInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkXcbSurfaceCreateFlagsKHR,
+    pub connection: *mut xcb_connection_t,
+    pub window: xcb_window_t,
+}
+pub type PFN_vkCreateXcbSurfaceKHR = 
+    unsafe extern "C" fn(
+        instance: VkInstance,
+        pCreateInfo: *const VkXcbSurfaceCreateInfoKHR,
+        pAllocator: *const VkAllocationCallbacks,
+        pSurface: *mut VkSurfaceKHR,
+    ) -> VkResult
+;
+pub type PFN_vkGetPhysicalDeviceXcbPresentationSupportKHR = 
+    unsafe extern "C" fn(
+        physicalDevice: VkPhysicalDevice,
+        queueFamilyIndex: u32,
+        connection: *mut xcb_connection_t,
+        visual_id: xcb_visualid_t,
+    ) -> VkBool32
+;
+pub type VkXlibSurfaceCreateFlagsKHR = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkXlibSurfaceCreateInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkXlibSurfaceCreateFlagsKHR,
+    pub dpy: *mut Display,
+    pub window: Window,
+}
+pub type PFN_vkCreateXlibSurfaceKHR = 
+    unsafe extern "C" fn(
+        instance: VkInstance,
+        pCreateInfo: *const VkXlibSurfaceCreateInfoKHR,
+        pAllocator: *const VkAllocationCallbacks,
+        pSurface: *mut VkSurfaceKHR,
+    ) -> VkResult
+;
+pub type PFN_vkGetPhysicalDeviceXlibPresentationSupportKHR = 
+    unsafe extern "C" fn(
+        physicalDevice: VkPhysicalDevice,
+        queueFamilyIndex: u32,
+        dpy: *mut Display,
+        visualID: VisualID,
+    ) -> VkBool32
+;
+pub type PFN_vkAcquireXlibDisplayEXT = 
+    unsafe extern "C" fn(
+        physicalDevice: VkPhysicalDevice,
+        dpy: *mut Display,
+        display: VkDisplayKHR,
+    ) -> VkResult
+;
+pub type PFN_vkGetRandROutputDisplayEXT = 
+    unsafe extern "C" fn(
+        physicalDevice: VkPhysicalDevice,
+        dpy: *mut Display,
+        rrOutput: RROutput,
+        pDisplay: *mut VkDisplayKHR,
+    ) -> VkResult
+;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _screen_context {
+    pub _address: u8,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _screen_window {
+    pub _address: u8,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct wl_display {
+    pub _address: u8,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct wl_surface {
+    pub _address: u8,
 }
