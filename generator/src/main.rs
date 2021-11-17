@@ -5,13 +5,11 @@ use std::io;
 use std::io::Write;
 
 /*
-use std::io::{BufReader, BufRead, BufWriter, Write};
+use std::io::{BufReader, BufRead, BufWriter};
 use std::fs::{File, OpenOptions};
 use std::collections::HashMap;
 use regex::Regex;
- */
 
-/*
 pub fn enum_generator(source: &str, dest: &str,
                       name: &str, new_name: &str, guard: &str,
                       ends: Option<Vec<&str>>) {
@@ -87,16 +85,11 @@ fn enum_all(src: &str, enum_path: &str) {
     ).unwrap();
     output.flush().unwrap();
 
-    enum_generator(src, enum_path, "VkFormat", "Format", "FORMAT",
-                   Some(vec!["_EXT", "_KHR"]));
-
-    enum_generator(src, enum_path, "VkColorSpaceKHR", "ColorSpace", "COLOR_SPACE",
-                   Some(vec!["_KHR", "_EXT", "_AMD"]));
-
-    /*
-    enum_generator(src, enum_path, "VkPresentModeKHR", "PresentMode", "PRESENT_MODE",
-                   Some(vec!["_KHR"]));
-     */
+    enum_generator(src, enum_path, "VkFormat", "VkFormat", "FORMAT", Some(vec!["_EXT", "_KHR"]));
+    enum_generator(src, enum_path, "VkColorSpaceKHR", "VkColorSpace", "COLOR_SPACE", Some(vec!["_KHR", "_EXT", "_AMD"]));
+    enum_generator(src, enum_path, "VkPhysicalDeviceType", "VkPhysicalDeviceType", "PHYSICAL_DEVICE_TYPE", None);
+    enum_generator(src, enum_path, "VkQueueFlagBits", "VkQueueFlagBits", "QUEUE", Some(vec!["_BIT", "_BIT_KHR"]));
+    enum_generator(src, enum_path, "VkPresentModeKHR", "VkPresentMode", "PRESENT_MODE", Some(vec!["_KHR"]));
 }
 */
 
@@ -153,6 +146,6 @@ fn main() {
     io::stdout().write_all(&output.stdout).unwrap();
     io::stderr().write_all(&output.stderr).unwrap();
 
-    //let src = out_path.join("vulkan_bundle2").to_path_buf();
+    //let src = out_path.join("vulkan_generated.rs").to_path_buf();
     //enum_all(src.to_str().unwrap(), out_path.join("vulkan_enum.rs").to_str().unwrap());
 }

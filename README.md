@@ -61,7 +61,7 @@ Displays a window with a purple background.
 ![screenshot](examples/mira_color.png)
 
 ## Vulkan version
-1.2.189.0
+1.2.195
 
 ## License
 [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)
