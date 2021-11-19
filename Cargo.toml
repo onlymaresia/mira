@@ -1,6 +1,6 @@
 [package]
 name = "mira"
-version = "0.1.11"
+version = "0.1.12"
 authors = ["maresia <https://github.com/onlymaresia>"]
 edition = "2018"
 license = "Apache-2.0"
