@@ -18,9 +18,9 @@ pub struct Version {
 
 impl Version {
     /// Constructs a Version using variant, major, minor, patch
-    pub fn make(variant:u8, major:u8, minor:u8, patch:u8) -> Self {
+    pub fn make(major:u8, minor:u8, patch:u8) -> Self {
         Self {
-            variant, major, minor, patch
+            variant: 0, major, minor, patch
         }
     }
 
