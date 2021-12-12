@@ -77,12 +77,12 @@ fn main() -> Result<(), MiraError> {
 
     create_instance = unsafe { loader::instance(std::ptr::null_mut(), const_cstr!("vkCreateInstance"))? };
 
-    app_info.sType = VkStructureType_VK_STRUCTURE_TYPE_APPLICATION_INFO;
+    app_info.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
     app_info.pApplicationName = const_cstr!("mira/color").as_ptr();
     app_info.applicationVersion = VK_MAKE_API_VERSION(0, 0, 1, 0);
     app_info.apiVersion = VK_MAKE_API_VERSION(0, 1, 0, 0);
 
-    instance_info.sType = VkStructureType_VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+    instance_info.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
     instance_info.pApplicationInfo = &app_info;
     instance_info.ppEnabledLayerNames = layers.as_ptr();
     instance_info.enabledLayerCount = layers.len() as u32;
@@ -90,7 +90,7 @@ fn main() -> Result<(), MiraError> {
     instance_info.enabledExtensionCount = extensions.len() as u32;
 
     match unsafe { create_instance(&instance_info, std::ptr::null_mut(), &mut instance) } {
-        VkResult_VK_SUCCESS => {},
+        VK_SUCCESS => {},
         error => {
             println!("vulkan error {}", error);
             return Ok(());
@@ -119,7 +119,7 @@ fn main() -> Result<(), MiraError> {
 
     let mut count:u32 = 0;
     match unsafe { enumerate_adapters(instance, &mut count, std::ptr::null_mut()) } {
-        VkResult_VK_SUCCESS => {},
+        VK_SUCCESS => {},
         error => {
             println!("vulkan error {}", error);
             return Ok(());
@@ -128,7 +128,7 @@ fn main() -> Result<(), MiraError> {
 
     let mut adapters = unsafe { zeroed_vec::<VkPhysicalDevice>(count as usize) };
     match unsafe { enumerate_adapters(instance, &mut count, adapters.as_mut_ptr()) } {
-        VkResult_VK_SUCCESS => {},
+        VK_SUCCESS => {},
         error => {
             println!("vulkan error {}", error);
             return Ok(());
@@ -136,8 +136,7 @@ fn main() -> Result<(), MiraError> {
     }
 
     let mut selected_adapter:VkPhysicalDevice = unsafe { std::mem::zeroed() };
-    let gpu_range = VkPhysicalDeviceType_VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU ..=
-                    VkPhysicalDeviceType_VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU;
+    let gpu_range = VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU ..= VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU;
 
     for adapter in adapters.iter() {
         let mut adapter_properties:VkPhysicalDeviceProperties = unsafe { std::mem::zeroed() };
@@ -163,7 +162,7 @@ fn main() -> Result<(), MiraError> {
     unsafe { get_queues_properties(selected_adapter, &mut count, queues_properties.as_mut_ptr()) };
 
     let mut selected = false;
-    let queue_capabilities = VkQueueFlagBits_VK_QUEUE_GRAPHICS_BIT | VkQueueFlagBits_VK_QUEUE_COMPUTE_BIT;
+    let queue_capabilities = VK_QUEUE_GRAPHICS_BIT | VK_QUEUE_COMPUTE_BIT;
     let mut selected_queuefamily:u32 = 0;
     for queue_properties in queues_properties.iter().enumerate() {
         let mut support:u32 = 0;
@@ -182,7 +181,7 @@ fn main() -> Result<(), MiraError> {
     }
 
     let mut queues_info = unsafe { zeroed_vec::<VkDeviceQueueCreateInfo>(1) };
-    queues_info[0].sType = VkStructureType_VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
+    queues_info[0].sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
     queues_info[0].queueFamilyIndex = selected_queuefamily;
     queues_info[0].queueCount = 1;
     queues_info[0].pQueuePriorities = &1.0f32;
@@ -192,7 +191,7 @@ fn main() -> Result<(), MiraError> {
     ];
 
     let mut device_info:VkDeviceCreateInfo = unsafe { std::mem::zeroed() };
-    device_info.sType = VkStructureType_VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
+    device_info.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
     device_info.pQueueCreateInfos = queues_info.as_ptr();
     device_info.queueCreateInfoCount = queues_info.len() as u32;
     device_info.ppEnabledExtensionNames = device_extensions.as_ptr();
@@ -200,7 +199,7 @@ fn main() -> Result<(), MiraError> {
 
     let mut device:VkDevice = unsafe { std::mem::zeroed() };
     match unsafe { create_device(selected_adapter, &device_info, std::ptr::null_mut(), &mut device) } {
-        VkResult_VK_SUCCESS => {},
+        VK_SUCCESS => {},
         error => {
             println!("vulkan error {}", error);
             return Ok(());
@@ -232,7 +231,7 @@ fn main() -> Result<(), MiraError> {
     unsafe { get_queue(device, selected_queuefamily, 0, &mut queue) };
 
     let semaphore_info = VkSemaphoreCreateInfo {
-        sType: VkStructureType_VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO,
+        sType: VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO,
         pNext: std::ptr::null_mut(),
         flags: 0
     };
@@ -241,7 +240,7 @@ fn main() -> Result<(), MiraError> {
     let mut image_available:VkSemaphore = unsafe { std::mem::zeroed() };
 
     match unsafe { create_semaphore(device, &semaphore_info, std::ptr::null_mut(), &mut image_available) } {
-        VkResult_VK_SUCCESS => {},
+        VK_SUCCESS => {},
         error => {
             println!("vulkan error {}", error);
             return Ok(());
@@ -249,7 +248,7 @@ fn main() -> Result<(), MiraError> {
     }
 
     match unsafe { create_semaphore(device, &semaphore_info, std::ptr::null_mut(), &mut rendering_finished) } {
-        VkResult_VK_SUCCESS => {},
+        VK_SUCCESS => {},
         error => {
             println!("vulkan error {}", error);
             return Ok(());
@@ -258,14 +257,14 @@ fn main() -> Result<(), MiraError> {
 
     let mut command_pool:VkCommandPool = unsafe { std::mem::zeroed() };
     let command_pool_info = VkCommandPoolCreateInfo {
-        sType: VkStructureType_VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO,
+        sType: VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO,
         pNext: std::ptr::null_mut(),
         flags: 0,
         queueFamilyIndex: selected_queuefamily,
     };
 
     match unsafe { create_command_pool(device, &command_pool_info, std::ptr::null_mut(), &mut command_pool) } {
-        VkResult_VK_SUCCESS => {},
+        VK_SUCCESS => {},
         error => {
             println!("vulkan error {}", error);
             return Ok(());
@@ -273,9 +272,9 @@ fn main() -> Result<(), MiraError> {
     }
 
     let begin_info = VkCommandBufferBeginInfo {
-        sType: VkStructureType_VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO,
+        sType: VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO,
         pNext: std::ptr::null_mut(),
-        flags: VkCommandBufferUsageFlagBits_VK_COMMAND_BUFFER_USAGE_SIMULTANEOUS_USE_BIT,
+        flags: VK_COMMAND_BUFFER_USAGE_SIMULTANEOUS_USE_BIT,
         pInheritanceInfo: std::ptr::null_mut(),
     };
 
@@ -284,7 +283,7 @@ fn main() -> Result<(), MiraError> {
     };
 
     let image_subresource_range = VkImageSubresourceRange {
-        aspectMask: VkImageAspectFlagBits_VK_IMAGE_ASPECT_COLOR_BIT,
+        aspectMask: VK_IMAGE_ASPECT_COLOR_BIT,
         baseMipLevel: 0,
         levelCount: 1,
         baseArrayLayer: 0,
@@ -322,7 +321,7 @@ fn main() -> Result<(), MiraError> {
                     //swapchain
                     let mut surface_capabilities:VkSurfaceCapabilitiesKHR = unsafe { std::mem::zeroed() };
                     match unsafe { get_surface_capabilities(selected_adapter, surface, &mut surface_capabilities) } {
-                        VkResult_VK_SUCCESS => {},
+                        VK_SUCCESS => {},
                         error => {
                             println!("vulkan error {}", error);
                             return Ok(());
@@ -330,7 +329,7 @@ fn main() -> Result<(), MiraError> {
                     }
 
                     let image_usage;
-                    let required_image_usage:u32 = VkImageUsageFlagBits_VK_IMAGE_USAGE_TRANSFER_DST_BIT|VkImageUsageFlagBits_VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT;
+                    let required_image_usage:u32 = VK_IMAGE_USAGE_TRANSFER_DST_BIT|VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT;
                     if (surface_capabilities.supportedUsageFlags & required_image_usage) != required_image_usage {
                         println!("VK_IMAGE_USAGE_TRANSFER_DST image usage is not supported");
                         return Ok(());
@@ -345,8 +344,8 @@ fn main() -> Result<(), MiraError> {
 
                     let mut selected_format:VkSurfaceFormatKHR = unsafe { std::mem::zeroed() };
                     for surface_format in surface_formats {
-                        if  surface_format.format == VkFormat_VK_FORMAT_B8G8R8A8_SRGB &&
-                            surface_format.colorSpace == VkColorSpaceKHR_VK_COLORSPACE_SRGB_NONLINEAR_KHR {
+                        if  surface_format.format == VK_FORMAT_B8G8R8A8_SRGB &&
+                            surface_format.colorSpace == VK_COLORSPACE_SRGB_NONLINEAR_KHR {
                             selected_format = surface_format;
                             break;
                         }
@@ -360,7 +359,7 @@ fn main() -> Result<(), MiraError> {
                     let image_count = surface_capabilities.minImageCount + 1;
 
                     let swapchain_info = VkSwapchainCreateInfoKHR {
-                        sType: VkStructureType_VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR,
+                        sType: VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR,
                         pNext: std::ptr::null_mut(),
                         flags: 0,
                         surface,
@@ -370,12 +369,12 @@ fn main() -> Result<(), MiraError> {
                         imageExtent: surface_capabilities.currentExtent,
                         imageArrayLayers: 1,
                         imageUsage: image_usage,
-                        imageSharingMode: VkSharingMode_VK_SHARING_MODE_EXCLUSIVE,
+                        imageSharingMode: VK_SHARING_MODE_EXCLUSIVE,
                         queueFamilyIndexCount: 0,
                         pQueueFamilyIndices: std::ptr::null_mut(),
-                        presentMode: VkPresentModeKHR_VK_PRESENT_MODE_FIFO_KHR,
+                        presentMode: VK_PRESENT_MODE_FIFO_KHR,
                         preTransform: surface_capabilities.currentTransform,
-                        compositeAlpha: VkCompositeAlphaFlagBitsKHR_VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR,
+                        compositeAlpha: VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR,
                         clipped: 1,
                         oldSwapchain: std::ptr::null_mut(),
                     };
@@ -383,15 +382,15 @@ fn main() -> Result<(), MiraError> {
                     commands = unsafe { zeroed_vec::<VkCommandBuffer>(image_count as usize) };
 
                     let command_buffer_info = VkCommandBufferAllocateInfo {
-                        sType: VkStructureType_VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO,
+                        sType: VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO,
                         pNext: std::ptr::null_mut(),
                         commandPool: command_pool,
-                        level: VkCommandBufferLevel_VK_COMMAND_BUFFER_LEVEL_PRIMARY,
+                        level: VK_COMMAND_BUFFER_LEVEL_PRIMARY,
                         commandBufferCount: commands.len() as u32,
                     };
 
                     match unsafe { allocate_command_buffers(device, &command_buffer_info, commands.as_mut_ptr()) } {
-                        VkResult_VK_SUCCESS => {},
+                        VK_SUCCESS => {},
                         error => {
                             println!("vulkan error {}", error);
                             return Ok(());
@@ -399,7 +398,7 @@ fn main() -> Result<(), MiraError> {
                     }
 
                     match unsafe { create_swapchain(device, &swapchain_info, std::ptr::null_mut(), &mut swapchain) } {
-                        VkResult_VK_SUCCESS => {},
+                        VK_SUCCESS => {},
                         error => {
                             println!("vulkan error {}", error);
                             return Ok(());
@@ -408,7 +407,7 @@ fn main() -> Result<(), MiraError> {
 
                     let mut image_count:u32 = 0;
                     match unsafe { get_swapchain_images(device, swapchain, &mut image_count, std::ptr::null_mut()) } {
-                        VkResult_VK_SUCCESS => {},
+                        VK_SUCCESS => {},
                         error => {
                             println!("vulkan error {}", error);
                             return Ok(());
@@ -417,7 +416,7 @@ fn main() -> Result<(), MiraError> {
 
                     let mut images = unsafe { zeroed_vec::<VkImage>(image_count as usize) };
                     match unsafe { get_swapchain_images(device, swapchain, &mut image_count, images.as_mut_ptr()) } {
-                        VkResult_VK_SUCCESS => {},
+                        VK_SUCCESS => {},
                         error => {
                             println!("vulkan error {}", error);
                             return Ok(());
@@ -426,7 +425,7 @@ fn main() -> Result<(), MiraError> {
 
                     let mut next_image:u32 = 0;
                     match unsafe { acquire_next_image(device, swapchain, u64::MAX, image_available, std::ptr::null_mut(), &mut next_image) } {
-                        VkResult_VK_SUCCESS => {},
+                        VK_SUCCESS => {},
                         error => {
                             println!("vulkan error {}", error);
                             return Ok(());
@@ -435,12 +434,12 @@ fn main() -> Result<(), MiraError> {
 
                     for command in commands.iter().enumerate() {
                         let from_present_to_clear = VkImageMemoryBarrier {
-                            sType: VkStructureType_VK_STRUCTURE_TYPE_IMAGE_MEMORY_BARRIER,
+                            sType: VK_STRUCTURE_TYPE_IMAGE_MEMORY_BARRIER,
                             pNext: std::ptr::null_mut(),
-                            srcAccessMask: VkAccessFlagBits_VK_ACCESS_MEMORY_READ_BIT,
-                            dstAccessMask: VkAccessFlagBits_VK_ACCESS_TRANSFER_WRITE_BIT,
-                            oldLayout: VkImageLayout_VK_IMAGE_LAYOUT_UNDEFINED,
-                            newLayout: VkImageLayout_VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,
+                            srcAccessMask: VK_ACCESS_MEMORY_READ_BIT,
+                            dstAccessMask: VK_ACCESS_TRANSFER_WRITE_BIT,
+                            oldLayout: VK_IMAGE_LAYOUT_UNDEFINED,
+                            newLayout: VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,
                             srcQueueFamilyIndex: selected_queuefamily,
                             dstQueueFamilyIndex: selected_queuefamily,
                             image: images[command.0],
@@ -448,12 +447,12 @@ fn main() -> Result<(), MiraError> {
                         };
 
                         let from_clear_to_present = VkImageMemoryBarrier {
-                            sType: VkStructureType_VK_STRUCTURE_TYPE_IMAGE_MEMORY_BARRIER,
+                            sType: VK_STRUCTURE_TYPE_IMAGE_MEMORY_BARRIER,
                             pNext: std::ptr::null_mut(),
-                            dstAccessMask: VkAccessFlagBits_VK_ACCESS_MEMORY_READ_BIT,
-                            srcAccessMask: VkAccessFlagBits_VK_ACCESS_TRANSFER_WRITE_BIT,
-                            newLayout: VkImageLayout_VK_IMAGE_LAYOUT_PRESENT_SRC_KHR,
-                            oldLayout: VkImageLayout_VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,
+                            dstAccessMask: VK_ACCESS_MEMORY_READ_BIT,
+                            srcAccessMask: VK_ACCESS_TRANSFER_WRITE_BIT,
+                            newLayout: VK_IMAGE_LAYOUT_PRESENT_SRC_KHR,
+                            oldLayout: VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,
                             srcQueueFamilyIndex: selected_queuefamily,
                             dstQueueFamilyIndex: selected_queuefamily,
                             image: images[command.0],
@@ -465,16 +464,16 @@ fn main() -> Result<(), MiraError> {
                             begin_command_buffer(cmd, &begin_info);
 
                             cmd_pipeline_barrier(cmd,
-                                                 VkPipelineStageFlagBits_VK_PIPELINE_STAGE_TRANSFER_BIT, VkPipelineStageFlagBits_VK_PIPELINE_STAGE_TRANSFER_BIT,
+                                                 VK_PIPELINE_STAGE_TRANSFER_BIT, VK_PIPELINE_STAGE_TRANSFER_BIT,
                                                  0, 0, std::ptr::null_mut(), 0, std::ptr::null_mut(), 1, &from_present_to_clear);
-                            cmd_clear_color_image(cmd, images[command.0], VkImageLayout_VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,
+                            cmd_clear_color_image(cmd, images[command.0], VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,
                                                   &clear_color, 1, &image_subresource_range);
                             cmd_pipeline_barrier(cmd,
-                                                 VkPipelineStageFlagBits_VK_PIPELINE_STAGE_TRANSFER_BIT, VkPipelineStageFlagBits_VK_PIPELINE_STAGE_BOTTOM_OF_PIPE_BIT,
+                                                 VK_PIPELINE_STAGE_TRANSFER_BIT, VK_PIPELINE_STAGE_BOTTOM_OF_PIPE_BIT,
                                                  0, 0, std::ptr::null_mut(), 0, std::ptr::null_mut(), 1, &from_clear_to_present);
 
                             match end_command_buffer(cmd) {
-                                VkResult_VK_SUCCESS => {},
+                                VK_SUCCESS => {},
                                 error => {
                                     println!("vulkan error {}", error);
                                     return Ok(());
@@ -484,11 +483,11 @@ fn main() -> Result<(), MiraError> {
                     }
 
                     let submit_info = VkSubmitInfo {
-                        sType: VkStructureType_VK_STRUCTURE_TYPE_SUBMIT_INFO,
+                        sType: VK_STRUCTURE_TYPE_SUBMIT_INFO,
                         pNext: std::ptr::null_mut(),
                         waitSemaphoreCount: 1,
                         pWaitSemaphores: &image_available,
-                        pWaitDstStageMask: &VkPipelineStageFlagBits_VK_PIPELINE_STAGE_TRANSFER_BIT,
+                        pWaitDstStageMask: &VK_PIPELINE_STAGE_TRANSFER_BIT,
                         commandBufferCount: 1,
                         pCommandBuffers: &commands[next_image as usize],
                         signalSemaphoreCount: 1,
@@ -496,7 +495,7 @@ fn main() -> Result<(), MiraError> {
                     };
 
                     match unsafe { queue_submit(queue, 1, &submit_info, std::ptr::null_mut()) } {
-                        VkResult_VK_SUCCESS => {},
+                        VK_SUCCESS => {},
                         error => {
                             println!("vulkan error {}", error);
                             return Ok(());
@@ -504,7 +503,7 @@ fn main() -> Result<(), MiraError> {
                     }
 
                     let present_info = VkPresentInfoKHR {
-                        sType: VkStructureType_VK_STRUCTURE_TYPE_PRESENT_INFO_KHR,
+                        sType: VK_STRUCTURE_TYPE_PRESENT_INFO_KHR,
                         pNext: std::ptr::null_mut(),
                         waitSemaphoreCount: 1,
                         pWaitSemaphores: &rendering_finished,
@@ -515,7 +514,7 @@ fn main() -> Result<(), MiraError> {
                     };
 
                     match unsafe { queue_present(queue, &present_info) } {
-                        VkResult_VK_SUCCESS => {},
+                        VK_SUCCESS => {},
                         error => {
                             println!("vulkan error {}", error);
                             return Ok(());

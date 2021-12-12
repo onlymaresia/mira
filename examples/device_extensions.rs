@@ -10,7 +10,7 @@ fn main() -> Result<(), MiraError> {
     ];
 
     let mut instance_info:VkInstanceCreateInfo = unsafe { std::mem::zeroed() };
-    instance_info.sType = VkStructureType_VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+    instance_info.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
     instance_info.ppEnabledLayerNames = layers.as_ptr();
     instance_info.enabledLayerCount = layers.len() as u32;
 
