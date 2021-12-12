@@ -177,7 +177,7 @@ pub const SIZE_MAX: i32 = -1;
 pub const WINT_MIN: u32 = 0;
 pub const WINT_MAX: u32 = 4294967295;
 pub const VK_USE_64_BIT_PTR_DEFINES: u32 = 1;
-pub const VK_HEADER_VERSION: u32 = 195;
+pub const VK_HEADER_VERSION: u32 = 202;
 pub const VK_UUID_SIZE: u32 = 16;
 pub const VK_ATTACHMENT_UNUSED: i32 = -1;
 pub const VK_FALSE: u32 = 0;
@@ -217,6 +217,10 @@ pub const VK_KHR_sampler_mirror_clamp_to_edge: u32 = 1;
 pub const VK_KHR_SAMPLER_MIRROR_CLAMP_TO_EDGE_SPEC_VERSION: u32 = 3;
 pub const VK_KHR_SAMPLER_MIRROR_CLAMP_TO_EDGE_EXTENSION_NAME: &'static [u8; 36usize] =
     b"VK_KHR_sampler_mirror_clamp_to_edge\0";
+pub const VK_KHR_dynamic_rendering: u32 = 1;
+pub const VK_KHR_DYNAMIC_RENDERING_SPEC_VERSION: u32 = 1;
+pub const VK_KHR_DYNAMIC_RENDERING_EXTENSION_NAME: &'static [u8; 25usize] =
+    b"VK_KHR_dynamic_rendering\0";
 pub const VK_KHR_multiview: u32 = 1;
 pub const VK_KHR_MULTIVIEW_SPEC_VERSION: u32 = 1;
 pub const VK_KHR_MULTIVIEW_EXTENSION_NAME: &'static [u8; 17usize] = b"VK_KHR_multiview\0";
@@ -484,7 +488,7 @@ pub const VK_KHR_FORMAT_FEATURE_FLAGS_2_SPEC_VERSION: u32 = 1;
 pub const VK_KHR_FORMAT_FEATURE_FLAGS_2_EXTENSION_NAME: &'static [u8; 29usize] =
     b"VK_KHR_format_feature_flags2\0";
 pub const VK_KHR_maintenance4: u32 = 1;
-pub const VK_KHR_MAINTENANCE_4_SPEC_VERSION: u32 = 1;
+pub const VK_KHR_MAINTENANCE_4_SPEC_VERSION: u32 = 2;
 pub const VK_KHR_MAINTENANCE_4_EXTENSION_NAME: &'static [u8; 20usize] = b"VK_KHR_maintenance4\0";
 pub const VK_EXT_debug_report: u32 = 1;
 pub const VK_EXT_DEBUG_REPORT_SPEC_VERSION: u32 = 10;
@@ -1022,6 +1026,10 @@ pub const VK_EXT_IMAGE_ROBUSTNESS_EXTENSION_NAME: &'static [u8; 24usize] =
 pub const VK_EXT_4444_formats: u32 = 1;
 pub const VK_EXT_4444_FORMATS_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_4444_FORMATS_EXTENSION_NAME: &'static [u8; 20usize] = b"VK_EXT_4444_formats\0";
+pub const VK_ARM_rasterization_order_attachment_access: u32 = 1;
+pub const VK_ARM_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_SPEC_VERSION: u32 = 1;
+pub const VK_ARM_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_EXTENSION_NAME: &'static [u8; 45usize] =
+    b"VK_ARM_rasterization_order_attachment_access\0";
 pub const VK_EXT_rgba10x6_formats: u32 = 1;
 pub const VK_EXT_RGBA10X6_FORMATS_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_RGBA10X6_FORMATS_EXTENSION_NAME: &'static [u8; 24usize] =
@@ -1042,6 +1050,10 @@ pub const VK_EXT_physical_device_drm: u32 = 1;
 pub const VK_EXT_PHYSICAL_DEVICE_DRM_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_PHYSICAL_DEVICE_DRM_EXTENSION_NAME: &'static [u8; 27usize] =
     b"VK_EXT_physical_device_drm\0";
+pub const VK_EXT_depth_clip_control: u32 = 1;
+pub const VK_EXT_DEPTH_CLIP_CONTROL_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_DEPTH_CLIP_CONTROL_EXTENSION_NAME: &'static [u8; 26usize] =
+    b"VK_EXT_depth_clip_control\0";
 pub const VK_EXT_primitive_topology_list_restart: u32 = 1;
 pub const VK_EXT_PRIMITIVE_TOPOLOGY_LIST_RESTART_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_PRIMITIVE_TOPOLOGY_LIST_RESTART_EXTENSION_NAME: &'static [u8; 39usize] =
@@ -1071,6 +1083,10 @@ pub const VK_MAX_GLOBAL_PRIORITY_SIZE_EXT: u32 = 16;
 pub const VK_EXT_GLOBAL_PRIORITY_QUERY_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_GLOBAL_PRIORITY_QUERY_EXTENSION_NAME: &'static [u8; 29usize] =
     b"VK_EXT_global_priority_query\0";
+pub const VK_EXT_image_view_min_lod: u32 = 1;
+pub const VK_EXT_IMAGE_VIEW_MIN_LOD_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_IMAGE_VIEW_MIN_LOD_EXTENSION_NAME: &'static [u8; 26usize] =
+    b"VK_EXT_image_view_min_lod\0";
 pub const VK_EXT_multi_draw: u32 = 1;
 pub const VK_EXT_MULTI_DRAW_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_MULTI_DRAW_EXTENSION_NAME: &'static [u8; 18usize] = b"VK_EXT_multi_draw\0";
@@ -1078,6 +1094,10 @@ pub const VK_EXT_load_store_op_none: u32 = 1;
 pub const VK_EXT_LOAD_STORE_OP_NONE_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_LOAD_STORE_OP_NONE_EXTENSION_NAME: &'static [u8; 26usize] =
     b"VK_EXT_load_store_op_none\0";
+pub const VK_EXT_border_color_swizzle: u32 = 1;
+pub const VK_EXT_BORDER_COLOR_SWIZZLE_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_BORDER_COLOR_SWIZZLE_EXTENSION_NAME: &'static [u8; 28usize] =
+    b"VK_EXT_border_color_swizzle\0";
 pub const VK_EXT_pageable_device_local_memory: u32 = 1;
 pub const VK_EXT_PAGEABLE_DEVICE_LOCAL_MEMORY_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_PAGEABLE_DEVICE_LOCAL_MEMORY_EXTENSION_NAME: &'static [u8; 36usize] =
@@ -1123,20 +1143,50 @@ pub const VULKAN_VIDEO_CODEC_H264STD_H_: u32 = 1;
 pub const VULKAN_VIDEO_CODEC_COMMON_H_: u32 = 1;
 pub const VK_STD_VULKAN_VIDEO_CODEC_H264_EXTENSION_NAME: &'static [u8; 31usize] =
     b"VK_STD_vulkan_video_codec_h264\0";
+pub const STD_VIDEO_H264_CPB_CNT_LIST_SIZE: u32 = 32;
+pub const STD_VIDEO_H264_SCALING_LIST_4X4_NUM_LISTS: u32 = 6;
+pub const STD_VIDEO_H264_SCALING_LIST_4X4_NUM_ELEMENTS: u32 = 16;
+pub const STD_VIDEO_H264_SCALING_LIST_8X8_NUM_LISTS: u32 = 2;
+pub const STD_VIDEO_H264_SCALING_LIST_8X8_NUM_ELEMENTS: u32 = 64;
 pub const VULKAN_VIDEO_CODEC_H264STD_ENCODE_H_: u32 = 1;
 pub const VK_EXT_VIDEO_ENCODE_H264_SPEC_VERSION: u32 = 2;
 pub const VK_EXT_VIDEO_ENCODE_H264_EXTENSION_NAME: &'static [u8; 25usize] =
     b"VK_EXT_video_encode_h264\0";
+pub const VK_EXT_video_encode_h265: u32 = 1;
+pub const VULKAN_VIDEO_CODEC_H265STD_H_: u32 = 1;
+pub const VK_STD_VULKAN_VIDEO_CODEC_H265_EXTENSION_NAME: &'static [u8; 31usize] =
+    b"VK_STD_vulkan_video_codec_h265\0";
+pub const STD_VIDEO_H265_CPB_CNT_LIST_SIZE: u32 = 32;
+pub const STD_VIDEO_H265_SUBLAYERS_MINUS1_LIST_SIZE: u32 = 7;
+pub const STD_VIDEO_H265_SCALING_LIST_4X4_NUM_LISTS: u32 = 6;
+pub const STD_VIDEO_H265_SCALING_LIST_4X4_NUM_ELEMENTS: u32 = 16;
+pub const STD_VIDEO_H265_SCALING_LIST_8X8_NUM_LISTS: u32 = 6;
+pub const STD_VIDEO_H265_SCALING_LIST_8X8_NUM_ELEMENTS: u32 = 64;
+pub const STD_VIDEO_H265_SCALING_LIST_16X16_NUM_LISTS: u32 = 6;
+pub const STD_VIDEO_H265_SCALING_LIST_16X16_NUM_ELEMENTS: u32 = 64;
+pub const STD_VIDEO_H265_SCALING_LIST_32X32_NUM_LISTS: u32 = 2;
+pub const STD_VIDEO_H265_SCALING_LIST_32X32_NUM_ELEMENTS: u32 = 64;
+pub const STD_VIDEO_H265_CHROMA_QP_OFFSET_LIST_SIZE: u32 = 6;
+pub const STD_VIDEO_H265_CHROMA_QP_OFFSET_TILE_COLS_LIST_SIZE: u32 = 19;
+pub const STD_VIDEO_H265_CHROMA_QP_OFFSET_TILE_ROWS_LIST_SIZE: u32 = 21;
+pub const STD_VIDEO_H265_PREDICTOR_PALETTE_COMPONENTS_LIST_SIZE: u32 = 3;
+pub const STD_VIDEO_H265_PREDICTOR_PALETTE_COMP_ENTRIES_LIST_SIZE: u32 = 128;
+pub const VULKAN_VIDEO_CODEC_H265STD_ENCODE_H_: u32 = 1;
+pub const STD_VIDEO_ENCODE_H265_LUMA_LIST_SIZE: u32 = 15;
+pub const STD_VIDEO_ENCODE_H265_CHROMA_LIST_SIZE: u32 = 15;
+pub const STD_VIDEO_ENCODE_H265_CHROMA_LISTS_NUM: u32 = 2;
+pub const VK_EXT_VIDEO_ENCODE_H265_SPEC_VERSION: u32 = 2;
+pub const VK_EXT_VIDEO_ENCODE_H265_EXTENSION_NAME: &'static [u8; 25usize] =
+    b"VK_EXT_video_encode_h265\0";
 pub const VK_EXT_video_decode_h264: u32 = 1;
 pub const VULKAN_VIDEO_CODEC_H264STD_DECODE_H_: u32 = 1;
+pub const STD_VIDEO_DECODE_H264_MVC_REF_LIST_SIZE: u32 = 15;
 pub const VK_EXT_VIDEO_DECODE_H264_SPEC_VERSION: u32 = 3;
 pub const VK_EXT_VIDEO_DECODE_H264_EXTENSION_NAME: &'static [u8; 25usize] =
     b"VK_EXT_video_decode_h264\0";
 pub const VK_EXT_video_decode_h265: u32 = 1;
-pub const VULKAN_VIDEO_CODEC_H265STD_H_: u32 = 1;
-pub const VK_STD_VULKAN_VIDEO_CODEC_H265_EXTENSION_NAME: &'static [u8; 31usize] =
-    b"VK_STD_vulkan_video_codec_h265\0";
 pub const VULKAN_VIDEO_CODEC_H265STD_DECODE_H_: u32 = 1;
+pub const STD_VIDEO_DECODE_H265_REF_PIC_SET_LIST_SIZE: u32 = 8;
 pub const VK_EXT_VIDEO_DECODE_H265_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_VIDEO_DECODE_H265_EXTENSION_NAME: &'static [u8; 25usize] =
     b"VK_EXT_video_decode_h265\0";
@@ -1893,6 +1943,34 @@ pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_EMIT_PICTURE_PARAMETERS_EXT:
     VkStructureType = 1000038007;
 pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_PROFILE_EXT: VkStructureType =
     1000038008;
+pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_RATE_CONTROL_INFO_EXT:
+    VkStructureType = 1000038009;
+pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_RATE_CONTROL_LAYER_INFO_EXT:
+    VkStructureType = 1000038010;
+pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_CAPABILITIES_EXT: VkStructureType =
+    1000039000;
+pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_SESSION_CREATE_INFO_EXT:
+    VkStructureType = 1000039001;
+pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT:
+    VkStructureType = 1000039002;
+pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT:
+    VkStructureType = 1000039003;
+pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_VCL_FRAME_INFO_EXT: VkStructureType =
+    1000039004;
+pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_DPB_SLOT_INFO_EXT: VkStructureType =
+    1000039005;
+pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_NALU_SLICE_EXT: VkStructureType =
+    1000039006;
+pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_EMIT_PICTURE_PARAMETERS_EXT:
+    VkStructureType = 1000039007;
+pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_PROFILE_EXT: VkStructureType =
+    1000039008;
+pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_REFERENCE_LISTS_EXT: VkStructureType =
+    1000039009;
+pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_RATE_CONTROL_INFO_EXT:
+    VkStructureType = 1000039010;
+pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_RATE_CONTROL_LAYER_INFO_EXT:
+    VkStructureType = 1000039011;
 pub const VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_CAPABILITIES_EXT: VkStructureType =
     1000040000;
 pub const VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_SESSION_CREATE_INFO_EXT:
@@ -1910,6 +1988,23 @@ pub const VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT: VkStructureType
     1000040007;
 pub const VK_STRUCTURE_TYPE_TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD:
     VkStructureType = 1000041000;
+pub const VK_STRUCTURE_TYPE_RENDERING_INFO_KHR: VkStructureType = 1000044000;
+pub const VK_STRUCTURE_TYPE_RENDERING_ATTACHMENT_INFO_KHR: VkStructureType =
+    1000044001;
+pub const VK_STRUCTURE_TYPE_PIPELINE_RENDERING_CREATE_INFO_KHR: VkStructureType =
+    1000044002;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DYNAMIC_RENDERING_FEATURES_KHR:
+    VkStructureType = 1000044003;
+pub const VK_STRUCTURE_TYPE_COMMAND_BUFFER_INHERITANCE_RENDERING_INFO_KHR:
+    VkStructureType = 1000044004;
+pub const VK_STRUCTURE_TYPE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR:
+    VkStructureType = 1000044006;
+pub const VK_STRUCTURE_TYPE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_INFO_EXT:
+    VkStructureType = 1000044007;
+pub const VK_STRUCTURE_TYPE_ATTACHMENT_SAMPLE_COUNT_INFO_AMD: VkStructureType =
+    1000044008;
+pub const VK_STRUCTURE_TYPE_MULTIVIEW_PER_VIEW_ATTRIBUTES_INFO_NVX:
+    VkStructureType = 1000044009;
 pub const VK_STRUCTURE_TYPE_STREAM_DESCRIPTOR_SURFACE_CREATE_INFO_GGP:
     VkStructureType = 1000049000;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV:
@@ -2399,6 +2494,8 @@ pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEAT
 pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_INFO_KHR: VkStructureType = 1000299000;
 pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_RATE_CONTROL_INFO_KHR: VkStructureType =
     1000299001;
+pub const VK_STRUCTURE_TYPE_VIDEO_ENCODE_RATE_CONTROL_LAYER_INFO_KHR:
+    VkStructureType = 1000299002;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV:
     VkStructureType = 1000300000;
 pub const VK_STRUCTURE_TYPE_DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV:
@@ -2452,6 +2549,7 @@ pub const VK_STRUCTURE_TYPE_BUFFER_IMAGE_COPY_2_KHR: VkStructureType = 100033700
 pub const VK_STRUCTURE_TYPE_IMAGE_RESOLVE_2_KHR: VkStructureType = 1000337010;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT:
     VkStructureType = 1000340000;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_FEATURES_ARM : VkStructureType = 1000342000 ;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_RGBA10X6_FORMATS_FEATURES_EXT:
     VkStructureType = 1000344000;
 pub const VK_STRUCTURE_TYPE_DIRECTFB_SURFACE_CREATE_INFO_EXT: VkStructureType =
@@ -2466,6 +2564,10 @@ pub const VK_STRUCTURE_TYPE_VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT:
     VkStructureType = 1000352002;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DRM_PROPERTIES_EXT: VkStructureType =
     1000353000;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DEPTH_CLIP_CONTROL_FEATURES_EXT:
+    VkStructureType = 1000355000;
+pub const VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_DEPTH_CLIP_CONTROL_CREATE_INFO_EXT:
+    VkStructureType = 1000355001;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PRIMITIVE_TOPOLOGY_LIST_RESTART_FEATURES_EXT : VkStructureType = 1000356000 ;
 pub const VK_STRUCTURE_TYPE_FORMAT_PROPERTIES_3_KHR: VkStructureType = 1000360000;
 pub const VK_STRUCTURE_TYPE_IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA:
@@ -2521,10 +2623,17 @@ pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_EXT:
     VkStructureType = 1000388000;
 pub const VK_STRUCTURE_TYPE_QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_EXT:
     VkStructureType = 1000388001;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_IMAGE_VIEW_MIN_LOD_FEATURES_EXT:
+    VkStructureType = 1000391000;
+pub const VK_STRUCTURE_TYPE_IMAGE_VIEW_MIN_LOD_CREATE_INFO_EXT: VkStructureType =
+    1000391001;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MULTI_DRAW_FEATURES_EXT:
     VkStructureType = 1000392000;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT:
     VkStructureType = 1000392001;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_BORDER_COLOR_SWIZZLE_FEATURES_EXT:
+    VkStructureType = 1000411000;
+pub const VK_STRUCTURE_TYPE_SAMPLER_BORDER_COLOR_COMPONENT_MAPPING_CREATE_INFO_EXT : VkStructureType = 1000411001 ;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PAGEABLE_DEVICE_LOCAL_MEMORY_FEATURES_EXT : VkStructureType = 1000412000 ;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MAINTENANCE_4_FEATURES_KHR:
     VkStructureType = 1000413000;
@@ -2540,6 +2649,8 @@ pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_DRAW_PARAMETER_FEATURES:
     VkStructureType = 1000063000;
 pub const VK_STRUCTURE_TYPE_DEBUG_REPORT_CREATE_INFO_EXT: VkStructureType =
     1000011000;
+pub const VK_STRUCTURE_TYPE_ATTACHMENT_SAMPLE_COUNT_INFO_NV: VkStructureType =
+    1000044008;
 pub const VK_STRUCTURE_TYPE_RENDER_PASS_MULTIVIEW_CREATE_INFO_KHR: VkStructureType =
     1000053000;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MULTIVIEW_FEATURES_KHR:
@@ -3450,8 +3561,9 @@ pub const VK_ATTACHMENT_LOAD_OP_MAX_ENUM: VkAttachmentLoadOp = 2147483647;
 pub type VkAttachmentLoadOp = ::std::os::raw::c_uint;
 pub const VK_ATTACHMENT_STORE_OP_STORE: VkAttachmentStoreOp = 0;
 pub const VK_ATTACHMENT_STORE_OP_DONT_CARE: VkAttachmentStoreOp = 1;
-pub const VK_ATTACHMENT_STORE_OP_NONE_EXT: VkAttachmentStoreOp = 1000301000;
+pub const VK_ATTACHMENT_STORE_OP_NONE_KHR: VkAttachmentStoreOp = 1000301000;
 pub const VK_ATTACHMENT_STORE_OP_NONE_QCOM: VkAttachmentStoreOp = 1000301000;
+pub const VK_ATTACHMENT_STORE_OP_NONE_EXT: VkAttachmentStoreOp = 1000301000;
 pub const VK_ATTACHMENT_STORE_OP_MAX_ENUM: VkAttachmentStoreOp = 2147483647;
 pub type VkAttachmentStoreOp = ::std::os::raw::c_uint;
 pub const VK_PIPELINE_BIND_POINT_GRAPHICS: VkPipelineBindPoint = 0;
@@ -3533,6 +3645,7 @@ pub const VK_IMAGE_ASPECT_MEMORY_PLANE_1_BIT_EXT: VkImageAspectFlagBits = 256;
 pub const VK_IMAGE_ASPECT_MEMORY_PLANE_2_BIT_EXT: VkImageAspectFlagBits = 512;
 pub const VK_IMAGE_ASPECT_MEMORY_PLANE_3_BIT_EXT: VkImageAspectFlagBits =
     1024;
+pub const VK_IMAGE_ASPECT_NONE_KHR: VkImageAspectFlagBits = 0;
 pub const VK_IMAGE_ASPECT_PLANE_0_BIT_KHR: VkImageAspectFlagBits = 16;
 pub const VK_IMAGE_ASPECT_PLANE_1_BIT_KHR: VkImageAspectFlagBits = 32;
 pub const VK_IMAGE_ASPECT_PLANE_2_BIT_KHR: VkImageAspectFlagBits = 64;
@@ -3925,6 +4038,8 @@ pub const VK_PIPELINE_CREATE_VIEW_INDEX_FROM_DEVICE_INDEX_BIT:
     VkPipelineCreateFlagBits = 8;
 pub const VK_PIPELINE_CREATE_DISPATCH_BASE_BIT: VkPipelineCreateFlagBits =
     16;
+pub const VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR : VkPipelineCreateFlagBits = 2097152 ;
+pub const VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT : VkPipelineCreateFlagBits = 4194304 ;
 pub const VK_PIPELINE_CREATE_RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_BIT_KHR : VkPipelineCreateFlagBits = 16384 ;
 pub const VK_PIPELINE_CREATE_RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_BIT_KHR : VkPipelineCreateFlagBits = 32768 ;
 pub const VK_PIPELINE_CREATE_RAY_TRACING_NO_NULL_MISS_SHADERS_BIT_KHR:
@@ -3952,6 +4067,8 @@ pub const VK_PIPELINE_CREATE_EARLY_RETURN_ON_FAILURE_BIT_EXT:
 pub const VK_PIPELINE_CREATE_RAY_TRACING_ALLOW_MOTION_BIT_NV:
     VkPipelineCreateFlagBits = 1048576;
 pub const VK_PIPELINE_CREATE_DISPATCH_BASE: VkPipelineCreateFlagBits = 16;
+pub const VK_PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR : VkPipelineCreateFlagBits = 2097152 ;
+pub const VK_PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT : VkPipelineCreateFlagBits = 4194304 ;
 pub const VK_PIPELINE_CREATE_VIEW_INDEX_FROM_DEVICE_INDEX_BIT_KHR:
     VkPipelineCreateFlagBits = 8;
 pub const VK_PIPELINE_CREATE_DISPATCH_BASE_KHR: VkPipelineCreateFlagBits =
@@ -4007,7 +4124,14 @@ pub type VkPipelineTessellationStateCreateFlags = VkFlags;
 pub type VkPipelineViewportStateCreateFlags = VkFlags;
 pub type VkPipelineRasterizationStateCreateFlags = VkFlags;
 pub type VkPipelineMultisampleStateCreateFlags = VkFlags;
+pub const VK_PIPELINE_DEPTH_STENCIL_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_BIT_ARM : VkPipelineDepthStencilStateCreateFlagBits = 1 ;
+pub const VK_PIPELINE_DEPTH_STENCIL_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_BIT_ARM : VkPipelineDepthStencilStateCreateFlagBits = 2 ;
+pub const VK_PIPELINE_DEPTH_STENCIL_STATE_CREATE_FLAG_BITS_MAX_ENUM : VkPipelineDepthStencilStateCreateFlagBits = 2147483647 ;
+pub type VkPipelineDepthStencilStateCreateFlagBits = ::std::os::raw::c_uint;
 pub type VkPipelineDepthStencilStateCreateFlags = VkFlags;
+pub const VK_PIPELINE_COLOR_BLEND_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_BIT_ARM : VkPipelineColorBlendStateCreateFlagBits = 1 ;
+pub const VK_PIPELINE_COLOR_BLEND_STATE_CREATE_FLAG_BITS_MAX_ENUM : VkPipelineColorBlendStateCreateFlagBits = 2147483647 ;
+pub type VkPipelineColorBlendStateCreateFlagBits = ::std::os::raw::c_uint;
 pub type VkPipelineColorBlendStateCreateFlags = VkFlags;
 pub type VkPipelineDynamicStateCreateFlags = VkFlags;
 pub type VkPipelineLayoutCreateFlags = VkFlags;
@@ -4076,6 +4200,9 @@ pub const VK_SUBPASS_DESCRIPTION_FRAGMENT_REGION_BIT_QCOM:
     VkSubpassDescriptionFlagBits = 4;
 pub const VK_SUBPASS_DESCRIPTION_SHADER_RESOLVE_BIT_QCOM:
     VkSubpassDescriptionFlagBits = 8;
+pub const VK_SUBPASS_DESCRIPTION_RASTERIZATION_ORDER_ATTACHMENT_COLOR_ACCESS_BIT_ARM : VkSubpassDescriptionFlagBits = 16 ;
+pub const VK_SUBPASS_DESCRIPTION_RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_BIT_ARM : VkSubpassDescriptionFlagBits = 32 ;
+pub const VK_SUBPASS_DESCRIPTION_RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_BIT_ARM : VkSubpassDescriptionFlagBits = 64 ;
 pub const VK_SUBPASS_DESCRIPTION_FLAG_BITS_MAX_ENUM:
     VkSubpassDescriptionFlagBits = 2147483647;
 pub type VkSubpassDescriptionFlagBits = ::std::os::raw::c_uint;
@@ -7393,6 +7520,7 @@ pub const VK_DRIVER_ID_VERISILICON_PROPRIETARY: VkDriverId = 17;
 pub const VK_DRIVER_ID_MESA_TURNIP: VkDriverId = 18;
 pub const VK_DRIVER_ID_MESA_V3DV: VkDriverId = 19;
 pub const VK_DRIVER_ID_MESA_PANVK: VkDriverId = 20;
+pub const VK_DRIVER_ID_SAMSUNG_PROPRIETARY: VkDriverId = 21;
 pub const VK_DRIVER_ID_AMD_PROPRIETARY_KHR: VkDriverId = 1;
 pub const VK_DRIVER_ID_AMD_OPEN_SOURCE_KHR: VkDriverId = 2;
 pub const VK_DRIVER_ID_MESA_RADV_KHR: VkDriverId = 3;
@@ -8631,6 +8759,113 @@ pub type PFN_vkCreateSharedSwapchainsKHR =
         pSwapchains: *mut VkSwapchainKHR,
     ) -> VkResult
 ;
+pub const VK_RENDERING_CONTENTS_SECONDARY_COMMAND_BUFFERS_BIT_KHR:
+    VkRenderingFlagBitsKHR = 1;
+pub const VK_RENDERING_SUSPENDING_BIT_KHR: VkRenderingFlagBitsKHR = 2;
+pub const VK_RENDERING_RESUMING_BIT_KHR: VkRenderingFlagBitsKHR = 4;
+pub const VK_RENDERING_FLAG_BITS_MAX_ENUM_KHR: VkRenderingFlagBitsKHR =
+    2147483647;
+pub type VkRenderingFlagBitsKHR = ::std::os::raw::c_uint;
+pub type VkRenderingFlagsKHR = VkFlags;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct VkRenderingAttachmentInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub imageView: VkImageView,
+    pub imageLayout: VkImageLayout,
+    pub resolveMode: VkResolveModeFlagBits,
+    pub resolveImageView: VkImageView,
+    pub resolveImageLayout: VkImageLayout,
+    pub loadOp: VkAttachmentLoadOp,
+    pub storeOp: VkAttachmentStoreOp,
+    pub clearValue: VkClearValue,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkRenderingInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkRenderingFlagsKHR,
+    pub renderArea: VkRect2D,
+    pub layerCount: u32,
+    pub viewMask: u32,
+    pub colorAttachmentCount: u32,
+    pub pColorAttachments: *const VkRenderingAttachmentInfoKHR,
+    pub pDepthAttachment: *const VkRenderingAttachmentInfoKHR,
+    pub pStencilAttachment: *const VkRenderingAttachmentInfoKHR,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPipelineRenderingCreateInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub viewMask: u32,
+    pub colorAttachmentCount: u32,
+    pub pColorAttachmentFormats: *const VkFormat,
+    pub depthAttachmentFormat: VkFormat,
+    pub stencilAttachmentFormat: VkFormat,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceDynamicRenderingFeaturesKHR {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub dynamicRendering: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkCommandBufferInheritanceRenderingInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkRenderingFlagsKHR,
+    pub viewMask: u32,
+    pub colorAttachmentCount: u32,
+    pub pColorAttachmentFormats: *const VkFormat,
+    pub depthAttachmentFormat: VkFormat,
+    pub stencilAttachmentFormat: VkFormat,
+    pub rasterizationSamples: VkSampleCountFlagBits,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkRenderingFragmentShadingRateAttachmentInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub imageView: VkImageView,
+    pub imageLayout: VkImageLayout,
+    pub shadingRateAttachmentTexelSize: VkExtent2D,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkRenderingFragmentDensityMapAttachmentInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub imageView: VkImageView,
+    pub imageLayout: VkImageLayout,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkAttachmentSampleCountInfoAMD {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub colorAttachmentCount: u32,
+    pub pColorAttachmentSamples: *const VkSampleCountFlagBits,
+    pub depthStencilAttachmentSamples: VkSampleCountFlagBits,
+}
+pub type VkAttachmentSampleCountInfoNV = VkAttachmentSampleCountInfoAMD;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkMultiviewPerViewAttributesInfoNVX {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub perViewAttributes: VkBool32,
+    pub perViewAttributesPositionXOnly: VkBool32,
+}
+pub type PFN_vkCmdBeginRenderingKHR = 
+    unsafe extern "C" fn(commandBuffer: VkCommandBuffer, pRenderingInfo: *const VkRenderingInfoKHR)
+;
+pub type PFN_vkCmdEndRenderingKHR =
+    unsafe extern "C" fn(commandBuffer: VkCommandBuffer);
 pub type VkRenderPassMultiviewCreateInfoKHR = VkRenderPassMultiviewCreateInfo;
 pub type VkPhysicalDeviceMultiviewFeaturesKHR = VkPhysicalDeviceMultiviewFeatures;
 pub type VkPhysicalDeviceMultiviewPropertiesKHR = VkPhysicalDeviceMultiviewProperties;
@@ -14185,6 +14420,15 @@ pub struct VkPhysicalDevice4444FormatsFeaturesEXT {
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub rasterizationOrderColorAttachmentAccess: VkBool32,
+    pub rasterizationOrderDepthAttachmentAccess: VkBool32,
+    pub rasterizationOrderStencilAttachmentAccess: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
 pub struct VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT {
     pub sType: VkStructureType,
     pub pNext: *mut ::std::os::raw::c_void,
@@ -14268,6 +14512,20 @@ pub struct VkPhysicalDeviceDrmPropertiesEXT {
     pub primaryMinor: i64,
     pub renderMajor: i64,
     pub renderMinor: i64,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceDepthClipControlFeaturesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub depthClipControl: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPipelineViewportDepthClipControlCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub negativeOneToOne: VkBool32,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -14407,6 +14665,20 @@ pub struct VkQueueFamilyGlobalPriorityPropertiesEXT {
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceImageViewMinLodFeaturesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub minLod: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImageViewMinLodCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub minLod: f32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
 pub struct VkPhysicalDeviceMultiDrawFeaturesEXT {
     pub sType: VkStructureType,
     pub pNext: *mut ::std::os::raw::c_void,
@@ -14453,6 +14725,22 @@ pub type PFN_vkCmdDrawMultiIndexedEXT =
         pVertexOffset: *const i32,
     )
 ;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceBorderColorSwizzleFeaturesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub borderColorSwizzle: VkBool32,
+    pub borderColorSwizzleFromImage: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkSamplerBorderColorComponentMappingCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub components: VkComponentMapping,
+    pub srgb: VkBool32,
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT {
@@ -15077,6 +15365,8 @@ pub const VK_VIDEO_CODEC_OPERATION_INVALID_BIT_KHR:
     VkVideoCodecOperationFlagBitsKHR = 0;
 pub const VK_VIDEO_CODEC_OPERATION_ENCODE_H264_BIT_EXT:
     VkVideoCodecOperationFlagBitsKHR = 65536;
+pub const VK_VIDEO_CODEC_OPERATION_ENCODE_H265_BIT_EXT:
+    VkVideoCodecOperationFlagBitsKHR = 131072;
 pub const VK_VIDEO_CODEC_OPERATION_DECODE_H264_BIT_EXT:
     VkVideoCodecOperationFlagBitsKHR = 1;
 pub const VK_VIDEO_CODEC_OPERATION_DECODE_H265_BIT_EXT:
@@ -15437,7 +15727,7 @@ pub type VkVideoEncodeFlagBitsKHR = ::std::os::raw::c_uint;
 pub type VkVideoEncodeFlagsKHR = VkFlags;
 pub const VK_VIDEO_ENCODE_RATE_CONTROL_DEFAULT_KHR:
     VkVideoEncodeRateControlFlagBitsKHR = 0;
-pub const VK_VIDEO_ENCODE_RATE_CONTROL_RESET_BIT_KHR:
+pub const VK_VIDEO_ENCODE_RATE_CONTROL_RESERVED_0_BIT_KHR:
     VkVideoEncodeRateControlFlagBitsKHR = 1;
 pub const VK_VIDEO_ENCODE_RATE_CONTROL_FLAG_BITS_MAX_ENUM_KHR : VkVideoEncodeRateControlFlagBitsKHR = 2147483647 ;
 pub type VkVideoEncodeRateControlFlagBitsKHR = ::std::os::raw::c_uint;
@@ -15466,6 +15756,19 @@ pub struct VkVideoEncodeInfoKHR {
     pub pSetupReferenceSlot: *const VkVideoReferenceSlotKHR,
     pub referenceSlotCount: u32,
     pub pReferenceSlots: *const VkVideoReferenceSlotKHR,
+    pub precedingExternallyEncodedBytes: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeRateControlLayerInfoKHR {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub averageBitrate: u32,
+    pub maxBitrate: u32,
+    pub frameRateNumerator: u32,
+    pub frameRateDenominator: u32,
+    pub virtualBufferSizeInMs: u32,
+    pub initialVirtualBufferSizeInMs: u32,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -15474,166 +15777,166 @@ pub struct VkVideoEncodeRateControlInfoKHR {
     pub pNext: *const ::std::os::raw::c_void,
     pub flags: VkVideoEncodeRateControlFlagsKHR,
     pub rateControlMode: VkVideoEncodeRateControlModeFlagBitsKHR,
-    pub averageBitrate: u32,
-    pub peakToAverageBitrateRatio: u16,
-    pub frameRateNumerator: u16,
-    pub frameRateDenominator: u16,
-    pub virtualBufferSizeInMs: u32,
+    pub layerCount: u8,
+    pub pLayerConfigs: *const VkVideoEncodeRateControlLayerInfoKHR,
 }
 pub type PFN_vkCmdEncodeVideoKHR = 
     unsafe extern "C" fn(commandBuffer: VkCommandBuffer, pEncodeInfo: *const VkVideoEncodeInfoKHR)
 ;
-pub const StdVideoH264ChromaFormatIdc_std_video_h264_chroma_format_idc_monochrome:
+pub const StdVideoH264ChromaFormatIdc_STD_VIDEO_H264_CHROMA_FORMAT_IDC_MONOCHROME:
     StdVideoH264ChromaFormatIdc = 0;
-pub const StdVideoH264ChromaFormatIdc_std_video_h264_chroma_format_idc_420:
+pub const StdVideoH264ChromaFormatIdc_STD_VIDEO_H264_CHROMA_FORMAT_IDC_420:
     StdVideoH264ChromaFormatIdc = 1;
-pub const StdVideoH264ChromaFormatIdc_std_video_h264_chroma_format_idc_422:
+pub const StdVideoH264ChromaFormatIdc_STD_VIDEO_H264_CHROMA_FORMAT_IDC_422:
     StdVideoH264ChromaFormatIdc = 2;
-pub const StdVideoH264ChromaFormatIdc_std_video_h264_chroma_format_idc_444:
+pub const StdVideoH264ChromaFormatIdc_STD_VIDEO_H264_CHROMA_FORMAT_IDC_444:
     StdVideoH264ChromaFormatIdc = 3;
+pub const StdVideoH264ChromaFormatIdc_STD_VIDEO_H264_CHROMA_FORMAT_IDC_INVALID:
+    StdVideoH264ChromaFormatIdc = 2147483647;
 pub type StdVideoH264ChromaFormatIdc = ::std::os::raw::c_uint;
-pub const StdVideoH264ProfileIdc_std_video_h264_profile_idc_baseline: StdVideoH264ProfileIdc = 66;
-pub const StdVideoH264ProfileIdc_std_video_h264_profile_idc_main: StdVideoH264ProfileIdc = 77;
-pub const StdVideoH264ProfileIdc_std_video_h264_profile_idc_high: StdVideoH264ProfileIdc = 100;
-pub const StdVideoH264ProfileIdc_std_video_h264_profile_idc_high_444_predictive:
+pub const StdVideoH264ProfileIdc_STD_VIDEO_H264_PROFILE_IDC_BASELINE: StdVideoH264ProfileIdc = 66;
+pub const StdVideoH264ProfileIdc_STD_VIDEO_H264_PROFILE_IDC_MAIN: StdVideoH264ProfileIdc = 77;
+pub const StdVideoH264ProfileIdc_STD_VIDEO_H264_PROFILE_IDC_HIGH: StdVideoH264ProfileIdc = 100;
+pub const StdVideoH264ProfileIdc_STD_VIDEO_H264_PROFILE_IDC_HIGH_444_PREDICTIVE:
     StdVideoH264ProfileIdc = 244;
-pub const StdVideoH264ProfileIdc_std_video_h264_profile_idc_invalid: StdVideoH264ProfileIdc =
+pub const StdVideoH264ProfileIdc_STD_VIDEO_H264_PROFILE_IDC_INVALID: StdVideoH264ProfileIdc =
     2147483647;
 pub type StdVideoH264ProfileIdc = ::std::os::raw::c_uint;
-pub const StdVideoH264Level_std_video_h264_level_1_0: StdVideoH264Level = 0;
-pub const StdVideoH264Level_std_video_h264_level_1_1: StdVideoH264Level = 1;
-pub const StdVideoH264Level_std_video_h264_level_1_2: StdVideoH264Level = 2;
-pub const StdVideoH264Level_std_video_h264_level_1_3: StdVideoH264Level = 3;
-pub const StdVideoH264Level_std_video_h264_level_2_0: StdVideoH264Level = 4;
-pub const StdVideoH264Level_std_video_h264_level_2_1: StdVideoH264Level = 5;
-pub const StdVideoH264Level_std_video_h264_level_2_2: StdVideoH264Level = 6;
-pub const StdVideoH264Level_std_video_h264_level_3_0: StdVideoH264Level = 7;
-pub const StdVideoH264Level_std_video_h264_level_3_1: StdVideoH264Level = 8;
-pub const StdVideoH264Level_std_video_h264_level_3_2: StdVideoH264Level = 9;
-pub const StdVideoH264Level_std_video_h264_level_4_0: StdVideoH264Level = 10;
-pub const StdVideoH264Level_std_video_h264_level_4_1: StdVideoH264Level = 11;
-pub const StdVideoH264Level_std_video_h264_level_4_2: StdVideoH264Level = 12;
-pub const StdVideoH264Level_std_video_h264_level_5_0: StdVideoH264Level = 13;
-pub const StdVideoH264Level_std_video_h264_level_5_1: StdVideoH264Level = 14;
-pub const StdVideoH264Level_std_video_h264_level_5_2: StdVideoH264Level = 15;
-pub const StdVideoH264Level_std_video_h264_level_6_0: StdVideoH264Level = 16;
-pub const StdVideoH264Level_std_video_h264_level_6_1: StdVideoH264Level = 17;
-pub const StdVideoH264Level_std_video_h264_level_6_2: StdVideoH264Level = 18;
-pub const StdVideoH264Level_std_video_h264_level_invalid: StdVideoH264Level = 2147483647;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_1_0: StdVideoH264Level = 0;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_1_1: StdVideoH264Level = 1;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_1_2: StdVideoH264Level = 2;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_1_3: StdVideoH264Level = 3;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_2_0: StdVideoH264Level = 4;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_2_1: StdVideoH264Level = 5;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_2_2: StdVideoH264Level = 6;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_3_0: StdVideoH264Level = 7;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_3_1: StdVideoH264Level = 8;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_3_2: StdVideoH264Level = 9;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_4_0: StdVideoH264Level = 10;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_4_1: StdVideoH264Level = 11;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_4_2: StdVideoH264Level = 12;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_5_0: StdVideoH264Level = 13;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_5_1: StdVideoH264Level = 14;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_5_2: StdVideoH264Level = 15;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_6_0: StdVideoH264Level = 16;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_6_1: StdVideoH264Level = 17;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_6_2: StdVideoH264Level = 18;
+pub const StdVideoH264Level_STD_VIDEO_H264_LEVEL_INVALID: StdVideoH264Level = 2147483647;
 pub type StdVideoH264Level = ::std::os::raw::c_uint;
-pub const StdVideoH264PocType_std_video_h264_poc_type_0: StdVideoH264PocType = 0;
-pub const StdVideoH264PocType_std_video_h264_poc_type_1: StdVideoH264PocType = 1;
-pub const StdVideoH264PocType_std_video_h264_poc_type_2: StdVideoH264PocType = 2;
-pub const StdVideoH264PocType_std_video_h264_poc_type_invalid: StdVideoH264PocType = 2147483647;
+pub const StdVideoH264PocType_STD_VIDEO_H264_POC_TYPE_0: StdVideoH264PocType = 0;
+pub const StdVideoH264PocType_STD_VIDEO_H264_POC_TYPE_1: StdVideoH264PocType = 1;
+pub const StdVideoH264PocType_STD_VIDEO_H264_POC_TYPE_2: StdVideoH264PocType = 2;
+pub const StdVideoH264PocType_STD_VIDEO_H264_POC_TYPE_INVALID: StdVideoH264PocType = 2147483647;
 pub type StdVideoH264PocType = ::std::os::raw::c_uint;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_unspecified:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_UNSPECIFIED:
     StdVideoH264AspectRatioIdc = 0;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_square:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_SQUARE:
     StdVideoH264AspectRatioIdc = 1;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_12_11:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_12_11:
     StdVideoH264AspectRatioIdc = 2;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_10_11:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_10_11:
     StdVideoH264AspectRatioIdc = 3;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_16_11:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_16_11:
     StdVideoH264AspectRatioIdc = 4;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_40_33:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_40_33:
     StdVideoH264AspectRatioIdc = 5;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_24_11:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_24_11:
     StdVideoH264AspectRatioIdc = 6;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_20_11:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_20_11:
     StdVideoH264AspectRatioIdc = 7;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_32_11:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_32_11:
     StdVideoH264AspectRatioIdc = 8;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_80_33:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_80_33:
     StdVideoH264AspectRatioIdc = 9;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_18_11:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_18_11:
     StdVideoH264AspectRatioIdc = 10;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_15_11:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_15_11:
     StdVideoH264AspectRatioIdc = 11;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_64_33:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_64_33:
     StdVideoH264AspectRatioIdc = 12;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_160_99:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_160_99:
     StdVideoH264AspectRatioIdc = 13;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_4_3:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_4_3:
     StdVideoH264AspectRatioIdc = 14;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_3_2:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_3_2:
     StdVideoH264AspectRatioIdc = 15;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_2_1:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_2_1:
     StdVideoH264AspectRatioIdc = 16;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_extended_sar:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_EXTENDED_SAR:
     StdVideoH264AspectRatioIdc = 255;
-pub const StdVideoH264AspectRatioIdc_std_video_h264_aspect_ratio_idc_invalid:
+pub const StdVideoH264AspectRatioIdc_STD_VIDEO_H264_ASPECT_RATIO_IDC_INVALID:
     StdVideoH264AspectRatioIdc = 2147483647;
 pub type StdVideoH264AspectRatioIdc = ::std::os::raw::c_uint;
-pub const StdVideoH264WeightedBiPredIdc_std_video_h264_default_weighted_b_slices_prediction_idc:
-    StdVideoH264WeightedBiPredIdc = 0;
-pub const StdVideoH264WeightedBiPredIdc_std_video_h264_explicit_weighted_b_slices_prediction_idc:
-    StdVideoH264WeightedBiPredIdc = 1;
-pub const StdVideoH264WeightedBiPredIdc_std_video_h264_implicit_weighted_b_slices_prediction_idc:
-    StdVideoH264WeightedBiPredIdc = 2;
-pub const StdVideoH264WeightedBiPredIdc_std_video_h264_invalid_weighted_b_slices_prediction_idc:
-    StdVideoH264WeightedBiPredIdc = 2147483647;
-pub type StdVideoH264WeightedBiPredIdc = ::std::os::raw::c_uint;
-pub const StdVideoH264ModificationOfPicNumsIdc_std_video_h264_modification_of_pic_nums_idc_short_term_subtract : StdVideoH264ModificationOfPicNumsIdc = 0 ;
-pub const StdVideoH264ModificationOfPicNumsIdc_std_video_h264_modification_of_pic_nums_idc_short_term_add : StdVideoH264ModificationOfPicNumsIdc = 1 ;
-pub const StdVideoH264ModificationOfPicNumsIdc_std_video_h264_modification_of_pic_nums_idc_long_term : StdVideoH264ModificationOfPicNumsIdc = 2 ;
-pub const StdVideoH264ModificationOfPicNumsIdc_std_video_h264_modification_of_pic_nums_idc_end:
+pub const StdVideoH264WeightedBipredIdc_STD_VIDEO_H264_WEIGHTED_BIPRED_IDC_DEFAULT:
+    StdVideoH264WeightedBipredIdc = 0;
+pub const StdVideoH264WeightedBipredIdc_STD_VIDEO_H264_WEIGHTED_BIPRED_IDC_EXPLICIT:
+    StdVideoH264WeightedBipredIdc = 1;
+pub const StdVideoH264WeightedBipredIdc_STD_VIDEO_H264_WEIGHTED_BIPRED_IDC_IMPLICIT:
+    StdVideoH264WeightedBipredIdc = 2;
+pub const StdVideoH264WeightedBipredIdc_STD_VIDEO_H264_WEIGHTED_BIPRED_IDC_INVALID:
+    StdVideoH264WeightedBipredIdc = 2147483647;
+pub type StdVideoH264WeightedBipredIdc = ::std::os::raw::c_uint;
+pub const StdVideoH264ModificationOfPicNumsIdc_STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_SHORT_TERM_SUBTRACT : StdVideoH264ModificationOfPicNumsIdc = 0 ;
+pub const StdVideoH264ModificationOfPicNumsIdc_STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_SHORT_TERM_ADD : StdVideoH264ModificationOfPicNumsIdc = 1 ;
+pub const StdVideoH264ModificationOfPicNumsIdc_STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_LONG_TERM : StdVideoH264ModificationOfPicNumsIdc = 2 ;
+pub const StdVideoH264ModificationOfPicNumsIdc_STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_END:
     StdVideoH264ModificationOfPicNumsIdc = 3;
-pub const StdVideoH264ModificationOfPicNumsIdc_std_video_h264_modification_of_pic_nums_idc_invalid : StdVideoH264ModificationOfPicNumsIdc = 2147483647 ;
+pub const StdVideoH264ModificationOfPicNumsIdc_STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_INVALID : StdVideoH264ModificationOfPicNumsIdc = 2147483647 ;
 pub type StdVideoH264ModificationOfPicNumsIdc = ::std::os::raw::c_uint;
-pub const StdVideoH264MemMgmtControlOp_std_video_h264_mem_mgmt_control_op_end:
+pub const StdVideoH264MemMgmtControlOp_STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_END:
     StdVideoH264MemMgmtControlOp = 0;
-pub const StdVideoH264MemMgmtControlOp_std_video_h264_mem_mgmt_control_op_unmark_short_term:
+pub const StdVideoH264MemMgmtControlOp_STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_UNMARK_SHORT_TERM:
     StdVideoH264MemMgmtControlOp = 1;
-pub const StdVideoH264MemMgmtControlOp_std_video_h264_mem_mgmt_control_op_unmark_long_term:
+pub const StdVideoH264MemMgmtControlOp_STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_UNMARK_LONG_TERM:
     StdVideoH264MemMgmtControlOp = 2;
-pub const StdVideoH264MemMgmtControlOp_std_video_h264_mem_mgmt_control_op_mark_long_term:
+pub const StdVideoH264MemMgmtControlOp_STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_MARK_LONG_TERM:
     StdVideoH264MemMgmtControlOp = 3;
-pub const StdVideoH264MemMgmtControlOp_std_video_h264_mem_mgmt_control_op_set_max_long_term_index : StdVideoH264MemMgmtControlOp = 4 ;
-pub const StdVideoH264MemMgmtControlOp_std_video_h264_mem_mgmt_control_op_unmark_all:
+pub const StdVideoH264MemMgmtControlOp_STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_SET_MAX_LONG_TERM_INDEX : StdVideoH264MemMgmtControlOp = 4 ;
+pub const StdVideoH264MemMgmtControlOp_STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_UNMARK_ALL:
     StdVideoH264MemMgmtControlOp = 5;
-pub const StdVideoH264MemMgmtControlOp_std_video_h264_mem_mgmt_control_op_mark_current_as_long_term : StdVideoH264MemMgmtControlOp = 6 ;
-pub const StdVideoH264MemMgmtControlOp_std_video_h264_mem_mgmt_control_op_invalid:
+pub const StdVideoH264MemMgmtControlOp_STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_MARK_CURRENT_AS_LONG_TERM : StdVideoH264MemMgmtControlOp = 6 ;
+pub const StdVideoH264MemMgmtControlOp_STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_INVALID:
     StdVideoH264MemMgmtControlOp = 2147483647;
 pub type StdVideoH264MemMgmtControlOp = ::std::os::raw::c_uint;
-pub const StdVideoH264CabacInitIdc_std_video_h264_cabac_init_idc_0: StdVideoH264CabacInitIdc = 0;
-pub const StdVideoH264CabacInitIdc_std_video_h264_cabac_init_idc_1: StdVideoH264CabacInitIdc = 1;
-pub const StdVideoH264CabacInitIdc_std_video_h264_cabac_init_idc_2: StdVideoH264CabacInitIdc = 2;
-pub const StdVideoH264CabacInitIdc_std_video_h264_cabac_init_idc_invalid: StdVideoH264CabacInitIdc =
+pub const StdVideoH264CabacInitIdc_STD_VIDEO_H264_CABAC_INIT_IDC_0: StdVideoH264CabacInitIdc = 0;
+pub const StdVideoH264CabacInitIdc_STD_VIDEO_H264_CABAC_INIT_IDC_1: StdVideoH264CabacInitIdc = 1;
+pub const StdVideoH264CabacInitIdc_STD_VIDEO_H264_CABAC_INIT_IDC_2: StdVideoH264CabacInitIdc = 2;
+pub const StdVideoH264CabacInitIdc_STD_VIDEO_H264_CABAC_INIT_IDC_INVALID: StdVideoH264CabacInitIdc =
     2147483647;
 pub type StdVideoH264CabacInitIdc = ::std::os::raw::c_uint;
-pub const StdVideoH264DisableDeblockingFilterIdc_std_video_h264_disable_deblocking_filter_idc_disabled : StdVideoH264DisableDeblockingFilterIdc = 0 ;
-pub const StdVideoH264DisableDeblockingFilterIdc_std_video_h264_disable_deblocking_filter_idc_enabled : StdVideoH264DisableDeblockingFilterIdc = 1 ;
-pub const StdVideoH264DisableDeblockingFilterIdc_std_video_h264_disable_deblocking_filter_idc_partial : StdVideoH264DisableDeblockingFilterIdc = 2 ;
-pub const StdVideoH264DisableDeblockingFilterIdc_std_video_h264_disable_deblocking_filter_idc_invalid : StdVideoH264DisableDeblockingFilterIdc = 2147483647 ;
+pub const StdVideoH264DisableDeblockingFilterIdc_STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_DISABLED : StdVideoH264DisableDeblockingFilterIdc = 0 ;
+pub const StdVideoH264DisableDeblockingFilterIdc_STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_ENABLED : StdVideoH264DisableDeblockingFilterIdc = 1 ;
+pub const StdVideoH264DisableDeblockingFilterIdc_STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_PARTIAL : StdVideoH264DisableDeblockingFilterIdc = 2 ;
+pub const StdVideoH264DisableDeblockingFilterIdc_STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_INVALID : StdVideoH264DisableDeblockingFilterIdc = 2147483647 ;
 pub type StdVideoH264DisableDeblockingFilterIdc = ::std::os::raw::c_uint;
-pub const StdVideoH264PictureType_std_video_h264_picture_type_i: StdVideoH264PictureType = 0;
-pub const StdVideoH264PictureType_std_video_h264_picture_type_p: StdVideoH264PictureType = 1;
-pub const StdVideoH264PictureType_std_video_h264_picture_type_b: StdVideoH264PictureType = 2;
-pub const StdVideoH264PictureType_std_video_h264_picture_type_invalid: StdVideoH264PictureType =
-    2147483647;
-pub type StdVideoH264PictureType = ::std::os::raw::c_uint;
-pub const StdVideoH264SliceType_std_video_h264_slice_type_i: StdVideoH264SliceType = 0;
-pub const StdVideoH264SliceType_std_video_h264_slice_type_p: StdVideoH264SliceType = 1;
-pub const StdVideoH264SliceType_std_video_h264_slice_type_b: StdVideoH264SliceType = 2;
-pub const StdVideoH264SliceType_std_video_h264_slice_type_invalid: StdVideoH264SliceType =
+pub const StdVideoH264SliceType_STD_VIDEO_H264_SLICE_TYPE_P: StdVideoH264SliceType = 0;
+pub const StdVideoH264SliceType_STD_VIDEO_H264_SLICE_TYPE_B: StdVideoH264SliceType = 1;
+pub const StdVideoH264SliceType_STD_VIDEO_H264_SLICE_TYPE_I: StdVideoH264SliceType = 2;
+pub const StdVideoH264SliceType_STD_VIDEO_H264_SLICE_TYPE_INVALID: StdVideoH264SliceType =
     2147483647;
 pub type StdVideoH264SliceType = ::std::os::raw::c_uint;
-pub const StdVideoH264NonVclNaluType_std_video_h264_non_vcl_nalu_type_sps:
+pub const StdVideoH264PictureType_STD_VIDEO_H264_PICTURE_TYPE_P: StdVideoH264PictureType = 0;
+pub const StdVideoH264PictureType_STD_VIDEO_H264_PICTURE_TYPE_B: StdVideoH264PictureType = 1;
+pub const StdVideoH264PictureType_STD_VIDEO_H264_PICTURE_TYPE_I: StdVideoH264PictureType = 2;
+pub const StdVideoH264PictureType_STD_VIDEO_H264_PICTURE_TYPE_IDR: StdVideoH264PictureType = 5;
+pub const StdVideoH264PictureType_STD_VIDEO_H264_PICTURE_TYPE_INVALID: StdVideoH264PictureType =
+    2147483647;
+pub type StdVideoH264PictureType = ::std::os::raw::c_uint;
+pub const StdVideoH264NonVclNaluType_STD_VIDEO_H264_NON_VCL_NALU_TYPE_SPS:
     StdVideoH264NonVclNaluType = 0;
-pub const StdVideoH264NonVclNaluType_std_video_h264_non_vcl_nalu_type_pps:
+pub const StdVideoH264NonVclNaluType_STD_VIDEO_H264_NON_VCL_NALU_TYPE_PPS:
     StdVideoH264NonVclNaluType = 1;
-pub const StdVideoH264NonVclNaluType_std_video_h264_non_vcl_nalu_type_aud:
+pub const StdVideoH264NonVclNaluType_STD_VIDEO_H264_NON_VCL_NALU_TYPE_AUD:
     StdVideoH264NonVclNaluType = 2;
-pub const StdVideoH264NonVclNaluType_std_video_h264_non_vcl_nalu_type_prefix:
+pub const StdVideoH264NonVclNaluType_STD_VIDEO_H264_NON_VCL_NALU_TYPE_PREFIX:
     StdVideoH264NonVclNaluType = 3;
-pub const StdVideoH264NonVclNaluType_std_video_h264_non_vcl_nalu_type_end_of_sequence:
+pub const StdVideoH264NonVclNaluType_STD_VIDEO_H264_NON_VCL_NALU_TYPE_END_OF_SEQUENCE:
     StdVideoH264NonVclNaluType = 4;
-pub const StdVideoH264NonVclNaluType_std_video_h264_non_vcl_nalu_type_end_of_stream:
+pub const StdVideoH264NonVclNaluType_STD_VIDEO_H264_NON_VCL_NALU_TYPE_END_OF_STREAM:
     StdVideoH264NonVclNaluType = 5;
-pub const StdVideoH264NonVclNaluType_std_video_h264_non_vcl_nalu_type_precoded:
+pub const StdVideoH264NonVclNaluType_STD_VIDEO_H264_NON_VCL_NALU_TYPE_PRECODED:
     StdVideoH264NonVclNaluType = 6;
-pub const StdVideoH264NonVclNaluType_std_video_h264_non_vcl_nalu_type_invalid:
+pub const StdVideoH264NonVclNaluType_STD_VIDEO_H264_NON_VCL_NALU_TYPE_INVALID:
     StdVideoH264NonVclNaluType = 2147483647;
 pub type StdVideoH264NonVclNaluType = ::std::os::raw::c_uint;
 #[repr(C)]
@@ -15882,8 +16185,8 @@ pub struct StdVideoH264SequenceParameterSetVui {
     pub matrix_coefficients: u8,
     pub num_units_in_tick: u32,
     pub time_scale: u32,
-    pub hrd_parameters: StdVideoH264HrdParameters,
-    pub num_reorder_frames: u8,
+    pub pHrdParameters: *mut StdVideoH264HrdParameters,
+    pub max_num_reorder_frames: u8,
     pub max_dec_frame_buffering: u8,
     pub flags: StdVideoH264SpsVuiFlags,
 }
@@ -15892,8 +16195,8 @@ pub struct StdVideoH264SequenceParameterSetVui {
 #[derive(Debug, Copy, Clone)]
 pub struct StdVideoH264SpsFlags {
     pub _bitfield_align_1: [u8; 0],
-    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 3usize]>,
-    pub __bindgen_padding_0: u8,
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 2usize]>,
+    pub __bindgen_padding_0: u16,
 }
 impl StdVideoH264SpsFlags {
     #[inline]
@@ -16007,11 +16310,11 @@ impl StdVideoH264SpsFlags {
         }
     }
     #[inline]
-    pub fn residual_colour_transform_flag(&self) -> u32 {
+    pub fn separate_colour_plane_flag(&self) -> u32 {
         unsafe { ::std::mem::transmute(self._bitfield_1.get(10usize, 1u8) as u32) }
     }
     #[inline]
-    pub fn set_residual_colour_transform_flag(&mut self, val: u32) {
+    pub fn set_separate_colour_plane_flag(&mut self, val: u32) {
         unsafe {
             let val: u32 = ::std::mem::transmute(val);
             self._bitfield_1.set(10usize, 1u8, val as u64)
@@ -16029,58 +16332,47 @@ impl StdVideoH264SpsFlags {
         }
     }
     #[inline]
-    pub fn first_picture_after_seek_flag(&self) -> u32 {
+    pub fn qpprime_y_zero_transform_bypass_flag(&self) -> u32 {
         unsafe { ::std::mem::transmute(self._bitfield_1.get(12usize, 1u8) as u32) }
     }
     #[inline]
-    pub fn set_first_picture_after_seek_flag(&mut self, val: u32) {
+    pub fn set_qpprime_y_zero_transform_bypass_flag(&mut self, val: u32) {
         unsafe {
             let val: u32 = ::std::mem::transmute(val);
             self._bitfield_1.set(12usize, 1u8, val as u64)
         }
     }
     #[inline]
-    pub fn qpprime_y_zero_transform_bypass_flag(&self) -> u32 {
+    pub fn frame_cropping_flag(&self) -> u32 {
         unsafe { ::std::mem::transmute(self._bitfield_1.get(13usize, 1u8) as u32) }
     }
     #[inline]
-    pub fn set_qpprime_y_zero_transform_bypass_flag(&mut self, val: u32) {
+    pub fn set_frame_cropping_flag(&mut self, val: u32) {
         unsafe {
             let val: u32 = ::std::mem::transmute(val);
             self._bitfield_1.set(13usize, 1u8, val as u64)
         }
     }
     #[inline]
-    pub fn frame_cropping_flag(&self) -> u32 {
+    pub fn seq_scaling_matrix_present_flag(&self) -> u32 {
         unsafe { ::std::mem::transmute(self._bitfield_1.get(14usize, 1u8) as u32) }
     }
     #[inline]
-    pub fn set_frame_cropping_flag(&mut self, val: u32) {
+    pub fn set_seq_scaling_matrix_present_flag(&mut self, val: u32) {
         unsafe {
             let val: u32 = ::std::mem::transmute(val);
             self._bitfield_1.set(14usize, 1u8, val as u64)
         }
     }
     #[inline]
-    pub fn scaling_matrix_present_flag(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(15usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_scaling_matrix_present_flag(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(15usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
     pub fn vui_parameters_present_flag(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(16usize, 1u8) as u32) }
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(15usize, 1u8) as u32) }
     }
     #[inline]
     pub fn set_vui_parameters_present_flag(&mut self, val: u32) {
         unsafe {
             let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(16usize, 1u8, val as u64)
+            self._bitfield_1.set(15usize, 1u8, val as u64)
         }
     }
     #[inline]
@@ -16095,15 +16387,14 @@ impl StdVideoH264SpsFlags {
         mb_adaptive_frame_field_flag: u32,
         frame_mbs_only_flag: u32,
         delta_pic_order_always_zero_flag: u32,
-        residual_colour_transform_flag: u32,
+        separate_colour_plane_flag: u32,
         gaps_in_frame_num_value_allowed_flag: u32,
-        first_picture_after_seek_flag: u32,
         qpprime_y_zero_transform_bypass_flag: u32,
         frame_cropping_flag: u32,
-        scaling_matrix_present_flag: u32,
+        seq_scaling_matrix_present_flag: u32,
         vui_parameters_present_flag: u32,
-    ) -> __BindgenBitfieldUnit<[u8; 3usize]> {
-        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 3usize]> = Default::default();
+    ) -> __BindgenBitfieldUnit<[u8; 2usize]> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 2usize]> = Default::default();
         __bindgen_bitfield_unit.set(0usize, 1u8, {
             let constraint_set0_flag: u32 = unsafe { ::std::mem::transmute(constraint_set0_flag) };
             constraint_set0_flag as u64
@@ -16148,9 +16439,9 @@ impl StdVideoH264SpsFlags {
             delta_pic_order_always_zero_flag as u64
         });
         __bindgen_bitfield_unit.set(10usize, 1u8, {
-            let residual_colour_transform_flag: u32 =
-                unsafe { ::std::mem::transmute(residual_colour_transform_flag) };
-            residual_colour_transform_flag as u64
+            let separate_colour_plane_flag: u32 =
+                unsafe { ::std::mem::transmute(separate_colour_plane_flag) };
+            separate_colour_plane_flag as u64
         });
         __bindgen_bitfield_unit.set(11usize, 1u8, {
             let gaps_in_frame_num_value_allowed_flag: u32 =
@@ -16158,25 +16449,20 @@ impl StdVideoH264SpsFlags {
             gaps_in_frame_num_value_allowed_flag as u64
         });
         __bindgen_bitfield_unit.set(12usize, 1u8, {
-            let first_picture_after_seek_flag: u32 =
-                unsafe { ::std::mem::transmute(first_picture_after_seek_flag) };
-            first_picture_after_seek_flag as u64
-        });
-        __bindgen_bitfield_unit.set(13usize, 1u8, {
             let qpprime_y_zero_transform_bypass_flag: u32 =
                 unsafe { ::std::mem::transmute(qpprime_y_zero_transform_bypass_flag) };
             qpprime_y_zero_transform_bypass_flag as u64
         });
-        __bindgen_bitfield_unit.set(14usize, 1u8, {
+        __bindgen_bitfield_unit.set(13usize, 1u8, {
             let frame_cropping_flag: u32 = unsafe { ::std::mem::transmute(frame_cropping_flag) };
             frame_cropping_flag as u64
         });
-        __bindgen_bitfield_unit.set(15usize, 1u8, {
-            let scaling_matrix_present_flag: u32 =
-                unsafe { ::std::mem::transmute(scaling_matrix_present_flag) };
-            scaling_matrix_present_flag as u64
+        __bindgen_bitfield_unit.set(14usize, 1u8, {
+            let seq_scaling_matrix_present_flag: u32 =
+                unsafe { ::std::mem::transmute(seq_scaling_matrix_present_flag) };
+            seq_scaling_matrix_present_flag as u64
         });
-        __bindgen_bitfield_unit.set(16usize, 1u8, {
+        __bindgen_bitfield_unit.set(15usize, 1u8, {
             let vui_parameters_present_flag: u32 =
                 unsafe { ::std::mem::transmute(vui_parameters_present_flag) };
             vui_parameters_present_flag as u64
@@ -16215,7 +16501,7 @@ pub struct StdVideoH264SequenceParameterSet {
     pub frame_crop_top_offset: u32,
     pub frame_crop_bottom_offset: u32,
     pub flags: StdVideoH264SpsFlags,
-    pub offset_for_ref_frame: [i32; 255usize],
+    pub pOffsetForRefFrame: *mut i32,
     pub pScalingLists: *mut StdVideoH264ScalingLists,
     pub pSequenceParameterSetVui: *mut StdVideoH264SequenceParameterSetVui,
 }
@@ -16317,11 +16603,11 @@ impl StdVideoH264PpsFlags {
         }
     }
     #[inline]
-    pub fn scaling_matrix_present_flag(&self) -> u32 {
+    pub fn pic_scaling_matrix_present_flag(&self) -> u32 {
         unsafe { ::std::mem::transmute(self._bitfield_1.get(8usize, 1u8) as u32) }
     }
     #[inline]
-    pub fn set_scaling_matrix_present_flag(&mut self, val: u32) {
+    pub fn set_pic_scaling_matrix_present_flag(&mut self, val: u32) {
         unsafe {
             let val: u32 = ::std::mem::transmute(val);
             self._bitfield_1.set(8usize, 1u8, val as u64)
@@ -16337,7 +16623,7 @@ impl StdVideoH264PpsFlags {
         weighted_pred_flag: u32,
         pic_order_present_flag: u32,
         entropy_coding_mode_flag: u32,
-        scaling_matrix_present_flag: u32,
+        pic_scaling_matrix_present_flag: u32,
     ) -> __BindgenBitfieldUnit<[u8; 2usize]> {
         let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 2usize]> = Default::default();
         __bindgen_bitfield_unit.set(0usize, 1u8, {
@@ -16380,9 +16666,9 @@ impl StdVideoH264PpsFlags {
             entropy_coding_mode_flag as u64
         });
         __bindgen_bitfield_unit.set(8usize, 1u8, {
-            let scaling_matrix_present_flag: u32 =
-                unsafe { ::std::mem::transmute(scaling_matrix_present_flag) };
-            scaling_matrix_present_flag as u64
+            let pic_scaling_matrix_present_flag: u32 =
+                unsafe { ::std::mem::transmute(pic_scaling_matrix_present_flag) };
+            pic_scaling_matrix_present_flag as u64
         });
         __bindgen_bitfield_unit
     }
@@ -16394,7 +16680,7 @@ pub struct StdVideoH264PictureParameterSet {
     pub pic_parameter_set_id: u8,
     pub num_ref_idx_l0_default_active_minus1: u8,
     pub num_ref_idx_l1_default_active_minus1: u8,
-    pub weighted_bipred_idc: StdVideoH264WeightedBiPredIdc,
+    pub weighted_bipred_idc: StdVideoH264WeightedBipredIdc,
     pub pic_init_qp_minus26: i8,
     pub pic_init_qs_minus26: i8,
     pub chroma_qp_index_offset: i8,
@@ -16716,6 +17002,7 @@ pub const VK_VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_ENABLED_BIT_EXT : Vk
 pub const VK_VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_PARTIAL_BIT_EXT : VkVideoEncodeH264CapabilityFlagBitsEXT = 256 ;
 pub const VK_VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_BIT_EXT : VkVideoEncodeH264CapabilityFlagBitsEXT = 512 ;
 pub const VK_VIDEO_ENCODE_H264_CAPABILITY_EVENLY_DISTRIBUTED_SLICE_SIZE_BIT_EXT : VkVideoEncodeH264CapabilityFlagBitsEXT = 1024 ;
+pub const VK_VIDEO_ENCODE_H264_CAPABILITY_OPTIONAL_RC_EXTENSION_STRUCT_BIT_EXT : VkVideoEncodeH264CapabilityFlagBitsEXT = 2048 ;
 pub const VK_VIDEO_ENCODE_H264_CAPABILITY_FLAG_BITS_MAX_ENUM_EXT : VkVideoEncodeH264CapabilityFlagBitsEXT = 2147483647 ;
 pub type VkVideoEncodeH264CapabilityFlagBitsEXT = ::std::os::raw::c_uint;
 pub type VkVideoEncodeH264CapabilityFlagsEXT = VkFlags;
@@ -16744,6 +17031,12 @@ pub const VK_VIDEO_ENCODE_H264_CREATE_FLAG_BITS_MAX_ENUM_EXT:
     VkVideoEncodeH264CreateFlagBitsEXT = 2147483647;
 pub type VkVideoEncodeH264CreateFlagBitsEXT = ::std::os::raw::c_uint;
 pub type VkVideoEncodeH264CreateFlagsEXT = VkFlags;
+pub const VK_VIDEO_ENCODE_H264_RATE_CONTROL_STRUCTURE_UNKNOWN_EXT : VkVideoEncodeH264RateControlStructureFlagBitsEXT = 0 ;
+pub const VK_VIDEO_ENCODE_H264_RATE_CONTROL_STRUCTURE_FLAT_BIT_EXT : VkVideoEncodeH264RateControlStructureFlagBitsEXT = 1 ;
+pub const VK_VIDEO_ENCODE_H264_RATE_CONTROL_STRUCTURE_DYADIC_BIT_EXT : VkVideoEncodeH264RateControlStructureFlagBitsEXT = 2 ;
+pub const VK_VIDEO_ENCODE_H264_RATE_CONTROL_STRUCTURE_FLAG_BITS_MAX_ENUM_EXT : VkVideoEncodeH264RateControlStructureFlagBitsEXT = 2147483647 ;
+pub type VkVideoEncodeH264RateControlStructureFlagBitsEXT = ::std::os::raw::c_uint;
+pub type VkVideoEncodeH264RateControlStructureFlagsEXT = VkFlags;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct VkVideoEncodeH264CapabilitiesEXT {
@@ -16808,9 +17101,6 @@ pub struct VkVideoEncodeH264NaluSliceEXT {
     pub pRefFinalList0Entries: *const VkVideoEncodeH264DpbSlotInfoEXT,
     pub refFinalList1EntryCount: u8,
     pub pRefFinalList1Entries: *const VkVideoEncodeH264DpbSlotInfoEXT,
-    pub precedingNaluBytes: u32,
-    pub minQp: u8,
-    pub maxQp: u8,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -16843,398 +17133,94 @@ pub struct VkVideoEncodeH264ProfileEXT {
     pub stdProfileIdc: StdVideoH264ProfileIdc,
 }
 #[repr(C)]
-#[repr(align(4))]
 #[derive(Debug, Copy, Clone)]
-pub struct StdVideoDecodeH264PictureInfoFlags {
-    pub _bitfield_align_1: [u8; 0],
-    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
-    pub __bindgen_padding_0: [u8; 3usize],
-}
-impl StdVideoDecodeH264PictureInfoFlags {
-    #[inline]
-    pub fn field_pic_flag(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_field_pic_flag(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(0usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn is_intra(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_is_intra(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(1usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn bottom_field_flag(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_bottom_field_flag(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(2usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn is_reference(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_is_reference(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(3usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn complementary_field_pair(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(4usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_complementary_field_pair(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(4usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn new_bitfield_1(
-        field_pic_flag: u32,
-        is_intra: u32,
-        bottom_field_flag: u32,
-        is_reference: u32,
-        complementary_field_pair: u32,
-    ) -> __BindgenBitfieldUnit<[u8; 1usize]> {
-        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 1usize]> = Default::default();
-        __bindgen_bitfield_unit.set(0usize, 1u8, {
-            let field_pic_flag: u32 = unsafe { ::std::mem::transmute(field_pic_flag) };
-            field_pic_flag as u64
-        });
-        __bindgen_bitfield_unit.set(1usize, 1u8, {
-            let is_intra: u32 = unsafe { ::std::mem::transmute(is_intra) };
-            is_intra as u64
-        });
-        __bindgen_bitfield_unit.set(2usize, 1u8, {
-            let bottom_field_flag: u32 = unsafe { ::std::mem::transmute(bottom_field_flag) };
-            bottom_field_flag as u64
-        });
-        __bindgen_bitfield_unit.set(3usize, 1u8, {
-            let is_reference: u32 = unsafe { ::std::mem::transmute(is_reference) };
-            is_reference as u64
-        });
-        __bindgen_bitfield_unit.set(4usize, 1u8, {
-            let complementary_field_pair: u32 =
-                unsafe { ::std::mem::transmute(complementary_field_pair) };
-            complementary_field_pair as u64
-        });
-        __bindgen_bitfield_unit
-    }
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct StdVideoDecodeH264PictureInfo {
-    pub seq_parameter_set_id: u8,
-    pub pic_parameter_set_id: u8,
-    pub reserved: u16,
-    pub frame_num: u16,
-    pub idr_pic_id: u16,
-    pub PicOrderCnt: [i32; 2usize],
-    pub flags: StdVideoDecodeH264PictureInfoFlags,
-}
-#[repr(C)]
-#[repr(align(4))]
-#[derive(Debug, Copy, Clone)]
-pub struct StdVideoDecodeH264ReferenceInfoFlags {
-    pub _bitfield_align_1: [u8; 0],
-    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
-    pub __bindgen_padding_0: [u8; 3usize],
-}
-impl StdVideoDecodeH264ReferenceInfoFlags {
-    #[inline]
-    pub fn top_field_flag(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_top_field_flag(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(0usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn bottom_field_flag(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_bottom_field_flag(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(1usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn is_long_term(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_is_long_term(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(2usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn is_non_existing(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_is_non_existing(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(3usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn new_bitfield_1(
-        top_field_flag: u32,
-        bottom_field_flag: u32,
-        is_long_term: u32,
-        is_non_existing: u32,
-    ) -> __BindgenBitfieldUnit<[u8; 1usize]> {
-        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 1usize]> = Default::default();
-        __bindgen_bitfield_unit.set(0usize, 1u8, {
-            let top_field_flag: u32 = unsafe { ::std::mem::transmute(top_field_flag) };
-            top_field_flag as u64
-        });
-        __bindgen_bitfield_unit.set(1usize, 1u8, {
-            let bottom_field_flag: u32 = unsafe { ::std::mem::transmute(bottom_field_flag) };
-            bottom_field_flag as u64
-        });
-        __bindgen_bitfield_unit.set(2usize, 1u8, {
-            let is_long_term: u32 = unsafe { ::std::mem::transmute(is_long_term) };
-            is_long_term as u64
-        });
-        __bindgen_bitfield_unit.set(3usize, 1u8, {
-            let is_non_existing: u32 = unsafe { ::std::mem::transmute(is_non_existing) };
-            is_non_existing as u64
-        });
-        __bindgen_bitfield_unit
-    }
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct StdVideoDecodeH264ReferenceInfo {
-    pub FrameNum: u16,
-    pub reserved: u16,
-    pub PicOrderCnt: [i32; 2usize],
-    pub flags: StdVideoDecodeH264ReferenceInfoFlags,
-}
-#[repr(C)]
-#[repr(align(4))]
-#[derive(Debug, Copy, Clone)]
-pub struct StdVideoDecodeH264MvcElementFlags {
-    pub _bitfield_align_1: [u8; 0],
-    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
-    pub __bindgen_padding_0: [u8; 3usize],
-}
-impl StdVideoDecodeH264MvcElementFlags {
-    #[inline]
-    pub fn non_idr(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_non_idr(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(0usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn anchor_pic(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_anchor_pic(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(1usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn inter_view(&self) -> u32 {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_inter_view(&mut self, val: u32) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(2usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn new_bitfield_1(
-        non_idr: u32,
-        anchor_pic: u32,
-        inter_view: u32,
-    ) -> __BindgenBitfieldUnit<[u8; 1usize]> {
-        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 1usize]> = Default::default();
-        __bindgen_bitfield_unit.set(0usize, 1u8, {
-            let non_idr: u32 = unsafe { ::std::mem::transmute(non_idr) };
-            non_idr as u64
-        });
-        __bindgen_bitfield_unit.set(1usize, 1u8, {
-            let anchor_pic: u32 = unsafe { ::std::mem::transmute(anchor_pic) };
-            anchor_pic as u64
-        });
-        __bindgen_bitfield_unit.set(2usize, 1u8, {
-            let inter_view: u32 = unsafe { ::std::mem::transmute(inter_view) };
-            inter_view as u64
-        });
-        __bindgen_bitfield_unit
-    }
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct StdVideoDecodeH264MvcElement {
-    pub flags: StdVideoDecodeH264MvcElementFlags,
-    pub viewOrderIndex: u16,
-    pub viewId: u16,
-    pub temporalId: u16,
-    pub priorityId: u16,
-    pub numOfAnchorRefsInL0: u16,
-    pub viewIdOfAnchorRefsInL0: [u16; 15usize],
-    pub numOfAnchorRefsInL1: u16,
-    pub viewIdOfAnchorRefsInL1: [u16; 15usize],
-    pub numOfNonAnchorRefsInL0: u16,
-    pub viewIdOfNonAnchorRefsInL0: [u16; 15usize],
-    pub numOfNonAnchorRefsInL1: u16,
-    pub viewIdOfNonAnchorRefsInL1: [u16; 15usize],
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct StdVideoDecodeH264Mvc {
-    pub viewId0: u32,
-    pub mvcElementCount: u32,
-    pub pMvcElements: *mut StdVideoDecodeH264MvcElement,
-}
-pub const VK_VIDEO_DECODE_H264_PICTURE_LAYOUT_PROGRESSIVE_EXT : VkVideoDecodeH264PictureLayoutFlagBitsEXT = 0 ;
-pub const VK_VIDEO_DECODE_H264_PICTURE_LAYOUT_INTERLACED_INTERLEAVED_LINES_BIT_EXT : VkVideoDecodeH264PictureLayoutFlagBitsEXT = 1 ;
-pub const VK_VIDEO_DECODE_H264_PICTURE_LAYOUT_INTERLACED_SEPARATE_PLANES_BIT_EXT : VkVideoDecodeH264PictureLayoutFlagBitsEXT = 2 ;
-pub const VK_VIDEO_DECODE_H264_PICTURE_LAYOUT_FLAG_BITS_MAX_ENUM_EXT : VkVideoDecodeH264PictureLayoutFlagBitsEXT = 2147483647 ;
-pub type VkVideoDecodeH264PictureLayoutFlagBitsEXT = ::std::os::raw::c_uint;
-pub type VkVideoDecodeH264PictureLayoutFlagsEXT = VkFlags;
-pub type VkVideoDecodeH264CreateFlagsEXT = VkFlags;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct VkVideoDecodeH264ProfileEXT {
+pub struct VkVideoEncodeH264RateControlInfoEXT {
     pub sType: VkStructureType,
     pub pNext: *const ::std::os::raw::c_void,
-    pub stdProfileIdc: StdVideoH264ProfileIdc,
-    pub pictureLayout: VkVideoDecodeH264PictureLayoutFlagsEXT,
+    pub gopFrameCount: u32,
+    pub idrPeriod: u32,
+    pub consecutiveBFrameCount: u32,
+    pub rateControlStructure: VkVideoEncodeH264RateControlStructureFlagBitsEXT,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct VkVideoDecodeH264CapabilitiesEXT {
-    pub sType: VkStructureType,
-    pub pNext: *mut ::std::os::raw::c_void,
-    pub maxLevel: u32,
-    pub fieldOffsetGranularity: VkOffset2D,
-    pub stdExtensionVersion: VkExtensionProperties,
+pub struct VkVideoEncodeH264QpEXT {
+    pub qpI: i32,
+    pub qpP: i32,
+    pub qpB: i32,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct VkVideoDecodeH264SessionCreateInfoEXT {
-    pub sType: VkStructureType,
-    pub pNext: *const ::std::os::raw::c_void,
-    pub flags: VkVideoDecodeH264CreateFlagsEXT,
-    pub pStdExtensionVersion: *const VkExtensionProperties,
+pub struct VkVideoEncodeH264FrameSizeEXT {
+    pub frameISize: u32,
+    pub framePSize: u32,
+    pub frameBSize: u32,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct VkVideoDecodeH264SessionParametersAddInfoEXT {
-    pub sType: VkStructureType,
-    pub pNext: *const ::std::os::raw::c_void,
-    pub spsStdCount: u32,
-    pub pSpsStd: *const StdVideoH264SequenceParameterSet,
-    pub ppsStdCount: u32,
-    pub pPpsStd: *const StdVideoH264PictureParameterSet,
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct VkVideoDecodeH264SessionParametersCreateInfoEXT {
+pub struct VkVideoEncodeH264RateControlLayerInfoEXT {
     pub sType: VkStructureType,
     pub pNext: *const ::std::os::raw::c_void,
-    pub maxSpsStdCount: u32,
-    pub maxPpsStdCount: u32,
-    pub pParametersAddInfo: *const VkVideoDecodeH264SessionParametersAddInfoEXT,
+    pub temporalLayerId: u8,
+    pub useInitialRcQp: VkBool32,
+    pub initialRcQp: VkVideoEncodeH264QpEXT,
+    pub useMinQp: VkBool32,
+    pub minQp: VkVideoEncodeH264QpEXT,
+    pub useMaxQp: VkBool32,
+    pub maxQp: VkVideoEncodeH264QpEXT,
+    pub useMaxFrameSize: VkBool32,
+    pub maxFrameSize: VkVideoEncodeH264FrameSizeEXT,
 }
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct VkVideoDecodeH264PictureInfoEXT {
-    pub sType: VkStructureType,
-    pub pNext: *const ::std::os::raw::c_void,
-    pub pStdPictureInfo: *const StdVideoDecodeH264PictureInfo,
-    pub slicesCount: u32,
-    pub pSlicesDataOffsets: *const u32,
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct VkVideoDecodeH264MvcEXT {
-    pub sType: VkStructureType,
-    pub pNext: *const ::std::os::raw::c_void,
-    pub pStdMvc: *const StdVideoDecodeH264Mvc,
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct VkVideoDecodeH264DpbSlotInfoEXT {
-    pub sType: VkStructureType,
-    pub pNext: *const ::std::os::raw::c_void,
-    pub pStdReferenceInfo: *const StdVideoDecodeH264ReferenceInfo,
-}
-pub const StdVideoH265ChromaFormatIdc_std_video_h265_chroma_format_idc_monochrome:
+pub const StdVideoH265ChromaFormatIdc_STD_VIDEO_H265_CHROMA_FORMAT_IDC_MONOCHROME:
     StdVideoH265ChromaFormatIdc = 0;
-pub const StdVideoH265ChromaFormatIdc_std_video_h265_chroma_format_idc_420:
+pub const StdVideoH265ChromaFormatIdc_STD_VIDEO_H265_CHROMA_FORMAT_IDC_420:
     StdVideoH265ChromaFormatIdc = 1;
-pub const StdVideoH265ChromaFormatIdc_std_video_h265_chroma_format_idc_422:
+pub const StdVideoH265ChromaFormatIdc_STD_VIDEO_H265_CHROMA_FORMAT_IDC_422:
     StdVideoH265ChromaFormatIdc = 2;
-pub const StdVideoH265ChromaFormatIdc_std_video_h265_chroma_format_idc_444:
+pub const StdVideoH265ChromaFormatIdc_STD_VIDEO_H265_CHROMA_FORMAT_IDC_444:
     StdVideoH265ChromaFormatIdc = 3;
+pub const StdVideoH265ChromaFormatIdc_STD_VIDEO_H265_CHROMA_FORMAT_IDC_INVALID:
+    StdVideoH265ChromaFormatIdc = 2147483647;
 pub type StdVideoH265ChromaFormatIdc = ::std::os::raw::c_uint;
-pub const StdVideoH265ProfileIdc_std_video_h265_profile_idc_main: StdVideoH265ProfileIdc = 1;
-pub const StdVideoH265ProfileIdc_std_video_h265_profile_idc_main_10: StdVideoH265ProfileIdc = 2;
-pub const StdVideoH265ProfileIdc_std_video_h265_profile_idc_main_still_picture:
+pub const StdVideoH265ProfileIdc_STD_VIDEO_H265_PROFILE_IDC_MAIN: StdVideoH265ProfileIdc = 1;
+pub const StdVideoH265ProfileIdc_STD_VIDEO_H265_PROFILE_IDC_MAIN_10: StdVideoH265ProfileIdc = 2;
+pub const StdVideoH265ProfileIdc_STD_VIDEO_H265_PROFILE_IDC_MAIN_STILL_PICTURE:
     StdVideoH265ProfileIdc = 3;
-pub const StdVideoH265ProfileIdc_std_video_h265_profile_idc_format_range_extensions:
+pub const StdVideoH265ProfileIdc_STD_VIDEO_H265_PROFILE_IDC_FORMAT_RANGE_EXTENSIONS:
     StdVideoH265ProfileIdc = 4;
-pub const StdVideoH265ProfileIdc_std_video_h265_profile_idc_scc_extensions: StdVideoH265ProfileIdc =
+pub const StdVideoH265ProfileIdc_STD_VIDEO_H265_PROFILE_IDC_SCC_EXTENSIONS: StdVideoH265ProfileIdc =
     9;
-pub const StdVideoH265ProfileIdc_std_video_h265_profile_idc_invalid: StdVideoH265ProfileIdc =
+pub const StdVideoH265ProfileIdc_STD_VIDEO_H265_PROFILE_IDC_INVALID: StdVideoH265ProfileIdc =
     2147483647;
 pub type StdVideoH265ProfileIdc = ::std::os::raw::c_uint;
-pub const StdVideoH265Level_std_video_h265_level_1_0: StdVideoH265Level = 0;
-pub const StdVideoH265Level_std_video_h265_level_2_0: StdVideoH265Level = 1;
-pub const StdVideoH265Level_std_video_h265_level_2_1: StdVideoH265Level = 2;
-pub const StdVideoH265Level_std_video_h265_level_3_0: StdVideoH265Level = 3;
-pub const StdVideoH265Level_std_video_h265_level_3_1: StdVideoH265Level = 4;
-pub const StdVideoH265Level_std_video_h265_level_4_0: StdVideoH265Level = 5;
-pub const StdVideoH265Level_std_video_h265_level_4_1: StdVideoH265Level = 6;
-pub const StdVideoH265Level_std_video_h265_level_5_0: StdVideoH265Level = 7;
-pub const StdVideoH265Level_std_video_h265_level_5_1: StdVideoH265Level = 8;
-pub const StdVideoH265Level_std_video_h265_level_5_2: StdVideoH265Level = 9;
-pub const StdVideoH265Level_std_video_h265_level_6_0: StdVideoH265Level = 10;
-pub const StdVideoH265Level_std_video_h265_level_6_1: StdVideoH265Level = 11;
-pub const StdVideoH265Level_std_video_h265_level_6_2: StdVideoH265Level = 12;
-pub const StdVideoH265Level_std_video_h265_level_invalid: StdVideoH265Level = 2147483647;
+pub const StdVideoH265Level_STD_VIDEO_H265_LEVEL_1_0: StdVideoH265Level = 0;
+pub const StdVideoH265Level_STD_VIDEO_H265_LEVEL_2_0: StdVideoH265Level = 1;
+pub const StdVideoH265Level_STD_VIDEO_H265_LEVEL_2_1: StdVideoH265Level = 2;
+pub const StdVideoH265Level_STD_VIDEO_H265_LEVEL_3_0: StdVideoH265Level = 3;
+pub const StdVideoH265Level_STD_VIDEO_H265_LEVEL_3_1: StdVideoH265Level = 4;
+pub const StdVideoH265Level_STD_VIDEO_H265_LEVEL_4_0: StdVideoH265Level = 5;
+pub const StdVideoH265Level_STD_VIDEO_H265_LEVEL_4_1: StdVideoH265Level = 6;
+pub const StdVideoH265Level_STD_VIDEO_H265_LEVEL_5_0: StdVideoH265Level = 7;
+pub const StdVideoH265Level_STD_VIDEO_H265_LEVEL_5_1: StdVideoH265Level = 8;
+pub const StdVideoH265Level_STD_VIDEO_H265_LEVEL_5_2: StdVideoH265Level = 9;
+pub const StdVideoH265Level_STD_VIDEO_H265_LEVEL_6_0: StdVideoH265Level = 10;
+pub const StdVideoH265Level_STD_VIDEO_H265_LEVEL_6_1: StdVideoH265Level = 11;
+pub const StdVideoH265Level_STD_VIDEO_H265_LEVEL_6_2: StdVideoH265Level = 12;
+pub const StdVideoH265Level_STD_VIDEO_H265_LEVEL_INVALID: StdVideoH265Level = 2147483647;
 pub type StdVideoH265Level = ::std::os::raw::c_uint;
+pub const StdVideoH265SliceType_STD_VIDEO_H265_SLICE_TYPE_B: StdVideoH265SliceType = 0;
+pub const StdVideoH265SliceType_STD_VIDEO_H265_SLICE_TYPE_P: StdVideoH265SliceType = 1;
+pub const StdVideoH265SliceType_STD_VIDEO_H265_SLICE_TYPE_I: StdVideoH265SliceType = 2;
+pub const StdVideoH265SliceType_STD_VIDEO_H265_SLICE_TYPE_INVALID: StdVideoH265SliceType =
+    2147483647;
+pub type StdVideoH265SliceType = ::std::os::raw::c_uint;
+pub const StdVideoH265PictureType_STD_VIDEO_H265_PICTURE_TYPE_P: StdVideoH265PictureType = 0;
+pub const StdVideoH265PictureType_STD_VIDEO_H265_PICTURE_TYPE_B: StdVideoH265PictureType = 1;
+pub const StdVideoH265PictureType_STD_VIDEO_H265_PICTURE_TYPE_I: StdVideoH265PictureType = 2;
+pub const StdVideoH265PictureType_STD_VIDEO_H265_PICTURE_TYPE_IDR: StdVideoH265PictureType = 3;
+pub const StdVideoH265PictureType_STD_VIDEO_H265_PICTURE_TYPE_INVALID: StdVideoH265PictureType =
+    2147483647;
+pub type StdVideoH265PictureType = ::std::os::raw::c_uint;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct StdVideoH265DecPicBufMgr {
@@ -17256,10 +17242,7 @@ pub struct StdVideoH265SubLayerHrdParameters {
 #[derive(Debug, Copy, Clone)]
 pub struct StdVideoH265HrdFlags {
     pub _bitfield_align_1: [u8; 0],
-    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
-    pub fixed_pic_rate_general_flag: u8,
-    pub fixed_pic_rate_within_cvs_flag: u8,
-    pub low_delay_hrd_flag: u8,
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize]>,
 }
 impl StdVideoH265HrdFlags {
     #[inline]
@@ -17307,13 +17290,49 @@ impl StdVideoH265HrdFlags {
         }
     }
     #[inline]
+    pub fn fixed_pic_rate_general_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(4usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_fixed_pic_rate_general_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(4usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn fixed_pic_rate_within_cvs_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(12usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_fixed_pic_rate_within_cvs_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(12usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn low_delay_hrd_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(20usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_low_delay_hrd_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(20usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
     pub fn new_bitfield_1(
         nal_hrd_parameters_present_flag: u32,
         vcl_hrd_parameters_present_flag: u32,
         sub_pic_hrd_params_present_flag: u32,
         sub_pic_cpb_params_in_pic_timing_sei_flag: u32,
-    ) -> __BindgenBitfieldUnit<[u8; 1usize]> {
-        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 1usize]> = Default::default();
+        fixed_pic_rate_general_flag: u32,
+        fixed_pic_rate_within_cvs_flag: u32,
+        low_delay_hrd_flag: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize]> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize]> = Default::default();
         __bindgen_bitfield_unit.set(0usize, 1u8, {
             let nal_hrd_parameters_present_flag: u32 =
                 unsafe { ::std::mem::transmute(nal_hrd_parameters_present_flag) };
@@ -17334,6 +17353,20 @@ impl StdVideoH265HrdFlags {
                 unsafe { ::std::mem::transmute(sub_pic_cpb_params_in_pic_timing_sei_flag) };
             sub_pic_cpb_params_in_pic_timing_sei_flag as u64
         });
+        __bindgen_bitfield_unit.set(4usize, 8u8, {
+            let fixed_pic_rate_general_flag: u32 =
+                unsafe { ::std::mem::transmute(fixed_pic_rate_general_flag) };
+            fixed_pic_rate_general_flag as u64
+        });
+        __bindgen_bitfield_unit.set(12usize, 8u8, {
+            let fixed_pic_rate_within_cvs_flag: u32 =
+                unsafe { ::std::mem::transmute(fixed_pic_rate_within_cvs_flag) };
+            fixed_pic_rate_within_cvs_flag as u64
+        });
+        __bindgen_bitfield_unit.set(20usize, 8u8, {
+            let low_delay_hrd_flag: u32 = unsafe { ::std::mem::transmute(low_delay_hrd_flag) };
+            low_delay_hrd_flag as u64
+        });
         __bindgen_bitfield_unit
     }
 }
@@ -17351,8 +17384,8 @@ pub struct StdVideoH265HrdParameters {
     pub dpb_output_delay_length_minus1: u8,
     pub cpb_cnt_minus1: [u8; 7usize],
     pub elemental_duration_in_tc_minus1: [u16; 7usize],
-    pub SubLayerHrdParametersNal: [*mut StdVideoH265SubLayerHrdParameters; 7usize],
-    pub SubLayerHrdParametersVcl: [*mut StdVideoH265SubLayerHrdParameters; 7usize],
+    pub pSubLayerHrdParametersNal: [*mut StdVideoH265SubLayerHrdParameters; 7usize],
+    pub pSubLayerHrdParametersVcl: [*mut StdVideoH265SubLayerHrdParameters; 7usize],
     pub flags: StdVideoH265HrdFlags,
 }
 #[repr(C)]
@@ -17448,7 +17481,7 @@ pub struct StdVideoH265VideoParameterSet {
     pub vps_time_scale: u32,
     pub vps_num_ticks_poc_diff_one_minus1: u32,
     pub pDecPicBufMgr: *mut StdVideoH265DecPicBufMgr,
-    pub hrd_parameters: *mut StdVideoH265HrdParameters,
+    pub pHrdParameters: *mut StdVideoH265HrdParameters,
     pub flags: StdVideoH265VpsFlags,
 }
 #[repr(C)]
@@ -17801,7 +17834,7 @@ pub struct StdVideoH265SequenceParameterSetVui {
     pub vui_num_units_in_tick: u32,
     pub vui_time_scale: u32,
     pub vui_num_ticks_poc_diff_one_minus1: u32,
-    pub hrd_parameters: *mut StdVideoH265HrdParameters,
+    pub pHrdParameters: *mut StdVideoH265HrdParameters,
     pub min_spatial_segmentation_idc: u16,
     pub max_bytes_per_pic_denom: u8,
     pub max_bits_per_min_cu_denom: u8,
@@ -18904,6 +18937,1060 @@ pub struct StdVideoH265PictureParameterSet {
 #[repr(C)]
 #[repr(align(4))]
 #[derive(Debug, Copy, Clone)]
+pub struct StdVideoEncodeH265SliceHeaderFlags {
+    pub _bitfield_align_1: [u32; 0],
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize]>,
+    pub luma_weight_l0_flag: u16,
+    pub chroma_weight_l0_flag: u16,
+    pub luma_weight_l1_flag: u16,
+    pub chroma_weight_l1_flag: u16,
+}
+impl StdVideoEncodeH265SliceHeaderFlags {
+    #[inline]
+    pub fn first_slice_segment_in_pic_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_first_slice_segment_in_pic_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn no_output_of_prior_pics_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_no_output_of_prior_pics_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn dependent_slice_segment_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_dependent_slice_segment_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(2usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn short_term_ref_pic_set_sps_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_short_term_ref_pic_set_sps_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(3usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn slice_temporal_mvp_enable_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(4usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_slice_temporal_mvp_enable_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(4usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn slice_sao_luma_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(5usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_slice_sao_luma_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(5usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn slice_sao_chroma_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(6usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_slice_sao_chroma_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(6usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn num_ref_idx_active_override_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(7usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_num_ref_idx_active_override_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(7usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn mvd_l1_zero_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(8usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_mvd_l1_zero_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(8usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn cabac_init_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(9usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_cabac_init_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(9usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn slice_deblocking_filter_disable_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(10usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_slice_deblocking_filter_disable_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(10usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn collocated_from_l0_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(11usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_collocated_from_l0_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(11usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn slice_loop_filter_across_slices_enabled_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(12usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_slice_loop_filter_across_slices_enabled_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(12usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn bLastSliceInPic(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(13usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_bLastSliceInPic(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(13usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reservedBits(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(14usize, 18u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reservedBits(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(14usize, 18u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        first_slice_segment_in_pic_flag: u32,
+        no_output_of_prior_pics_flag: u32,
+        dependent_slice_segment_flag: u32,
+        short_term_ref_pic_set_sps_flag: u32,
+        slice_temporal_mvp_enable_flag: u32,
+        slice_sao_luma_flag: u32,
+        slice_sao_chroma_flag: u32,
+        num_ref_idx_active_override_flag: u32,
+        mvd_l1_zero_flag: u32,
+        cabac_init_flag: u32,
+        slice_deblocking_filter_disable_flag: u32,
+        collocated_from_l0_flag: u32,
+        slice_loop_filter_across_slices_enabled_flag: u32,
+        bLastSliceInPic: u32,
+        reservedBits: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize]> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize]> = Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let first_slice_segment_in_pic_flag: u32 =
+                unsafe { ::std::mem::transmute(first_slice_segment_in_pic_flag) };
+            first_slice_segment_in_pic_flag as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let no_output_of_prior_pics_flag: u32 =
+                unsafe { ::std::mem::transmute(no_output_of_prior_pics_flag) };
+            no_output_of_prior_pics_flag as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 1u8, {
+            let dependent_slice_segment_flag: u32 =
+                unsafe { ::std::mem::transmute(dependent_slice_segment_flag) };
+            dependent_slice_segment_flag as u64
+        });
+        __bindgen_bitfield_unit.set(3usize, 1u8, {
+            let short_term_ref_pic_set_sps_flag: u32 =
+                unsafe { ::std::mem::transmute(short_term_ref_pic_set_sps_flag) };
+            short_term_ref_pic_set_sps_flag as u64
+        });
+        __bindgen_bitfield_unit.set(4usize, 1u8, {
+            let slice_temporal_mvp_enable_flag: u32 =
+                unsafe { ::std::mem::transmute(slice_temporal_mvp_enable_flag) };
+            slice_temporal_mvp_enable_flag as u64
+        });
+        __bindgen_bitfield_unit.set(5usize, 1u8, {
+            let slice_sao_luma_flag: u32 = unsafe { ::std::mem::transmute(slice_sao_luma_flag) };
+            slice_sao_luma_flag as u64
+        });
+        __bindgen_bitfield_unit.set(6usize, 1u8, {
+            let slice_sao_chroma_flag: u32 =
+                unsafe { ::std::mem::transmute(slice_sao_chroma_flag) };
+            slice_sao_chroma_flag as u64
+        });
+        __bindgen_bitfield_unit.set(7usize, 1u8, {
+            let num_ref_idx_active_override_flag: u32 =
+                unsafe { ::std::mem::transmute(num_ref_idx_active_override_flag) };
+            num_ref_idx_active_override_flag as u64
+        });
+        __bindgen_bitfield_unit.set(8usize, 1u8, {
+            let mvd_l1_zero_flag: u32 = unsafe { ::std::mem::transmute(mvd_l1_zero_flag) };
+            mvd_l1_zero_flag as u64
+        });
+        __bindgen_bitfield_unit.set(9usize, 1u8, {
+            let cabac_init_flag: u32 = unsafe { ::std::mem::transmute(cabac_init_flag) };
+            cabac_init_flag as u64
+        });
+        __bindgen_bitfield_unit.set(10usize, 1u8, {
+            let slice_deblocking_filter_disable_flag: u32 =
+                unsafe { ::std::mem::transmute(slice_deblocking_filter_disable_flag) };
+            slice_deblocking_filter_disable_flag as u64
+        });
+        __bindgen_bitfield_unit.set(11usize, 1u8, {
+            let collocated_from_l0_flag: u32 =
+                unsafe { ::std::mem::transmute(collocated_from_l0_flag) };
+            collocated_from_l0_flag as u64
+        });
+        __bindgen_bitfield_unit.set(12usize, 1u8, {
+            let slice_loop_filter_across_slices_enabled_flag: u32 =
+                unsafe { ::std::mem::transmute(slice_loop_filter_across_slices_enabled_flag) };
+            slice_loop_filter_across_slices_enabled_flag as u64
+        });
+        __bindgen_bitfield_unit.set(13usize, 1u8, {
+            let bLastSliceInPic: u32 = unsafe { ::std::mem::transmute(bLastSliceInPic) };
+            bLastSliceInPic as u64
+        });
+        __bindgen_bitfield_unit.set(14usize, 18u8, {
+            let reservedBits: u32 = unsafe { ::std::mem::transmute(reservedBits) };
+            reservedBits as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoEncodeH265SliceHeader {
+    pub slice_type: StdVideoH265SliceType,
+    pub slice_pic_parameter_set_id: u8,
+    pub num_short_term_ref_pic_sets: u8,
+    pub slice_segment_address: u32,
+    pub short_term_ref_pic_set_idx: u8,
+    pub num_long_term_sps: u8,
+    pub num_long_term_pics: u8,
+    pub collocated_ref_idx: u8,
+    pub num_ref_idx_l0_active_minus1: u8,
+    pub num_ref_idx_l1_active_minus1: u8,
+    pub luma_log2_weight_denom: u8,
+    pub delta_chroma_log2_weight_denom: i8,
+    pub delta_luma_weight_l0: [i8; 15usize],
+    pub luma_offset_l0: [i8; 15usize],
+    pub delta_chroma_weight_l0: [[i8; 2usize]; 15usize],
+    pub delta_chroma_offset_l0: [[i8; 2usize]; 15usize],
+    pub delta_luma_weight_l1: [i8; 15usize],
+    pub luma_offset_l1: [i8; 15usize],
+    pub delta_chroma_weight_l1: [[i8; 2usize]; 15usize],
+    pub delta_chroma_offset_l1: [[i8; 2usize]; 15usize],
+    pub MaxNumMergeCand: u8,
+    pub slice_qp_delta: i8,
+    pub slice_cb_qp_offset: i8,
+    pub slice_cr_qp_offset: i8,
+    pub slice_beta_offset_div2: i8,
+    pub slice_tc_offset_div2: i8,
+    pub slice_act_y_qp_offset: i8,
+    pub slice_act_cb_qp_offset: i8,
+    pub slice_act_cr_qp_offset: i8,
+    pub flags: StdVideoEncodeH265SliceHeaderFlags,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoEncodeH265ReferenceModificationFlags {
+    pub _bitfield_align_1: [u8; 0],
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
+    pub __bindgen_padding_0: [u8; 3usize],
+}
+impl StdVideoEncodeH265ReferenceModificationFlags {
+    #[inline]
+    pub fn ref_pic_list_modification_flag_l0(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_ref_pic_list_modification_flag_l0(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn ref_pic_list_modification_flag_l1(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_ref_pic_list_modification_flag_l1(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        ref_pic_list_modification_flag_l0: u32,
+        ref_pic_list_modification_flag_l1: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 1usize]> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 1usize]> = Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let ref_pic_list_modification_flag_l0: u32 =
+                unsafe { ::std::mem::transmute(ref_pic_list_modification_flag_l0) };
+            ref_pic_list_modification_flag_l0 as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let ref_pic_list_modification_flag_l1: u32 =
+                unsafe { ::std::mem::transmute(ref_pic_list_modification_flag_l1) };
+            ref_pic_list_modification_flag_l1 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoEncodeH265ReferenceModifications {
+    pub flags: StdVideoEncodeH265ReferenceModificationFlags,
+    pub referenceList0ModificationsCount: u8,
+    pub pReferenceList0Modifications: *mut u8,
+    pub referenceList1ModificationsCount: u8,
+    pub pReferenceList1Modifications: *mut u8,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoEncodeH265PictureInfoFlags {
+    pub _bitfield_align_1: [u8; 0],
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
+    pub __bindgen_padding_0: [u8; 3usize],
+}
+impl StdVideoEncodeH265PictureInfoFlags {
+    #[inline]
+    pub fn is_reference_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_is_reference_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn IrapPicFlag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_IrapPicFlag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn long_term_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_long_term_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(2usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        is_reference_flag: u32,
+        IrapPicFlag: u32,
+        long_term_flag: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 1usize]> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 1usize]> = Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let is_reference_flag: u32 = unsafe { ::std::mem::transmute(is_reference_flag) };
+            is_reference_flag as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let IrapPicFlag: u32 = unsafe { ::std::mem::transmute(IrapPicFlag) };
+            IrapPicFlag as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 1u8, {
+            let long_term_flag: u32 = unsafe { ::std::mem::transmute(long_term_flag) };
+            long_term_flag as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoEncodeH265PictureInfo {
+    pub PictureType: StdVideoH265PictureType,
+    pub sps_video_parameter_set_id: u8,
+    pub pps_seq_parameter_set_id: u8,
+    pub PicOrderCntVal: i32,
+    pub TemporalId: u8,
+    pub flags: StdVideoEncodeH265PictureInfoFlags,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoEncodeH265ReferenceInfoFlags {
+    pub _bitfield_align_1: [u8; 0],
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
+    pub __bindgen_padding_0: [u8; 3usize],
+}
+impl StdVideoEncodeH265ReferenceInfoFlags {
+    #[inline]
+    pub fn is_long_term(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_is_long_term(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn isUsedFlag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_isUsedFlag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        is_long_term: u32,
+        isUsedFlag: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 1usize]> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 1usize]> = Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let is_long_term: u32 = unsafe { ::std::mem::transmute(is_long_term) };
+            is_long_term as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let isUsedFlag: u32 = unsafe { ::std::mem::transmute(isUsedFlag) };
+            isUsedFlag as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoEncodeH265ReferenceInfo {
+    pub PicOrderCntVal: i32,
+    pub TemporalId: u8,
+    pub flags: StdVideoEncodeH265ReferenceInfoFlags,
+}
+pub type VkVideoEncodeH265CapabilityFlagsEXT = VkFlags;
+pub const VK_VIDEO_ENCODE_H265_INPUT_MODE_FRAME_BIT_EXT:
+    VkVideoEncodeH265InputModeFlagBitsEXT = 1;
+pub const VK_VIDEO_ENCODE_H265_INPUT_MODE_SLICE_BIT_EXT:
+    VkVideoEncodeH265InputModeFlagBitsEXT = 2;
+pub const VK_VIDEO_ENCODE_H265_INPUT_MODE_NON_VCL_BIT_EXT:
+    VkVideoEncodeH265InputModeFlagBitsEXT = 4;
+pub const VK_VIDEO_ENCODE_H265_INPUT_MODE_FLAG_BITS_MAX_ENUM_EXT : VkVideoEncodeH265InputModeFlagBitsEXT = 2147483647 ;
+pub type VkVideoEncodeH265InputModeFlagBitsEXT = ::std::os::raw::c_uint;
+pub type VkVideoEncodeH265InputModeFlagsEXT = VkFlags;
+pub const VK_VIDEO_ENCODE_H265_OUTPUT_MODE_FRAME_BIT_EXT:
+    VkVideoEncodeH265OutputModeFlagBitsEXT = 1;
+pub const VK_VIDEO_ENCODE_H265_OUTPUT_MODE_SLICE_BIT_EXT:
+    VkVideoEncodeH265OutputModeFlagBitsEXT = 2;
+pub const VK_VIDEO_ENCODE_H265_OUTPUT_MODE_NON_VCL_BIT_EXT : VkVideoEncodeH265OutputModeFlagBitsEXT = 4 ;
+pub const VK_VIDEO_ENCODE_H265_OUTPUT_MODE_FLAG_BITS_MAX_ENUM_EXT : VkVideoEncodeH265OutputModeFlagBitsEXT = 2147483647 ;
+pub type VkVideoEncodeH265OutputModeFlagBitsEXT = ::std::os::raw::c_uint;
+pub type VkVideoEncodeH265OutputModeFlagsEXT = VkFlags;
+pub type VkVideoEncodeH265CreateFlagsEXT = VkFlags;
+pub const VK_VIDEO_ENCODE_H265_CTB_SIZE_8_BIT_EXT:
+    VkVideoEncodeH265CtbSizeFlagBitsEXT = 1;
+pub const VK_VIDEO_ENCODE_H265_CTB_SIZE_16_BIT_EXT:
+    VkVideoEncodeH265CtbSizeFlagBitsEXT = 2;
+pub const VK_VIDEO_ENCODE_H265_CTB_SIZE_32_BIT_EXT:
+    VkVideoEncodeH265CtbSizeFlagBitsEXT = 4;
+pub const VK_VIDEO_ENCODE_H265_CTB_SIZE_64_BIT_EXT:
+    VkVideoEncodeH265CtbSizeFlagBitsEXT = 8;
+pub const VK_VIDEO_ENCODE_H265_CTB_SIZE_FLAG_BITS_MAX_ENUM_EXT : VkVideoEncodeH265CtbSizeFlagBitsEXT = 2147483647 ;
+pub type VkVideoEncodeH265CtbSizeFlagBitsEXT = ::std::os::raw::c_uint;
+pub type VkVideoEncodeH265CtbSizeFlagsEXT = VkFlags;
+pub const VK_VIDEO_ENCODE_H265_RATE_CONTROL_STRUCTURE_UNKNOWN_EXT : VkVideoEncodeH265RateControlStructureFlagBitsEXT = 0 ;
+pub const VK_VIDEO_ENCODE_H265_RATE_CONTROL_STRUCTURE_FLAT_BIT_EXT : VkVideoEncodeH265RateControlStructureFlagBitsEXT = 1 ;
+pub const VK_VIDEO_ENCODE_H265_RATE_CONTROL_STRUCTURE_DYADIC_BIT_EXT : VkVideoEncodeH265RateControlStructureFlagBitsEXT = 2 ;
+pub const VK_VIDEO_ENCODE_H265_RATE_CONTROL_STRUCTURE_FLAG_BITS_MAX_ENUM_EXT : VkVideoEncodeH265RateControlStructureFlagBitsEXT = 2147483647 ;
+pub type VkVideoEncodeH265RateControlStructureFlagBitsEXT = ::std::os::raw::c_uint;
+pub type VkVideoEncodeH265RateControlStructureFlagsEXT = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH265CapabilitiesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkVideoEncodeH265CapabilityFlagsEXT,
+    pub inputModeFlags: VkVideoEncodeH265InputModeFlagsEXT,
+    pub outputModeFlags: VkVideoEncodeH265OutputModeFlagsEXT,
+    pub ctbSizes: VkVideoEncodeH265CtbSizeFlagsEXT,
+    pub inputImageDataAlignment: VkExtent2D,
+    pub maxNumL0ReferenceForP: u8,
+    pub maxNumL0ReferenceForB: u8,
+    pub maxNumL1Reference: u8,
+    pub maxNumSubLayers: u8,
+    pub qualityLevelCount: u8,
+    pub stdExtensionVersion: VkExtensionProperties,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH265SessionCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkVideoEncodeH265CreateFlagsEXT,
+    pub pStdExtensionVersion: *const VkExtensionProperties,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH265SessionParametersAddInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub vpsStdCount: u32,
+    pub pVpsStd: *const StdVideoH265VideoParameterSet,
+    pub spsStdCount: u32,
+    pub pSpsStd: *const StdVideoH265SequenceParameterSet,
+    pub ppsStdCount: u32,
+    pub pPpsStd: *const StdVideoH265PictureParameterSet,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH265SessionParametersCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub maxVpsStdCount: u32,
+    pub maxSpsStdCount: u32,
+    pub maxPpsStdCount: u32,
+    pub pParametersAddInfo: *const VkVideoEncodeH265SessionParametersAddInfoEXT,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH265DpbSlotInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub slotIndex: i8,
+    pub pStdReferenceInfo: *const StdVideoEncodeH265ReferenceInfo,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH265ReferenceListsEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub referenceList0EntryCount: u8,
+    pub pReferenceList0Entries: *const VkVideoEncodeH265DpbSlotInfoEXT,
+    pub referenceList1EntryCount: u8,
+    pub pReferenceList1Entries: *const VkVideoEncodeH265DpbSlotInfoEXT,
+    pub pReferenceModifications: *const StdVideoEncodeH265ReferenceModifications,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH265NaluSliceEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub ctbCount: u32,
+    pub pReferenceFinalLists: *const VkVideoEncodeH265ReferenceListsEXT,
+    pub pSliceHeaderStd: *const StdVideoEncodeH265SliceHeader,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH265VclFrameInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pReferenceFinalLists: *const VkVideoEncodeH265ReferenceListsEXT,
+    pub naluSliceEntryCount: u32,
+    pub pNaluSliceEntries: *const VkVideoEncodeH265NaluSliceEXT,
+    pub pCurrentPictureInfo: *const StdVideoEncodeH265PictureInfo,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH265EmitPictureParametersEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub vpsId: u8,
+    pub spsId: u8,
+    pub emitVpsEnable: VkBool32,
+    pub emitSpsEnable: VkBool32,
+    pub ppsIdEntryCount: u32,
+    pub ppsIdEntries: *const u8,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH265ProfileEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub stdProfileIdc: StdVideoH265ProfileIdc,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH265RateControlInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub gopFrameCount: u32,
+    pub idrPeriod: u32,
+    pub consecutiveBFrameCount: u32,
+    pub rateControlStructure: VkVideoEncodeH265RateControlStructureFlagBitsEXT,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH265QpEXT {
+    pub qpI: i32,
+    pub qpP: i32,
+    pub qpB: i32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH265FrameSizeEXT {
+    pub frameISize: u32,
+    pub framePSize: u32,
+    pub frameBSize: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoEncodeH265RateControlLayerInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub temporalId: u8,
+    pub useInitialRcQp: VkBool32,
+    pub initialRcQp: VkVideoEncodeH265QpEXT,
+    pub useMinQp: VkBool32,
+    pub minQp: VkVideoEncodeH265QpEXT,
+    pub useMaxQp: VkBool32,
+    pub maxQp: VkVideoEncodeH265QpEXT,
+    pub useMaxFrameSize: VkBool32,
+    pub maxFrameSize: VkVideoEncodeH265FrameSizeEXT,
+}
+pub const StdVideoDecodeH264FieldOrderCount_STD_VIDEO_DECODE_H264_FIELD_ORDER_COUNT_TOP:
+    StdVideoDecodeH264FieldOrderCount = 0;
+pub const StdVideoDecodeH264FieldOrderCount_STD_VIDEO_DECODE_H264_FIELD_ORDER_COUNT_BOTTOM:
+    StdVideoDecodeH264FieldOrderCount = 1;
+pub const StdVideoDecodeH264FieldOrderCount_STD_VIDEO_DECODE_H264_FIELD_ORDER_COUNT_LIST_SIZE:
+    StdVideoDecodeH264FieldOrderCount = 2;
+pub const StdVideoDecodeH264FieldOrderCount_STD_VIDEO_DECODE_H264_FIELD_ORDER_COUNT_INVALID:
+    StdVideoDecodeH264FieldOrderCount = 2147483647;
+pub type StdVideoDecodeH264FieldOrderCount = ::std::os::raw::c_uint;
+pub use self::StdVideoDecodeH264FieldOrderCount as StdVideoDecodeH264FieldOrderCnt;
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoDecodeH264PictureInfoFlags {
+    pub _bitfield_align_1: [u8; 0],
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
+    pub __bindgen_padding_0: [u8; 3usize],
+}
+impl StdVideoDecodeH264PictureInfoFlags {
+    #[inline]
+    pub fn field_pic_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_field_pic_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn is_intra(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_is_intra(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn IdrPicFlag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_IdrPicFlag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(2usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn bottom_field_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_bottom_field_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(3usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn is_reference(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(4usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_is_reference(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(4usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn complementary_field_pair(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(5usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_complementary_field_pair(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(5usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        field_pic_flag: u32,
+        is_intra: u32,
+        IdrPicFlag: u32,
+        bottom_field_flag: u32,
+        is_reference: u32,
+        complementary_field_pair: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 1usize]> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 1usize]> = Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let field_pic_flag: u32 = unsafe { ::std::mem::transmute(field_pic_flag) };
+            field_pic_flag as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let is_intra: u32 = unsafe { ::std::mem::transmute(is_intra) };
+            is_intra as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 1u8, {
+            let IdrPicFlag: u32 = unsafe { ::std::mem::transmute(IdrPicFlag) };
+            IdrPicFlag as u64
+        });
+        __bindgen_bitfield_unit.set(3usize, 1u8, {
+            let bottom_field_flag: u32 = unsafe { ::std::mem::transmute(bottom_field_flag) };
+            bottom_field_flag as u64
+        });
+        __bindgen_bitfield_unit.set(4usize, 1u8, {
+            let is_reference: u32 = unsafe { ::std::mem::transmute(is_reference) };
+            is_reference as u64
+        });
+        __bindgen_bitfield_unit.set(5usize, 1u8, {
+            let complementary_field_pair: u32 =
+                unsafe { ::std::mem::transmute(complementary_field_pair) };
+            complementary_field_pair as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoDecodeH264PictureInfo {
+    pub seq_parameter_set_id: u8,
+    pub pic_parameter_set_id: u8,
+    pub reserved: u16,
+    pub frame_num: u16,
+    pub idr_pic_id: u16,
+    pub PicOrderCnt: [i32; 2usize],
+    pub flags: StdVideoDecodeH264PictureInfoFlags,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoDecodeH264ReferenceInfoFlags {
+    pub _bitfield_align_1: [u8; 0],
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
+    pub __bindgen_padding_0: [u8; 3usize],
+}
+impl StdVideoDecodeH264ReferenceInfoFlags {
+    #[inline]
+    pub fn top_field_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_top_field_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn bottom_field_flag(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_bottom_field_flag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn is_long_term(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_is_long_term(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(2usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn is_non_existing(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_is_non_existing(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(3usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        top_field_flag: u32,
+        bottom_field_flag: u32,
+        is_long_term: u32,
+        is_non_existing: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 1usize]> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 1usize]> = Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let top_field_flag: u32 = unsafe { ::std::mem::transmute(top_field_flag) };
+            top_field_flag as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let bottom_field_flag: u32 = unsafe { ::std::mem::transmute(bottom_field_flag) };
+            bottom_field_flag as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 1u8, {
+            let is_long_term: u32 = unsafe { ::std::mem::transmute(is_long_term) };
+            is_long_term as u64
+        });
+        __bindgen_bitfield_unit.set(3usize, 1u8, {
+            let is_non_existing: u32 = unsafe { ::std::mem::transmute(is_non_existing) };
+            is_non_existing as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoDecodeH264ReferenceInfo {
+    pub FrameNum: u16,
+    pub reserved: u16,
+    pub PicOrderCnt: [i32; 2usize],
+    pub flags: StdVideoDecodeH264ReferenceInfoFlags,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoDecodeH264MvcElementFlags {
+    pub _bitfield_align_1: [u8; 0],
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
+    pub __bindgen_padding_0: [u8; 3usize],
+}
+impl StdVideoDecodeH264MvcElementFlags {
+    #[inline]
+    pub fn non_idr(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_non_idr(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn anchor_pic(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_anchor_pic(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn inter_view(&self) -> u32 {
+        unsafe { ::std::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_inter_view(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::std::mem::transmute(val);
+            self._bitfield_1.set(2usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        non_idr: u32,
+        anchor_pic: u32,
+        inter_view: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 1usize]> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 1usize]> = Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let non_idr: u32 = unsafe { ::std::mem::transmute(non_idr) };
+            non_idr as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let anchor_pic: u32 = unsafe { ::std::mem::transmute(anchor_pic) };
+            anchor_pic as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 1u8, {
+            let inter_view: u32 = unsafe { ::std::mem::transmute(inter_view) };
+            inter_view as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoDecodeH264MvcElement {
+    pub flags: StdVideoDecodeH264MvcElementFlags,
+    pub viewOrderIndex: u16,
+    pub viewId: u16,
+    pub temporalId: u16,
+    pub priorityId: u16,
+    pub numOfAnchorRefsInL0: u16,
+    pub viewIdOfAnchorRefsInL0: [u16; 15usize],
+    pub numOfAnchorRefsInL1: u16,
+    pub viewIdOfAnchorRefsInL1: [u16; 15usize],
+    pub numOfNonAnchorRefsInL0: u16,
+    pub viewIdOfNonAnchorRefsInL0: [u16; 15usize],
+    pub numOfNonAnchorRefsInL1: u16,
+    pub viewIdOfNonAnchorRefsInL1: [u16; 15usize],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct StdVideoDecodeH264Mvc {
+    pub viewId0: u32,
+    pub mvcElementCount: u32,
+    pub pMvcElements: *mut StdVideoDecodeH264MvcElement,
+}
+pub const VK_VIDEO_DECODE_H264_PICTURE_LAYOUT_PROGRESSIVE_EXT : VkVideoDecodeH264PictureLayoutFlagBitsEXT = 0 ;
+pub const VK_VIDEO_DECODE_H264_PICTURE_LAYOUT_INTERLACED_INTERLEAVED_LINES_BIT_EXT : VkVideoDecodeH264PictureLayoutFlagBitsEXT = 1 ;
+pub const VK_VIDEO_DECODE_H264_PICTURE_LAYOUT_INTERLACED_SEPARATE_PLANES_BIT_EXT : VkVideoDecodeH264PictureLayoutFlagBitsEXT = 2 ;
+pub const VK_VIDEO_DECODE_H264_PICTURE_LAYOUT_FLAG_BITS_MAX_ENUM_EXT : VkVideoDecodeH264PictureLayoutFlagBitsEXT = 2147483647 ;
+pub type VkVideoDecodeH264PictureLayoutFlagBitsEXT = ::std::os::raw::c_uint;
+pub type VkVideoDecodeH264PictureLayoutFlagsEXT = VkFlags;
+pub type VkVideoDecodeH264CreateFlagsEXT = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH264ProfileEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub stdProfileIdc: StdVideoH264ProfileIdc,
+    pub pictureLayout: VkVideoDecodeH264PictureLayoutFlagsEXT,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH264CapabilitiesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub maxLevel: u32,
+    pub fieldOffsetGranularity: VkOffset2D,
+    pub stdExtensionVersion: VkExtensionProperties,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH264SessionCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkVideoDecodeH264CreateFlagsEXT,
+    pub pStdExtensionVersion: *const VkExtensionProperties,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH264SessionParametersAddInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub spsStdCount: u32,
+    pub pSpsStd: *const StdVideoH264SequenceParameterSet,
+    pub ppsStdCount: u32,
+    pub pPpsStd: *const StdVideoH264PictureParameterSet,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH264SessionParametersCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub maxSpsStdCount: u32,
+    pub maxPpsStdCount: u32,
+    pub pParametersAddInfo: *const VkVideoDecodeH264SessionParametersAddInfoEXT,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH264PictureInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pStdPictureInfo: *const StdVideoDecodeH264PictureInfo,
+    pub slicesCount: u32,
+    pub pSlicesDataOffsets: *const u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH264MvcEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pStdMvc: *const StdVideoDecodeH264Mvc,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkVideoDecodeH264DpbSlotInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pStdReferenceInfo: *const StdVideoDecodeH264ReferenceInfo,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
 pub struct StdVideoDecodeH265PictureInfoFlags {
     pub _bitfield_align_1: [u8; 0],
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
@@ -19227,8 +20314,6 @@ pub struct VkBufferCollectionFUCHSIA_T {
     _unused: [u8; 0],
 }
 pub type VkBufferCollectionFUCHSIA = *mut VkBufferCollectionFUCHSIA_T;
-pub const VK_IMAGE_FORMAT_CONSTRAINTS_FLAG_BITS_MAX_ENUM_FUCHSIA : VkImageFormatConstraintsFlagBitsFUCHSIA = 2147483647 ;
-pub type VkImageFormatConstraintsFlagBitsFUCHSIA = ::std::os::raw::c_uint;
 pub type VkImageFormatConstraintsFlagsFUCHSIA = VkFlags;
 pub const VK_IMAGE_CONSTRAINTS_INFO_CPU_READ_RARELY_FUCHSIA : VkImageConstraintsInfoFlagBitsFUCHSIA = 1 ;
 pub const VK_IMAGE_CONSTRAINTS_INFO_CPU_READ_OFTEN_FUCHSIA:
