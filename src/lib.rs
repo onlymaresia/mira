@@ -9,7 +9,12 @@
 //! * Extra useful features to help with development!
 //! * Simple examples!
 
+#![allow(non_upper_case_globals)]
+#![allow(non_camel_case_types)]
+#![allow(non_snake_case)]
+
 pub mod vulkan;
 pub mod loader;
 pub mod mem;
 pub mod error;
+pub mod vulkan_memory_allocator;
