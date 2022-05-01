@@ -1,10 +1,23 @@
 use bindgen;
-use std::path::PathBuf;
-use std::process::Command;
 use std::io;
 use std::io::Write;
+use std::path::PathBuf;
+use std::process::Command;
 
 fn main() {
+    let bindings = bindgen::Builder::default()
+        .layout_tests(false)
+        .clang_arg("-I../extra/VulkanMemoryAllocator/include")
+        .header("wrapper_vma.h")
+        .generate_comments(false)
+        .parse_callbacks(Box::new(bindgen::CargoCallbacks))
+        .generate()
+        .expect("Unable to generate bindings");
+
+    bindings
+        .write_to_file(PathBuf::from("../src/vulkan_memory_allocator.rs"))
+        .expect("Couldn't write bindings!");
+
     let bindings = bindgen::Builder::default()
         .layout_tests(false)
         .clang_arg("-I./Vulkan-Headers/include/")
@@ -17,20 +30,23 @@ fn main() {
     let out_path = PathBuf::from(out);
 
     if std::fs::read_dir(out).is_err() {
-        if std::fs::create_dir(out).is_err()  {
+        if std::fs::create_dir(out).is_err() {
             println!("Wrong error!");
             return;
         }
     }
 
-    bindings.write_to_file(out_path.join("bindings.rs")).expect("Couldn't write bindings!");
+    bindings
+        .write_to_file(out_path.join("bindings.rs"))
+        .expect("Couldn't write bindings!");
 
     let mut commands = Command::new("sh");
     commands.arg("-c");
-    commands.arg(format!("cat {} | ./vulkan.sh && mv vulkan_generated.rs {} && rm {}",
-                         out_path.join("bindings.rs").to_str().unwrap(),
-                         out_path.to_str().unwrap(),
-                         out_path.join("bindings.rs").to_str().unwrap()
+    commands.arg(format!(
+        "cat {} | ./vulkan.sh && mv vulkan_generated.rs {} && rm {}",
+        out_path.join("bindings.rs").to_str().unwrap(),
+        out_path.to_str().unwrap(),
+        out_path.join("bindings.rs").to_str().unwrap()
     ));
 
     let output = commands.output().expect("failed to execute stream");
