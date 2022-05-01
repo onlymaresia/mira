@@ -20,7 +20,7 @@ fn main() {
     let bindings = bindgen::Builder::default()
         .layout_tests(false)
         .clang_arg("-Iextra/VulkanMemoryAllocator/include")
-        .header("wrapper_build.h")
+        .header("wrapper_build.h").generate_comments(false)
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .generate()
         .expect("Unable to generate bindings");
