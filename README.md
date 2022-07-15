@@ -64,7 +64,7 @@ Displays a window with a purple background.
 ![screenshot](examples/mira_color.png)
 
 ## Vulkan version
-1.3.212
+1.3.221
 
 [Vulkan Changelog](https://github.com/KhronosGroup/Vulkan-Docs/blob/main/ChangeLog.txt)
 

@@ -177,8 +177,7 @@ pub const SIZE_MAX: i32 = -1;
 pub const WINT_MIN: u32 = 0;
 pub const WINT_MAX: u32 = 4294967295;
 pub const VK_USE_64_BIT_PTR_DEFINES: u32 = 1;
-pub const VK_HEADER_VERSION: u32 = 212;
-pub const VK_UUID_SIZE: u32 = 16;
+pub const VK_HEADER_VERSION: u32 = 221;
 pub const VK_ATTACHMENT_UNUSED: i32 = -1;
 pub const VK_FALSE: u32 = 0;
 pub const VK_LOD_CLAMP_NONE: f64 = 1000.0;
@@ -189,10 +188,11 @@ pub const VK_SUBPASS_EXTERNAL: i32 = -1;
 pub const VK_TRUE: u32 = 1;
 pub const VK_WHOLE_SIZE: i32 = -1;
 pub const VK_MAX_MEMORY_TYPES: u32 = 32;
-pub const VK_MAX_MEMORY_HEAPS: u32 = 16;
 pub const VK_MAX_PHYSICAL_DEVICE_NAME_SIZE: u32 = 256;
+pub const VK_UUID_SIZE: u32 = 16;
 pub const VK_MAX_EXTENSION_NAME_SIZE: u32 = 256;
 pub const VK_MAX_DESCRIPTION_SIZE: u32 = 256;
+pub const VK_MAX_MEMORY_HEAPS: u32 = 16;
 pub const VK_VERSION_1_1: u32 = 1;
 pub const VK_MAX_DEVICE_GROUP_SIZE: u32 = 32;
 pub const VK_LUID_SIZE: u32 = 8;
@@ -473,6 +473,10 @@ pub const VK_KHR_synchronization2: u32 = 1;
 pub const VK_KHR_SYNCHRONIZATION_2_SPEC_VERSION: u32 = 1;
 pub const VK_KHR_SYNCHRONIZATION_2_EXTENSION_NAME: &'static [u8; 24usize] =
     b"VK_KHR_synchronization2\0";
+pub const VK_KHR_fragment_shader_barycentric: u32 = 1;
+pub const VK_KHR_FRAGMENT_SHADER_BARYCENTRIC_SPEC_VERSION: u32 = 1;
+pub const VK_KHR_FRAGMENT_SHADER_BARYCENTRIC_EXTENSION_NAME: &'static [u8; 35usize] =
+    b"VK_KHR_fragment_shader_barycentric\0";
 pub const VK_KHR_shader_subgroup_uniform_control_flow: u32 = 1;
 pub const VK_KHR_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_SPEC_VERSION: u32 = 1;
 pub const VK_KHR_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_EXTENSION_NAME: &'static [u8; 44usize] =
@@ -493,6 +497,10 @@ pub const VK_KHR_format_feature_flags2: u32 = 1;
 pub const VK_KHR_FORMAT_FEATURE_FLAGS_2_SPEC_VERSION: u32 = 1;
 pub const VK_KHR_FORMAT_FEATURE_FLAGS_2_EXTENSION_NAME: &'static [u8; 29usize] =
     b"VK_KHR_format_feature_flags2\0";
+pub const VK_KHR_ray_tracing_maintenance1: u32 = 1;
+pub const VK_KHR_RAY_TRACING_MAINTENANCE_1_SPEC_VERSION: u32 = 1;
+pub const VK_KHR_RAY_TRACING_MAINTENANCE_1_EXTENSION_NAME: &'static [u8; 32usize] =
+    b"VK_KHR_ray_tracing_maintenance1\0";
 pub const VK_KHR_portability_enumeration: u32 = 1;
 pub const VK_KHR_PORTABILITY_ENUMERATION_SPEC_VERSION: u32 = 1;
 pub const VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME: &'static [u8; 31usize] =
@@ -606,6 +614,10 @@ pub const VK_EXT_astc_decode_mode: u32 = 1;
 pub const VK_EXT_ASTC_DECODE_MODE_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_ASTC_DECODE_MODE_EXTENSION_NAME: &'static [u8; 24usize] =
     b"VK_EXT_astc_decode_mode\0";
+pub const VK_EXT_pipeline_robustness: u32 = 1;
+pub const VK_EXT_PIPELINE_ROBUSTNESS_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_PIPELINE_ROBUSTNESS_EXTENSION_NAME: &'static [u8; 27usize] =
+    b"VK_EXT_pipeline_robustness\0";
 pub const VK_EXT_conditional_rendering: u32 = 1;
 pub const VK_EXT_CONDITIONAL_RENDERING_SPEC_VERSION: u32 = 2;
 pub const VK_EXT_CONDITIONAL_RENDERING_EXTENSION_NAME: &'static [u8; 29usize] =
@@ -1002,7 +1014,7 @@ pub const VK_EXT_PIPELINE_CREATION_CACHE_CONTROL_SPEC_VERSION: u32 = 3;
 pub const VK_EXT_PIPELINE_CREATION_CACHE_CONTROL_EXTENSION_NAME: &'static [u8; 39usize] =
     b"VK_EXT_pipeline_creation_cache_control\0";
 pub const VK_NV_device_diagnostics_config: u32 = 1;
-pub const VK_NV_DEVICE_DIAGNOSTICS_CONFIG_SPEC_VERSION: u32 = 1;
+pub const VK_NV_DEVICE_DIAGNOSTICS_CONFIG_SPEC_VERSION: u32 = 2;
 pub const VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME: &'static [u8; 32usize] =
     b"VK_NV_device_diagnostics_config\0";
 pub const VK_QCOM_render_pass_store_ops: u32 = 1;
@@ -1013,6 +1025,10 @@ pub const VK_EXT_graphics_pipeline_library: u32 = 1;
 pub const VK_EXT_GRAPHICS_PIPELINE_LIBRARY_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_GRAPHICS_PIPELINE_LIBRARY_EXTENSION_NAME: &'static [u8; 33usize] =
     b"VK_EXT_graphics_pipeline_library\0";
+pub const VK_AMD_shader_early_and_late_fragment_tests: u32 = 1;
+pub const VK_AMD_SHADER_EARLY_AND_LATE_FRAGMENT_TESTS_SPEC_VERSION: u32 = 1;
+pub const VK_AMD_SHADER_EARLY_AND_LATE_FRAGMENT_TESTS_EXTENSION_NAME: &'static [u8; 44usize] =
+    b"VK_AMD_shader_early_and_late_fragment_tests\0";
 pub const VK_NV_fragment_shading_rate_enums: u32 = 1;
 pub const VK_NV_FRAGMENT_SHADING_RATE_ENUMS_SPEC_VERSION: u32 = 1;
 pub const VK_NV_FRAGMENT_SHADING_RATE_ENUMS_EXTENSION_NAME: &'static [u8; 34usize] =
@@ -1037,6 +1053,10 @@ pub const VK_EXT_image_robustness: u32 = 1;
 pub const VK_EXT_IMAGE_ROBUSTNESS_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_IMAGE_ROBUSTNESS_EXTENSION_NAME: &'static [u8; 24usize] =
     b"VK_EXT_image_robustness\0";
+pub const VK_EXT_image_compression_control: u32 = 1;
+pub const VK_EXT_IMAGE_COMPRESSION_CONTROL_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_IMAGE_COMPRESSION_CONTROL_EXTENSION_NAME: &'static [u8; 33usize] =
+    b"VK_EXT_image_compression_control\0";
 pub const VK_EXT_4444_formats: u32 = 1;
 pub const VK_EXT_4444_FORMATS_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_4444_FORMATS_EXTENSION_NAME: &'static [u8; 20usize] = b"VK_EXT_4444_formats\0";
@@ -1084,6 +1104,14 @@ pub const VK_NV_external_memory_rdma: u32 = 1;
 pub const VK_NV_EXTERNAL_MEMORY_RDMA_SPEC_VERSION: u32 = 1;
 pub const VK_NV_EXTERNAL_MEMORY_RDMA_EXTENSION_NAME: &'static [u8; 27usize] =
     b"VK_NV_external_memory_rdma\0";
+pub const VK_EXT_pipeline_properties: u32 = 1;
+pub const VK_EXT_PIPELINE_PROPERTIES_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_PIPELINE_PROPERTIES_EXTENSION_NAME: &'static [u8; 27usize] =
+    b"VK_EXT_pipeline_properties\0";
+pub const VK_EXT_multisampled_render_to_single_sampled: u32 = 1;
+pub const VK_EXT_MULTISAMPLED_RENDER_TO_SINGLE_SAMPLED_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_MULTISAMPLED_RENDER_TO_SINGLE_SAMPLED_EXTENSION_NAME: &'static [u8; 45usize] =
+    b"VK_EXT_multisampled_render_to_single_sampled\0";
 pub const VK_EXT_extended_dynamic_state2: u32 = 1;
 pub const VK_EXT_EXTENDED_DYNAMIC_STATE_2_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_EXTENDED_DYNAMIC_STATE_2_EXTENSION_NAME: &'static [u8; 31usize] =
@@ -1128,6 +1156,10 @@ pub const VK_VALVE_descriptor_set_host_mapping: u32 = 1;
 pub const VK_VALVE_DESCRIPTOR_SET_HOST_MAPPING_SPEC_VERSION: u32 = 1;
 pub const VK_VALVE_DESCRIPTOR_SET_HOST_MAPPING_EXTENSION_NAME: &'static [u8; 37usize] =
     b"VK_VALVE_descriptor_set_host_mapping\0";
+pub const VK_EXT_non_seamless_cube_map: u32 = 1;
+pub const VK_EXT_NON_SEAMLESS_CUBE_MAP_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_NON_SEAMLESS_CUBE_MAP_EXTENSION_NAME: &'static [u8; 29usize] =
+    b"VK_EXT_non_seamless_cube_map\0";
 pub const VK_QCOM_fragment_density_map_offset: u32 = 1;
 pub const VK_QCOM_FRAGMENT_DENSITY_MAP_OFFSET_SPEC_VERSION: u32 = 1;
 pub const VK_QCOM_FRAGMENT_DENSITY_MAP_OFFSET_EXTENSION_NAME: &'static [u8; 36usize] =
@@ -1140,6 +1172,19 @@ pub const VK_GOOGLE_surfaceless_query: u32 = 1;
 pub const VK_GOOGLE_SURFACELESS_QUERY_SPEC_VERSION: u32 = 1;
 pub const VK_GOOGLE_SURFACELESS_QUERY_EXTENSION_NAME: &'static [u8; 28usize] =
     b"VK_GOOGLE_surfaceless_query\0";
+pub const VK_EXT_image_compression_control_swapchain: u32 = 1;
+pub const VK_EXT_IMAGE_COMPRESSION_CONTROL_SWAPCHAIN_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_IMAGE_COMPRESSION_CONTROL_SWAPCHAIN_EXTENSION_NAME: &'static [u8; 43usize] =
+    b"VK_EXT_image_compression_control_swapchain\0";
+pub const VK_EXT_subpass_merge_feedback: u32 = 1;
+pub const VK_EXT_SUBPASS_MERGE_FEEDBACK_SPEC_VERSION: u32 = 2;
+pub const VK_EXT_SUBPASS_MERGE_FEEDBACK_EXTENSION_NAME: &'static [u8; 30usize] =
+    b"VK_EXT_subpass_merge_feedback\0";
+pub const VK_EXT_shader_module_identifier: u32 = 1;
+pub const VK_MAX_SHADER_MODULE_IDENTIFIER_SIZE_EXT: u32 = 32;
+pub const VK_EXT_SHADER_MODULE_IDENTIFIER_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_SHADER_MODULE_IDENTIFIER_EXTENSION_NAME: &'static [u8; 32usize] =
+    b"VK_EXT_shader_module_identifier\0";
 pub const VK_KHR_acceleration_structure: u32 = 1;
 pub const VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION: u32 = 13;
 pub const VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME: &'static [u8; 30usize] =
@@ -1162,7 +1207,7 @@ pub const VK_ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_EXTENSION_NAME: &'s
              51usize] = b"VK_ANDROID_external_memory_android_hardware_buffer\0";
 pub const VULKAN_BETA_H_: u32 = 1;
 pub const VK_KHR_video_queue: u32 = 1;
-pub const VK_KHR_VIDEO_QUEUE_SPEC_VERSION: u32 = 3;
+pub const VK_KHR_VIDEO_QUEUE_SPEC_VERSION: u32 = 4;
 pub const VK_KHR_VIDEO_QUEUE_EXTENSION_NAME: &'static [u8; 19usize] = b"VK_KHR_video_queue\0";
 pub const VK_KHR_video_decode_queue: u32 = 1;
 pub const VK_KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION: u32 = 4;
@@ -1273,6 +1318,9 @@ pub const VULKAN_METAL_H_: u32 = 1;
 pub const VK_EXT_metal_surface: u32 = 1;
 pub const VK_EXT_METAL_SURFACE_SPEC_VERSION: u32 = 1;
 pub const VK_EXT_METAL_SURFACE_EXTENSION_NAME: &'static [u8; 21usize] = b"VK_EXT_metal_surface\0";
+pub const VK_EXT_metal_objects: u32 = 1;
+pub const VK_EXT_METAL_OBJECTS_SPEC_VERSION: u32 = 1;
+pub const VK_EXT_METAL_OBJECTS_EXTENSION_NAME: &'static [u8; 21usize] = b"VK_EXT_metal_objects\0";
 pub const VULKAN_SCREEN_H_: u32 = 1;
 pub const VK_QNX_screen_surface: u32 = 1;
 pub const VK_QNX_SCREEN_SURFACE_SPEC_VERSION: u32 = 1;
@@ -1611,6 +1659,12 @@ pub const VK_ERROR_OUT_OF_DATE_KHR: VkResult = -1000001004;
 pub const VK_ERROR_INCOMPATIBLE_DISPLAY_KHR: VkResult = -1000003001;
 pub const VK_ERROR_VALIDATION_FAILED_EXT: VkResult = -1000011001;
 pub const VK_ERROR_INVALID_SHADER_NV: VkResult = -1000012000;
+pub const VK_ERROR_IMAGE_USAGE_NOT_SUPPORTED_KHR: VkResult = -1000023000;
+pub const VK_ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR: VkResult = -1000023001;
+pub const VK_ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR: VkResult = -1000023002;
+pub const VK_ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR: VkResult = -1000023003;
+pub const VK_ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR: VkResult = -1000023004;
+pub const VK_ERROR_VIDEO_STD_VERSION_NOT_SUPPORTED_KHR: VkResult = -1000023005;
 pub const VK_ERROR_INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT_EXT: VkResult = -1000158000;
 pub const VK_ERROR_NOT_PERMITTED_KHR: VkResult = -1000174001;
 pub const VK_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT: VkResult = -1000255000;
@@ -1618,6 +1672,7 @@ pub const VK_THREAD_IDLE_KHR: VkResult = 1000268000;
 pub const VK_THREAD_DONE_KHR: VkResult = 1000268001;
 pub const VK_OPERATION_DEFERRED_KHR: VkResult = 1000268002;
 pub const VK_OPERATION_NOT_DEFERRED_KHR: VkResult = 1000268003;
+pub const VK_ERROR_COMPRESSION_EXHAUSTED_EXT: VkResult = -1000338000;
 pub const VK_ERROR_OUT_OF_POOL_MEMORY_KHR: VkResult = -1000069000;
 pub const VK_ERROR_INVALID_EXTERNAL_HANDLE_KHR: VkResult = -1000072003;
 pub const VK_ERROR_FRAGMENTATION_EXT: VkResult = -1000161000;
@@ -2147,6 +2202,12 @@ pub const VK_STRUCTURE_TYPE_IMAGE_VIEW_ASTC_DECODE_MODE_EXT: VkStructureType =
     1000067000;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_ASTC_DECODE_FEATURES_EXT:
     VkStructureType = 1000067001;
+pub const VK_STRUCTURE_TYPE_PIPELINE_ROBUSTNESS_CREATE_INFO_EXT: VkStructureType =
+    1000068000;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PIPELINE_ROBUSTNESS_FEATURES_EXT:
+    VkStructureType = 1000068001;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PIPELINE_ROBUSTNESS_PROPERTIES_EXT:
+    VkStructureType = 1000068002;
 pub const VK_STRUCTURE_TYPE_IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR: VkStructureType =
     1000073000;
 pub const VK_STRUCTURE_TYPE_EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR: VkStructureType =
@@ -2421,7 +2482,6 @@ pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV:
     VkStructureType = 1000202000;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV:
     VkStructureType = 1000202001;
-pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV : VkStructureType = 1000203000 ;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_IMAGE_FOOTPRINT_FEATURES_NV:
     VkStructureType = 1000204000;
 pub const VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV : VkStructureType = 1000205000 ;
@@ -2596,6 +2656,30 @@ pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV:
     VkStructureType = 1000300000;
 pub const VK_STRUCTURE_TYPE_DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV:
     VkStructureType = 1000300001;
+pub const VK_STRUCTURE_TYPE_EXPORT_METAL_OBJECT_CREATE_INFO_EXT: VkStructureType =
+    1000311000;
+pub const VK_STRUCTURE_TYPE_EXPORT_METAL_OBJECTS_INFO_EXT: VkStructureType =
+    1000311001;
+pub const VK_STRUCTURE_TYPE_EXPORT_METAL_DEVICE_INFO_EXT: VkStructureType =
+    1000311002;
+pub const VK_STRUCTURE_TYPE_EXPORT_METAL_COMMAND_QUEUE_INFO_EXT: VkStructureType =
+    1000311003;
+pub const VK_STRUCTURE_TYPE_EXPORT_METAL_BUFFER_INFO_EXT: VkStructureType =
+    1000311004;
+pub const VK_STRUCTURE_TYPE_IMPORT_METAL_BUFFER_INFO_EXT: VkStructureType =
+    1000311005;
+pub const VK_STRUCTURE_TYPE_EXPORT_METAL_TEXTURE_INFO_EXT: VkStructureType =
+    1000311006;
+pub const VK_STRUCTURE_TYPE_IMPORT_METAL_TEXTURE_INFO_EXT: VkStructureType =
+    1000311007;
+pub const VK_STRUCTURE_TYPE_EXPORT_METAL_IO_SURFACE_INFO_EXT: VkStructureType =
+    1000311008;
+pub const VK_STRUCTURE_TYPE_IMPORT_METAL_IO_SURFACE_INFO_EXT: VkStructureType =
+    1000311009;
+pub const VK_STRUCTURE_TYPE_EXPORT_METAL_SHARED_EVENT_INFO_EXT: VkStructureType =
+    1000311010;
+pub const VK_STRUCTURE_TYPE_IMPORT_METAL_SHARED_EVENT_INFO_EXT: VkStructureType =
+    1000311011;
 pub const VK_STRUCTURE_TYPE_QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV:
     VkStructureType = 1000314008;
 pub const VK_STRUCTURE_TYPE_CHECKPOINT_DATA_2_NV: VkStructureType = 1000314009;
@@ -2603,6 +2687,9 @@ pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_GRAPHICS_PIPELINE_LIBRARY_FEATURES_E
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_GRAPHICS_PIPELINE_LIBRARY_PROPERTIES_EXT : VkStructureType = 1000320001 ;
 pub const VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_LIBRARY_CREATE_INFO_EXT:
     VkStructureType = 1000320002;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_EARLY_AND_LATE_FRAGMENT_TESTS_FEATURES_AMD : VkStructureType = 1000321000 ;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_KHR : VkStructureType = 1000203000 ;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_PROPERTIES_KHR : VkStructureType = 1000322000 ;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_FEATURES_KHR : VkStructureType = 1000323000 ;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV : VkStructureType = 1000326000 ;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV : VkStructureType = 1000326001 ;
@@ -2619,6 +2706,13 @@ pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EX
 pub const VK_STRUCTURE_TYPE_COPY_COMMAND_TRANSFORM_INFO_QCOM: VkStructureType =
     1000333000;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR : VkStructureType = 1000336000 ;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_IMAGE_COMPRESSION_CONTROL_FEATURES_EXT : VkStructureType = 1000338000 ;
+pub const VK_STRUCTURE_TYPE_IMAGE_COMPRESSION_CONTROL_EXT: VkStructureType =
+    1000338001;
+pub const VK_STRUCTURE_TYPE_SUBRESOURCE_LAYOUT_2_EXT: VkStructureType = 1000338002;
+pub const VK_STRUCTURE_TYPE_IMAGE_SUBRESOURCE_2_EXT: VkStructureType = 1000338003;
+pub const VK_STRUCTURE_TYPE_IMAGE_COMPRESSION_PROPERTIES_EXT: VkStructureType =
+    1000338004;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT:
     VkStructureType = 1000340000;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_FEATURES_ARM : VkStructureType = 1000342000 ;
@@ -2683,6 +2777,15 @@ pub const VK_STRUCTURE_TYPE_MEMORY_GET_REMOTE_ADDRESS_INFO_NV: VkStructureType =
     1000371000;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTERNAL_MEMORY_RDMA_FEATURES_NV:
     VkStructureType = 1000371001;
+pub const VK_STRUCTURE_TYPE_PIPELINE_PROPERTIES_IDENTIFIER_EXT: VkStructureType =
+    1000372000;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PIPELINE_PROPERTIES_FEATURES_EXT:
+    VkStructureType = 1000372001;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MULTISAMPLED_RENDER_TO_SINGLE_SAMPLED_FEATURES_EXT : VkStructureType = 1000376000 ;
+pub const VK_STRUCTURE_TYPE_SUBPASS_RESOLVE_PERFORMANCE_QUERY_EXT: VkStructureType =
+    1000376001;
+pub const VK_STRUCTURE_TYPE_MULTISAMPLED_RENDER_TO_SINGLE_SAMPLED_INFO_EXT:
+    VkStructureType = 1000376002;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT : VkStructureType = 1000377000 ;
 pub const VK_STRUCTURE_TYPE_SCREEN_SURFACE_CREATE_INFO_QNX: VkStructureType =
     1000378000;
@@ -2691,6 +2794,7 @@ pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT:
 pub const VK_STRUCTURE_TYPE_PIPELINE_COLOR_WRITE_CREATE_INFO_EXT: VkStructureType =
     1000381001;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PRIMITIVES_GENERATED_QUERY_FEATURES_EXT : VkStructureType = 1000382000 ;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_RAY_TRACING_MAINTENANCE_1_FEATURES_KHR : VkStructureType = 1000386000 ;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_IMAGE_VIEW_MIN_LOD_FEATURES_EXT:
     VkStructureType = 1000391000;
 pub const VK_STRUCTURE_TYPE_IMAGE_VIEW_MIN_LOD_CREATE_INFO_EXT: VkStructureType =
@@ -2710,12 +2814,28 @@ pub const VK_STRUCTURE_TYPE_DESCRIPTOR_SET_BINDING_REFERENCE_VALVE:
     VkStructureType = 1000420001;
 pub const VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_HOST_MAPPING_INFO_VALVE:
     VkStructureType = 1000420002;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_NON_SEAMLESS_CUBE_MAP_FEATURES_EXT:
+    VkStructureType = 1000422000;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_OFFSET_FEATURES_QCOM : VkStructureType = 1000425000 ;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_OFFSET_PROPERTIES_QCOM : VkStructureType = 1000425001 ;
 pub const VK_STRUCTURE_TYPE_SUBPASS_FRAGMENT_DENSITY_MAP_OFFSET_END_INFO_QCOM:
     VkStructureType = 1000425002;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_LINEAR_COLOR_ATTACHMENT_FEATURES_NV:
     VkStructureType = 1000430000;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_IMAGE_COMPRESSION_CONTROL_SWAPCHAIN_FEATURES_EXT : VkStructureType = 1000437000 ;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SUBPASS_MERGE_FEEDBACK_FEATURES_EXT:
+    VkStructureType = 1000458000;
+pub const VK_STRUCTURE_TYPE_RENDER_PASS_CREATION_CONTROL_EXT: VkStructureType =
+    1000458001;
+pub const VK_STRUCTURE_TYPE_RENDER_PASS_CREATION_FEEDBACK_CREATE_INFO_EXT:
+    VkStructureType = 1000458002;
+pub const VK_STRUCTURE_TYPE_RENDER_PASS_SUBPASS_FEEDBACK_CREATE_INFO_EXT:
+    VkStructureType = 1000458003;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_MODULE_IDENTIFIER_FEATURES_EXT : VkStructureType = 1000462000 ;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_MODULE_IDENTIFIER_PROPERTIES_EXT : VkStructureType = 1000462001 ;
+pub const VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_MODULE_IDENTIFIER_CREATE_INFO_EXT : VkStructureType = 1000462002 ;
+pub const VK_STRUCTURE_TYPE_SHADER_MODULE_IDENTIFIER_EXT: VkStructureType =
+    1000462003;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VARIABLE_POINTER_FEATURES:
     VkStructureType = 1000120000;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_DRAW_PARAMETER_FEATURES:
@@ -2912,6 +3032,7 @@ pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DEPTH_STENCIL_RESOLVE_PROPERTIES_KHR
     VkStructureType = 1000199000;
 pub const VK_STRUCTURE_TYPE_SUBPASS_DESCRIPTION_DEPTH_STENCIL_RESOLVE_KHR:
     VkStructureType = 1000199001;
+pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV : VkStructureType = 1000203000 ;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_FEATURES_KHR:
     VkStructureType = 1000207000;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_PROPERTIES_KHR:
@@ -3000,6 +3121,7 @@ pub const VK_STRUCTURE_TYPE_IMAGE_BLIT_2_KHR: VkStructureType = 1000337008;
 pub const VK_STRUCTURE_TYPE_BUFFER_IMAGE_COPY_2_KHR: VkStructureType = 1000337009;
 pub const VK_STRUCTURE_TYPE_IMAGE_RESOLVE_2_KHR: VkStructureType = 1000337010;
 pub const VK_STRUCTURE_TYPE_FORMAT_PROPERTIES_3_KHR: VkStructureType = 1000360000;
+pub const VK_STRUCTURE_TYPE_PIPELINE_INFO_EXT: VkStructureType = 1000269001;
 pub const VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_EXT:
     VkStructureType = 1000388000;
 pub const VK_STRUCTURE_TYPE_QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_EXT:
@@ -3014,6 +3136,11 @@ pub const VK_STRUCTURE_TYPE_DEVICE_IMAGE_MEMORY_REQUIREMENTS_KHR: VkStructureTyp
     1000413003;
 pub const VK_STRUCTURE_TYPE_MAX_ENUM: VkStructureType = 2147483647;
 pub type VkStructureType = ::std::os::raw::c_uint;
+pub const VK_PIPELINE_CACHE_HEADER_VERSION_ONE:
+    VkPipelineCacheHeaderVersion = 1;
+pub const VK_PIPELINE_CACHE_HEADER_VERSION_MAX_ENUM:
+    VkPipelineCacheHeaderVersion = 2147483647;
+pub type VkPipelineCacheHeaderVersion = ::std::os::raw::c_uint;
 pub const VK_IMAGE_LAYOUT_UNDEFINED: VkImageLayout = 0;
 pub const VK_IMAGE_LAYOUT_GENERAL: VkImageLayout = 1;
 pub const VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL: VkImageLayout = 2;
@@ -3109,11 +3236,6 @@ pub const VK_OBJECT_TYPE_SAMPLER_YCBCR_CONVERSION_KHR: VkObjectType = 1000156000
 pub const VK_OBJECT_TYPE_PRIVATE_DATA_SLOT_EXT: VkObjectType = 1000295000;
 pub const VK_OBJECT_TYPE_MAX_ENUM: VkObjectType = 2147483647;
 pub type VkObjectType = ::std::os::raw::c_uint;
-pub const VK_PIPELINE_CACHE_HEADER_VERSION_ONE:
-    VkPipelineCacheHeaderVersion = 1;
-pub const VK_PIPELINE_CACHE_HEADER_VERSION_MAX_ENUM:
-    VkPipelineCacheHeaderVersion = 2147483647;
-pub type VkPipelineCacheHeaderVersion = ::std::os::raw::c_uint;
 pub const VK_VENDOR_ID_VIV: VkVendorId = 65537;
 pub const VK_VENDOR_ID_VSI: VkVendorId = 65538;
 pub const VK_VENDOR_ID_KAZAN: VkVendorId = 65539;
@@ -3471,6 +3593,8 @@ pub const VK_QUERY_TYPE_PERFORMANCE_QUERY_INTEL: VkQueryType = 1000210000;
 pub const VK_QUERY_TYPE_VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR: VkQueryType =
     1000299000;
 pub const VK_QUERY_TYPE_PRIMITIVES_GENERATED_EXT: VkQueryType = 1000382000;
+pub const VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SERIALIZATION_BOTTOM_LEVEL_POINTERS_KHR : VkQueryType = 1000386000 ;
+pub const VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SIZE_KHR: VkQueryType = 1000386001;
 pub const VK_QUERY_TYPE_MAX_ENUM: VkQueryType = 2147483647;
 pub type VkQueryType = ::std::os::raw::c_uint;
 pub const VK_SHARING_MODE_EXCLUSIVE: VkSharingMode = 0;
@@ -3709,8 +3833,8 @@ pub const VK_BORDER_COLOR_MAX_ENUM: VkBorderColor = 2147483647;
 pub type VkBorderColor = ::std::os::raw::c_uint;
 pub const VK_FILTER_NEAREST: VkFilter = 0;
 pub const VK_FILTER_LINEAR: VkFilter = 1;
-pub const VK_FILTER_CUBIC_IMG: VkFilter = 1000015000;
 pub const VK_FILTER_CUBIC_EXT: VkFilter = 1000015000;
+pub const VK_FILTER_CUBIC_IMG: VkFilter = 1000015000;
 pub const VK_FILTER_MAX_ENUM: VkFilter = 2147483647;
 pub type VkFilter = ::std::os::raw::c_uint;
 pub const VK_SAMPLER_ADDRESS_MODE_REPEAT: VkSamplerAddressMode = 0;
@@ -3887,14 +4011,14 @@ pub const VK_FORMAT_FEATURE_COSITED_CHROMA_SAMPLES_BIT:
     VkFormatFeatureFlagBits = 8388608;
 pub const VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT:
     VkFormatFeatureFlagBits = 65536;
-pub const VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_IMG:
-    VkFormatFeatureFlagBits = 8192;
 pub const VK_FORMAT_FEATURE_VIDEO_DECODE_OUTPUT_BIT_KHR:
     VkFormatFeatureFlagBits = 33554432;
 pub const VK_FORMAT_FEATURE_VIDEO_DECODE_DPB_BIT_KHR:
     VkFormatFeatureFlagBits = 67108864;
 pub const VK_FORMAT_FEATURE_ACCELERATION_STRUCTURE_VERTEX_BUFFER_BIT_KHR:
     VkFormatFeatureFlagBits = 536870912;
+pub const VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_EXT:
+    VkFormatFeatureFlagBits = 8192;
 pub const VK_FORMAT_FEATURE_FRAGMENT_DENSITY_MAP_BIT_EXT:
     VkFormatFeatureFlagBits = 16777216;
 pub const VK_FORMAT_FEATURE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR:
@@ -3903,6 +4027,8 @@ pub const VK_FORMAT_FEATURE_VIDEO_ENCODE_INPUT_BIT_KHR:
     VkFormatFeatureFlagBits = 134217728;
 pub const VK_FORMAT_FEATURE_VIDEO_ENCODE_DPB_BIT_KHR:
     VkFormatFeatureFlagBits = 268435456;
+pub const VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_IMG:
+    VkFormatFeatureFlagBits = 8192;
 pub const VK_FORMAT_FEATURE_TRANSFER_SRC_BIT_KHR: VkFormatFeatureFlagBits =
     16384;
 pub const VK_FORMAT_FEATURE_TRANSFER_DST_BIT_KHR: VkFormatFeatureFlagBits =
@@ -3919,8 +4045,6 @@ pub const VK_FORMAT_FEATURE_DISJOINT_BIT_KHR: VkFormatFeatureFlagBits =
     4194304;
 pub const VK_FORMAT_FEATURE_COSITED_CHROMA_SAMPLES_BIT_KHR:
     VkFormatFeatureFlagBits = 8388608;
-pub const VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_EXT:
-    VkFormatFeatureFlagBits = 8192;
 pub const VK_FORMAT_FEATURE_FLAG_BITS_MAX_ENUM: VkFormatFeatureFlagBits =
     2147483647;
 pub type VkFormatFeatureFlagBits = ::std::os::raw::c_uint;
@@ -3943,6 +4067,8 @@ pub const VK_IMAGE_CREATE_CORNER_SAMPLED_BIT_NV: VkImageCreateFlagBits = 8192;
 pub const VK_IMAGE_CREATE_SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_BIT_EXT:
     VkImageCreateFlagBits = 4096;
 pub const VK_IMAGE_CREATE_SUBSAMPLED_BIT_EXT: VkImageCreateFlagBits = 16384;
+pub const VK_IMAGE_CREATE_MULTISAMPLED_RENDER_TO_SINGLE_SAMPLED_BIT_EXT:
+    VkImageCreateFlagBits = 262144;
 pub const VK_IMAGE_CREATE_2D_VIEW_COMPATIBLE_BIT_EXT: VkImageCreateFlagBits =
     131072;
 pub const VK_IMAGE_CREATE_FRAGMENT_DENSITY_MAP_OFFSET_BIT_QCOM:
@@ -4365,6 +4491,8 @@ pub type VkShaderStageFlags = VkFlags;
 pub const VK_SAMPLER_CREATE_SUBSAMPLED_BIT_EXT: VkSamplerCreateFlagBits = 1;
 pub const VK_SAMPLER_CREATE_SUBSAMPLED_COARSE_RECONSTRUCTION_BIT_EXT:
     VkSamplerCreateFlagBits = 2;
+pub const VK_SAMPLER_CREATE_NON_SEAMLESS_CUBE_MAP_BIT_EXT:
+    VkSamplerCreateFlagBits = 4;
 pub const VK_SAMPLER_CREATE_FLAG_BITS_MAX_ENUM: VkSamplerCreateFlagBits =
     2147483647;
 pub type VkSamplerCreateFlagBits = ::std::os::raw::c_uint;
@@ -7748,6 +7876,7 @@ pub const VK_DRIVER_ID_MESA_V3DV: VkDriverId = 19;
 pub const VK_DRIVER_ID_MESA_PANVK: VkDriverId = 20;
 pub const VK_DRIVER_ID_SAMSUNG_PROPRIETARY: VkDriverId = 21;
 pub const VK_DRIVER_ID_MESA_VENUS: VkDriverId = 22;
+pub const VK_DRIVER_ID_MESA_DOZEN: VkDriverId = 23;
 pub const VK_DRIVER_ID_AMD_PROPRIETARY_KHR: VkDriverId = 1;
 pub const VK_DRIVER_ID_AMD_OPEN_SOURCE_KHR: VkDriverId = 2;
 pub const VK_DRIVER_ID_MESA_RADV_KHR: VkDriverId = 3;
@@ -8638,6 +8767,8 @@ pub const VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV: VkPipelineStageFlagBits2 = 524
 pub const VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV: VkPipelineStageFlagBits2 = 1048576;
 pub const VK_PIPELINE_STAGE_2_SUBPASS_SHADING_BIT_HUAWEI: VkPipelineStageFlagBits2 = 549755813888;
 pub const VK_PIPELINE_STAGE_2_INVOCATION_MASK_BIT_HUAWEI: VkPipelineStageFlagBits2 = 1099511627776;
+pub const VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_COPY_BIT_KHR: VkPipelineStageFlagBits2 =
+    268435456;
 pub type VkAccessFlags2 = VkFlags64;
 pub type VkAccessFlagBits2 = VkFlags64;
 pub const VK_ACCESS_2_NONE: VkAccessFlagBits2 = 0;
@@ -8701,6 +8832,7 @@ pub const VK_ACCESS_2_ACCELERATION_STRUCTURE_WRITE_BIT_NV: VkAccessFlagBits2 = 4
 pub const VK_ACCESS_2_FRAGMENT_DENSITY_MAP_READ_BIT_EXT: VkAccessFlagBits2 = 16777216;
 pub const VK_ACCESS_2_COLOR_ATTACHMENT_READ_NONCOHERENT_BIT_EXT: VkAccessFlagBits2 = 524288;
 pub const VK_ACCESS_2_INVOCATION_MASK_READ_BIT_HUAWEI: VkAccessFlagBits2 = 549755813888;
+pub const VK_ACCESS_2_SHADER_BINDING_TABLE_READ_BIT_KHR: VkAccessFlagBits2 = 1099511627776;
 pub const VK_SUBMIT_PROTECTED_BIT: VkSubmitFlagBits = 1;
 pub const VK_SUBMIT_PROTECTED_BIT_KHR: VkSubmitFlagBits = 1;
 pub const VK_SUBMIT_FLAG_BITS_MAX_ENUM: VkSubmitFlagBits = 2147483647;
@@ -11302,6 +11434,20 @@ pub type PFN_vkGetQueueCheckpointData2NV =
 ;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceFragmentShaderBarycentricFeaturesKHR {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub fragmentShaderBarycentric: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub triStripVertexOrderIndependentOfProvokingVertex: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
 pub struct VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR {
     pub sType: VkStructureType,
     pub pNext: *mut ::std::os::raw::c_void,
@@ -11360,6 +11506,35 @@ pub type PFN_vkCmdResolveImage2KHR =
 pub type VkFormatFeatureFlags2KHR = VkFormatFeatureFlags2;
 pub type VkFormatFeatureFlagBits2KHR = VkFormatFeatureFlagBits2;
 pub type VkFormatProperties3KHR = VkFormatProperties3;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceRayTracingMaintenance1FeaturesKHR {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub rayTracingMaintenance1: VkBool32,
+    pub rayTracingPipelineTraceRaysIndirect2: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkTraceRaysIndirectCommand2KHR {
+    pub raygenShaderRecordAddress: VkDeviceAddress,
+    pub raygenShaderRecordSize: VkDeviceSize,
+    pub missShaderBindingTableAddress: VkDeviceAddress,
+    pub missShaderBindingTableSize: VkDeviceSize,
+    pub missShaderBindingTableStride: VkDeviceSize,
+    pub hitShaderBindingTableAddress: VkDeviceAddress,
+    pub hitShaderBindingTableSize: VkDeviceSize,
+    pub hitShaderBindingTableStride: VkDeviceSize,
+    pub callableShaderBindingTableAddress: VkDeviceAddress,
+    pub callableShaderBindingTableSize: VkDeviceSize,
+    pub callableShaderBindingTableStride: VkDeviceSize,
+    pub width: u32,
+    pub height: u32,
+    pub depth: u32,
+}
+pub type PFN_vkCmdTraceRaysIndirect2KHR = 
+    unsafe extern "C" fn(commandBuffer: VkCommandBuffer, indirectDeviceAddress: VkDeviceAddress)
+;
 pub type VkPhysicalDeviceMaintenance4FeaturesKHR = VkPhysicalDeviceMaintenance4Features;
 pub type VkPhysicalDeviceMaintenance4PropertiesKHR = VkPhysicalDeviceMaintenance4Properties;
 pub type VkDeviceBufferMemoryRequirementsKHR = VkDeviceBufferMemoryRequirements;
@@ -11971,6 +12146,45 @@ pub struct VkPhysicalDeviceASTCDecodeFeaturesEXT {
     pub sType: VkStructureType,
     pub pNext: *mut ::std::os::raw::c_void,
     pub decodeModeSharedExponent: VkBool32,
+}
+pub const VK_PIPELINE_ROBUSTNESS_BUFFER_BEHAVIOR_DEVICE_DEFAULT_EXT : VkPipelineRobustnessBufferBehaviorEXT = 0 ;
+pub const VK_PIPELINE_ROBUSTNESS_BUFFER_BEHAVIOR_DISABLED_EXT : VkPipelineRobustnessBufferBehaviorEXT = 1 ;
+pub const VK_PIPELINE_ROBUSTNESS_BUFFER_BEHAVIOR_ROBUST_BUFFER_ACCESS_EXT : VkPipelineRobustnessBufferBehaviorEXT = 2 ;
+pub const VK_PIPELINE_ROBUSTNESS_BUFFER_BEHAVIOR_ROBUST_BUFFER_ACCESS_2_EXT : VkPipelineRobustnessBufferBehaviorEXT = 3 ;
+pub const VK_PIPELINE_ROBUSTNESS_BUFFER_BEHAVIOR_MAX_ENUM_EXT : VkPipelineRobustnessBufferBehaviorEXT = 2147483647 ;
+pub type VkPipelineRobustnessBufferBehaviorEXT = ::std::os::raw::c_uint;
+pub const VK_PIPELINE_ROBUSTNESS_IMAGE_BEHAVIOR_DEVICE_DEFAULT_EXT : VkPipelineRobustnessImageBehaviorEXT = 0 ;
+pub const VK_PIPELINE_ROBUSTNESS_IMAGE_BEHAVIOR_DISABLED_EXT : VkPipelineRobustnessImageBehaviorEXT = 1 ;
+pub const VK_PIPELINE_ROBUSTNESS_IMAGE_BEHAVIOR_ROBUST_IMAGE_ACCESS_EXT : VkPipelineRobustnessImageBehaviorEXT = 2 ;
+pub const VK_PIPELINE_ROBUSTNESS_IMAGE_BEHAVIOR_ROBUST_IMAGE_ACCESS_2_EXT : VkPipelineRobustnessImageBehaviorEXT = 3 ;
+pub const VK_PIPELINE_ROBUSTNESS_IMAGE_BEHAVIOR_MAX_ENUM_EXT : VkPipelineRobustnessImageBehaviorEXT = 2147483647 ;
+pub type VkPipelineRobustnessImageBehaviorEXT = ::std::os::raw::c_uint;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDevicePipelineRobustnessFeaturesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub pipelineRobustness: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDevicePipelineRobustnessPropertiesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub defaultRobustnessStorageBuffers: VkPipelineRobustnessBufferBehaviorEXT,
+    pub defaultRobustnessUniformBuffers: VkPipelineRobustnessBufferBehaviorEXT,
+    pub defaultRobustnessVertexInputs: VkPipelineRobustnessBufferBehaviorEXT,
+    pub defaultRobustnessImages: VkPipelineRobustnessImageBehaviorEXT,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPipelineRobustnessCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub storageBuffers: VkPipelineRobustnessBufferBehaviorEXT,
+    pub uniformBuffers: VkPipelineRobustnessBufferBehaviorEXT,
+    pub vertexInputs: VkPipelineRobustnessBufferBehaviorEXT,
+    pub images: VkPipelineRobustnessImageBehaviorEXT,
 }
 pub const VK_CONDITIONAL_RENDERING_INVERTED_BIT_EXT:
     VkConditionalRenderingFlagBitsEXT = 1;
@@ -13603,13 +13817,8 @@ pub type PFN_vkCmdDrawMeshTasksIndirectCountNV =
         stride: u32,
     )
 ;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV {
-    pub sType: VkStructureType,
-    pub pNext: *mut ::std::os::raw::c_void,
-    pub fragmentShaderBarycentric: VkBool32,
-}
+pub type VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV =
+    VkPhysicalDeviceFragmentShaderBarycentricFeaturesKHR;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct VkPhysicalDeviceShaderImageFootprintFeaturesNV {
@@ -14739,6 +14948,7 @@ pub type VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT =
 pub const VK_DEVICE_DIAGNOSTICS_CONFIG_ENABLE_SHADER_DEBUG_INFO_BIT_NV : VkDeviceDiagnosticsConfigFlagBitsNV = 1 ;
 pub const VK_DEVICE_DIAGNOSTICS_CONFIG_ENABLE_RESOURCE_TRACKING_BIT_NV : VkDeviceDiagnosticsConfigFlagBitsNV = 2 ;
 pub const VK_DEVICE_DIAGNOSTICS_CONFIG_ENABLE_AUTOMATIC_CHECKPOINTS_BIT_NV : VkDeviceDiagnosticsConfigFlagBitsNV = 4 ;
+pub const VK_DEVICE_DIAGNOSTICS_CONFIG_ENABLE_SHADER_ERROR_REPORTING_BIT_NV : VkDeviceDiagnosticsConfigFlagBitsNV = 8 ;
 pub const VK_DEVICE_DIAGNOSTICS_CONFIG_FLAG_BITS_MAX_ENUM_NV:
     VkDeviceDiagnosticsConfigFlagBitsNV = 2147483647;
 pub type VkDeviceDiagnosticsConfigFlagBitsNV = ::std::os::raw::c_uint;
@@ -14785,6 +14995,13 @@ pub struct VkGraphicsPipelineLibraryCreateInfoEXT {
     pub sType: VkStructureType,
     pub pNext: *mut ::std::os::raw::c_void,
     pub flags: VkGraphicsPipelineLibraryFlagsEXT,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub shaderEarlyAndLateFragmentTests: VkBool32,
 }
 pub const VK_FRAGMENT_SHADING_RATE_TYPE_FRAGMENT_SIZE_NV:
     VkFragmentShadingRateTypeNV = 0;
@@ -15118,6 +15335,117 @@ pub struct VkCopyCommandTransformInfoQCOM {
     pub transform: VkSurfaceTransformFlagBitsKHR,
 }
 pub type VkPhysicalDeviceImageRobustnessFeaturesEXT = VkPhysicalDeviceImageRobustnessFeatures;
+pub const VK_IMAGE_COMPRESSION_DEFAULT_EXT:
+    VkImageCompressionFlagBitsEXT = 0;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_DEFAULT_EXT:
+    VkImageCompressionFlagBitsEXT = 1;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_EXPLICIT_EXT:
+    VkImageCompressionFlagBitsEXT = 2;
+pub const VK_IMAGE_COMPRESSION_DISABLED_EXT:
+    VkImageCompressionFlagBitsEXT = 4;
+pub const VK_IMAGE_COMPRESSION_FLAG_BITS_MAX_ENUM_EXT:
+    VkImageCompressionFlagBitsEXT = 2147483647;
+pub type VkImageCompressionFlagBitsEXT = ::std::os::raw::c_uint;
+pub type VkImageCompressionFlagsEXT = VkFlags;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_NONE_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 0;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_1BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 1;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_2BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 2;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_3BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 4;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_4BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 8;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_5BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 16;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_6BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 32;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_7BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 64;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_8BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 128;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_9BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 256;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_10BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 512;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_11BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 1024;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_12BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 2048;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_13BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 4096;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_14BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 8192;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_15BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 16384;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_16BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 32768;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_17BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 65536;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_18BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 131072;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_19BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 262144;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_20BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 524288;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_21BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 1048576;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_22BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 2097152;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_23BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 4194304;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_24BPC_BIT_EXT:
+    VkImageCompressionFixedRateFlagBitsEXT = 8388608;
+pub const VK_IMAGE_COMPRESSION_FIXED_RATE_FLAG_BITS_MAX_ENUM_EXT : VkImageCompressionFixedRateFlagBitsEXT = 2147483647 ;
+pub type VkImageCompressionFixedRateFlagBitsEXT = ::std::os::raw::c_uint;
+pub type VkImageCompressionFixedRateFlagsEXT = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceImageCompressionControlFeaturesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub imageCompressionControl: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImageCompressionControlEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub flags: VkImageCompressionFlagsEXT,
+    pub compressionControlPlaneCount: u32,
+    pub pFixedRateFlags: *mut VkImageCompressionFixedRateFlagsEXT,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkSubresourceLayout2EXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub subresourceLayout: VkSubresourceLayout,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImageSubresource2EXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub imageSubresource: VkImageSubresource,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImageCompressionPropertiesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub imageCompressionFlags: VkImageCompressionFlagsEXT,
+    pub imageCompressionFixedRateFlags: VkImageCompressionFixedRateFlagsEXT,
+}
+pub type PFN_vkGetImageSubresourceLayout2EXT = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        image: VkImage,
+        pSubresource: *const VkImageSubresource2EXT,
+        pLayout: *mut VkSubresourceLayout2EXT,
+    )
+;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct VkPhysicalDevice4444FormatsFeaturesEXT {
@@ -15311,6 +15639,50 @@ pub type PFN_vkGetMemoryRemoteAddressNV =
         pAddress: *mut VkRemoteAddressNV,
     ) -> VkResult
 ;
+pub type VkPipelineInfoEXT = VkPipelineInfoKHR;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPipelinePropertiesIdentifierEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub pipelineIdentifier: [u8; 16usize],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDevicePipelinePropertiesFeaturesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub pipelinePropertiesIdentifier: VkBool32,
+}
+pub type PFN_vkGetPipelinePropertiesEXT = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pPipelineInfo: *const VkPipelineInfoEXT,
+        pPipelineProperties: *mut VkBaseOutStructure,
+    ) -> VkResult
+;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub multisampledRenderToSingleSampled: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkSubpassResolvePerformanceQueryEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub optimal: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkMultisampledRenderToSingleSampledInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub multisampledRenderToSingleSampledEnable: VkBool32,
+    pub rasterizationSamples: VkSampleCountFlagBits,
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct VkPhysicalDeviceExtendedDynamicState2FeaturesEXT {
@@ -15503,6 +15875,13 @@ pub type PFN_vkGetDescriptorSetHostMappingVALVE =
 ;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub nonSeamlessCubeMap: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
 pub struct VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM {
     pub sType: VkStructureType,
     pub pNext: *mut ::std::os::raw::c_void,
@@ -15530,6 +15909,125 @@ pub struct VkPhysicalDeviceLinearColorAttachmentFeaturesNV {
     pub pNext: *mut ::std::os::raw::c_void,
     pub linearColorAttachment: VkBool32,
 }
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceImageCompressionControlSwapchainFeaturesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub imageCompressionControlSwapchain: VkBool32,
+}
+pub const VK_SUBPASS_MERGE_STATUS_MERGED_EXT: VkSubpassMergeStatusEXT = 0;
+pub const VK_SUBPASS_MERGE_STATUS_DISALLOWED_EXT: VkSubpassMergeStatusEXT =
+    1;
+pub const VK_SUBPASS_MERGE_STATUS_NOT_MERGED_SIDE_EFFECTS_EXT:
+    VkSubpassMergeStatusEXT = 2;
+pub const VK_SUBPASS_MERGE_STATUS_NOT_MERGED_SAMPLES_MISMATCH_EXT:
+    VkSubpassMergeStatusEXT = 3;
+pub const VK_SUBPASS_MERGE_STATUS_NOT_MERGED_VIEWS_MISMATCH_EXT:
+    VkSubpassMergeStatusEXT = 4;
+pub const VK_SUBPASS_MERGE_STATUS_NOT_MERGED_ALIASING_EXT:
+    VkSubpassMergeStatusEXT = 5;
+pub const VK_SUBPASS_MERGE_STATUS_NOT_MERGED_DEPENDENCIES_EXT:
+    VkSubpassMergeStatusEXT = 6;
+pub const VK_SUBPASS_MERGE_STATUS_NOT_MERGED_INCOMPATIBLE_INPUT_ATTACHMENT_EXT : VkSubpassMergeStatusEXT = 7 ;
+pub const VK_SUBPASS_MERGE_STATUS_NOT_MERGED_TOO_MANY_ATTACHMENTS_EXT:
+    VkSubpassMergeStatusEXT = 8;
+pub const VK_SUBPASS_MERGE_STATUS_NOT_MERGED_INSUFFICIENT_STORAGE_EXT:
+    VkSubpassMergeStatusEXT = 9;
+pub const VK_SUBPASS_MERGE_STATUS_NOT_MERGED_DEPTH_STENCIL_COUNT_EXT:
+    VkSubpassMergeStatusEXT = 10;
+pub const VK_SUBPASS_MERGE_STATUS_NOT_MERGED_RESOLVE_ATTACHMENT_REUSE_EXT : VkSubpassMergeStatusEXT = 11 ;
+pub const VK_SUBPASS_MERGE_STATUS_NOT_MERGED_SINGLE_SUBPASS_EXT:
+    VkSubpassMergeStatusEXT = 12;
+pub const VK_SUBPASS_MERGE_STATUS_NOT_MERGED_UNSPECIFIED_EXT:
+    VkSubpassMergeStatusEXT = 13;
+pub const VK_SUBPASS_MERGE_STATUS_MAX_ENUM_EXT: VkSubpassMergeStatusEXT =
+    2147483647;
+pub type VkSubpassMergeStatusEXT = ::std::os::raw::c_uint;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub subpassMergeFeedback: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkRenderPassCreationControlEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub disallowMerging: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkRenderPassCreationFeedbackInfoEXT {
+    pub postMergeSubpassCount: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkRenderPassCreationFeedbackCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pRenderPassFeedback: *mut VkRenderPassCreationFeedbackInfoEXT,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkRenderPassSubpassFeedbackInfoEXT {
+    pub subpassMergeStatus: VkSubpassMergeStatusEXT,
+    pub description: [::std::os::raw::c_char; 256usize],
+    pub postMergeIndex: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkRenderPassSubpassFeedbackCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub pSubpassFeedback: *mut VkRenderPassSubpassFeedbackInfoEXT,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceShaderModuleIdentifierFeaturesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub shaderModuleIdentifier: VkBool32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub shaderModuleIdentifierAlgorithmUUID: [u8; 16usize],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkPipelineShaderStageModuleIdentifierCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub identifierSize: u32,
+    pub pIdentifier: *const u8,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkShaderModuleIdentifierEXT {
+    pub sType: VkStructureType,
+    pub pNext: *mut ::std::os::raw::c_void,
+    pub identifierSize: u32,
+    pub identifier: [u8; 32usize],
+}
+pub type PFN_vkGetShaderModuleIdentifierEXT = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        shaderModule: VkShaderModule,
+        pIdentifier: *mut VkShaderModuleIdentifierEXT,
+    )
+;
+pub type PFN_vkGetShaderModuleCreateInfoIdentifierEXT = 
+    unsafe extern "C" fn(
+        device: VkDevice,
+        pCreateInfo: *const VkShaderModuleCreateInfo,
+        pIdentifier: *mut VkShaderModuleIdentifierEXT,
+    )
+;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct VkAccelerationStructureKHR_T {
@@ -16219,7 +16717,7 @@ pub type VkVideoCodingQualityPresetFlagsKHR = VkFlags;
 pub struct VkQueueFamilyQueryResultStatusProperties2KHR {
     pub sType: VkStructureType,
     pub pNext: *mut ::std::os::raw::c_void,
-    pub supported: VkBool32,
+    pub queryResultStatusSupport: VkBool32,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -16232,7 +16730,7 @@ pub struct VkVideoQueueFamilyProperties2KHR {
 #[derive(Debug, Copy, Clone)]
 pub struct VkVideoProfileKHR {
     pub sType: VkStructureType,
-    pub pNext: *mut ::std::os::raw::c_void,
+    pub pNext: *const ::std::os::raw::c_void,
     pub videoCodecOperation: VkVideoCodecOperationFlagBitsKHR,
     pub chromaSubsampling: VkVideoChromaSubsamplingFlagsKHR,
     pub lumaBitDepth: VkVideoComponentBitDepthFlagsKHR,
@@ -16242,7 +16740,7 @@ pub struct VkVideoProfileKHR {
 #[derive(Debug, Copy, Clone)]
 pub struct VkVideoProfilesKHR {
     pub sType: VkStructureType,
-    pub pNext: *mut ::std::os::raw::c_void,
+    pub pNext: *const ::std::os::raw::c_void,
     pub profileCount: u32,
     pub pProfiles: *const VkVideoProfileKHR,
 }
@@ -16267,7 +16765,6 @@ pub struct VkPhysicalDeviceVideoFormatInfoKHR {
     pub sType: VkStructureType,
     pub pNext: *mut ::std::os::raw::c_void,
     pub imageUsage: VkImageUsageFlags,
-    pub pVideoProfiles: *const VkVideoProfilesKHR,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -16275,6 +16772,11 @@ pub struct VkVideoFormatPropertiesKHR {
     pub sType: VkStructureType,
     pub pNext: *mut ::std::os::raw::c_void,
     pub format: VkFormat,
+    pub componentMapping: VkComponentMapping,
+    pub imageCreateFlags: VkImageCreateFlags,
+    pub imageType: VkImageType,
+    pub imageTiling: VkImageTiling,
+    pub imageUsageFlags: VkImageUsageFlags,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -21466,6 +21968,127 @@ pub type PFN_vkCreateMetalSurfaceEXT =
         pAllocator: *const VkAllocationCallbacks,
         pSurface: *mut VkSurfaceKHR,
     ) -> VkResult
+;
+pub type MTLDevice_id = *mut ::std::os::raw::c_void;
+pub type MTLCommandQueue_id = *mut ::std::os::raw::c_void;
+pub type MTLBuffer_id = *mut ::std::os::raw::c_void;
+pub type MTLTexture_id = *mut ::std::os::raw::c_void;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __IOSurface {
+    _unused: [u8; 0],
+}
+pub type IOSurfaceRef = *mut __IOSurface;
+pub type MTLSharedEvent_id = *mut ::std::os::raw::c_void;
+pub const VK_EXPORT_METAL_OBJECT_TYPE_METAL_DEVICE_BIT_EXT:
+    VkExportMetalObjectTypeFlagBitsEXT = 1;
+pub const VK_EXPORT_METAL_OBJECT_TYPE_METAL_COMMAND_QUEUE_BIT_EXT : VkExportMetalObjectTypeFlagBitsEXT = 2 ;
+pub const VK_EXPORT_METAL_OBJECT_TYPE_METAL_BUFFER_BIT_EXT:
+    VkExportMetalObjectTypeFlagBitsEXT = 4;
+pub const VK_EXPORT_METAL_OBJECT_TYPE_METAL_TEXTURE_BIT_EXT:
+    VkExportMetalObjectTypeFlagBitsEXT = 8;
+pub const VK_EXPORT_METAL_OBJECT_TYPE_METAL_IOSURFACE_BIT_EXT:
+    VkExportMetalObjectTypeFlagBitsEXT = 16;
+pub const VK_EXPORT_METAL_OBJECT_TYPE_METAL_SHARED_EVENT_BIT_EXT : VkExportMetalObjectTypeFlagBitsEXT = 32 ;
+pub const VK_EXPORT_METAL_OBJECT_TYPE_FLAG_BITS_MAX_ENUM_EXT:
+    VkExportMetalObjectTypeFlagBitsEXT = 2147483647;
+pub type VkExportMetalObjectTypeFlagBitsEXT = ::std::os::raw::c_uint;
+pub type VkExportMetalObjectTypeFlagsEXT = VkFlags;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkExportMetalObjectCreateInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub exportObjectType: VkExportMetalObjectTypeFlagBitsEXT,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkExportMetalObjectsInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkExportMetalDeviceInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub mtlDevice: MTLDevice_id,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkExportMetalCommandQueueInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub queue: VkQueue,
+    pub mtlCommandQueue: MTLCommandQueue_id,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkExportMetalBufferInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub memory: VkDeviceMemory,
+    pub mtlBuffer: MTLBuffer_id,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImportMetalBufferInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub mtlBuffer: MTLBuffer_id,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkExportMetalTextureInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub image: VkImage,
+    pub imageView: VkImageView,
+    pub bufferView: VkBufferView,
+    pub plane: VkImageAspectFlagBits,
+    pub mtlTexture: MTLTexture_id,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImportMetalTextureInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub plane: VkImageAspectFlagBits,
+    pub mtlTexture: MTLTexture_id,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkExportMetalIOSurfaceInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub image: VkImage,
+    pub ioSurface: IOSurfaceRef,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImportMetalIOSurfaceInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub ioSurface: IOSurfaceRef,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkExportMetalSharedEventInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub semaphore: VkSemaphore,
+    pub event: VkEvent,
+    pub mtlSharedEvent: MTLSharedEvent_id,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct VkImportMetalSharedEventInfoEXT {
+    pub sType: VkStructureType,
+    pub pNext: *const ::std::os::raw::c_void,
+    pub mtlSharedEvent: MTLSharedEvent_id,
+}
+pub type PFN_vkExportMetalObjectsEXT = 
+    unsafe extern "C" fn(device: VkDevice, pMetalObjectsInfo: *mut VkExportMetalObjectsInfoEXT)
 ;
 pub type VkScreenSurfaceCreateFlagsQNX = VkFlags;
 #[repr(C)]
