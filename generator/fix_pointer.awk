@@ -23,14 +23,6 @@ BEGIN {
     sub(">;", ";", line)
 }
 
-/^extern "C" {/ {
-    remove = 1
-}
-
-/}$/ {
-    reset_remove = 1
-}
-
 {
     if(line == "") {
         line = $0
