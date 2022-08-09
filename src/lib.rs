@@ -69,13 +69,13 @@
 //! <br><br>
 //!
 //! ## Vulkan version
-//! 1.3.212
+//! 1.3.224
 //!
 //! [Vulkan Changelog](https://github.com/KhronosGroup/Vulkan-Docs/blob/main/ChangeLog.txt)
 //! <br><br>
 //!
 //! ## Vulkan Memory Allocator version
-//! 2.3.0
+//! 3.0.1
 //!
 //! [Vulkan Memory Allocator Changelog](https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/blob/master/CHANGELOG.md)
 //! <br><br>
@@ -94,3 +94,4 @@ pub mod loader;
 pub mod mem;
 pub mod error;
 pub mod vulkan_memory_allocator;
+pub mod version;

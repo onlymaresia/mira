@@ -38,6 +38,7 @@ BEGIN {
 
     sub("::std::option::Option<", "", line)
     sub("pub const Vk[a-zA-Z0-9]+_", "pub const ", line)
+    sub("pub const Vma[a-zA-Z0-9]+_", "pub const ", line)
 
     if(!remove) {
         print line

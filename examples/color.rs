@@ -12,6 +12,7 @@ use mira::error::MiraError;
 use mira::mem::{from_cstring, zeroed_vec};
 use mira::vulkan::*;
 use mira::*;
+use mira::version::VK_MAKE_API_VERSION;
 
 //https://software.intel.com/content/www/us/en/develop/articles/api-without-secrets-introduction-to-vulkan-part-2.html
 fn main() -> Result<(), MiraError> {
