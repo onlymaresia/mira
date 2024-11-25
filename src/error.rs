@@ -6,6 +6,5 @@ pub enum MiraError {
     CommandLoadError { command: &'static str },
 
     #[error("backend(libloading) error")]
-    BackendError(#[from] libloading::Error)
+    BackendError(#[from] libloading::Error),
 }
-

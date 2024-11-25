@@ -39,3 +39,27 @@ typedef XID RROutput;
 #include "vulkan/vulkan_xcb.h"
 #include "vulkan/vulkan_xlib.h"
 #include "vulkan/vulkan_xlib_xrandr.h"
+
+#include "vulkan/vk_icd.h"
+#include "vulkan/vk_layer.h"
+#include "vulkan/vk_platform.h"
+#include "vulkan/vulkan.h"
+
+// dead platform, google gaming platform
+typedef uint64_t GgpFrameToken;
+typedef uint32_t GgpStreamDescriptor;
+#include "vulkan/vulkan_ggp.h"
+
+#include "vk_video/vulkan_video_codec_av1std_decode.h"
+#include "vk_video/vulkan_video_codec_av1std_encode.h"
+#include "vk_video/vulkan_video_codec_av1std.h"
+
+#include "vk_video/vulkan_video_codec_h264std_decode.h"
+#include "vk_video/vulkan_video_codec_h264std_encode.h"
+#include "vk_video/vulkan_video_codec_h264std.h"
+
+#include "vk_video/vulkan_video_codec_h265std_decode.h"
+#include "vk_video/vulkan_video_codec_h265std_encode.h"
+#include "vk_video/vulkan_video_codec_h265std.h"
+
+#include "vk_video/vulkan_video_codecs_common.h"

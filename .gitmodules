@@ -2,6 +2,3 @@
 	path = generator/Vulkan-Headers
 	url = https://github.com/KhronosGroup/Vulkan-Headers.git
 
-[submodule "extra/VulkanMemoryAllocator"]
-	path = extra/VulkanMemoryAllocator
-	url = https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator.git

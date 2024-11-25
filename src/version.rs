@@ -10,33 +10,42 @@ use std::fmt::{Display, Formatter};
 /// From <https://www.khronos.org/registry/vulkan/specs/1.2-extensions/html/vkspec.html#VK_MAKE_API_VERSION>
 #[derive(Debug, Copy, Clone)]
 pub struct Version {
-    pub major:u8,
-    pub minor:u8,
-    pub patch:u8,
-    pub variant:u8,
+    pub major: u16,
+    pub minor: u16,
+    pub patch: u16,
+    pub variant: u16,
 }
 
 impl Version {
     /// Constructs a Version using variant, major, minor, patch
-    pub fn make(major:u8, minor:u8, patch:u8) -> Self {
+    #[deprecated]
+    pub fn make(major: u16, minor: u16, patch: u16) -> Self {
         Self {
-            variant: 0, major, minor, patch
+            variant: 0,
+            major,
+            minor,
+            patch,
         }
     }
 
     /// Converts a Vulkan version number to a Version
-    pub fn from_vulkan_version(version: u32) -> Self {
+    pub const fn from_vulkan_version(version: u32) -> Self {
         Self {
-            variant: (version >> 29) as u8,
-            patch: (version & 0xfff) as u8,
-            minor: ((version >> 12) & 0x3ff) as u8,
-            major: ((version >> 22) & 0x7f) as u8,
+            variant: VK_API_VERSION_VARIANT(version) as u16,
+            patch: VK_API_VERSION_PATCH(version) as u16,
+            minor: VK_API_VERSION_MINOR(version) as u16,
+            major: VK_API_VERSION_MAJOR(version) as u16,
         }
     }
 
     /// Converts to a Vulkan version
-    pub fn as_vulkan_version(&self) -> u32 {
-        VK_MAKE_API_VERSION(self.variant, self.major, self.minor, self.patch)
+    pub const fn as_vulkan_version(&self) -> u32 {
+        VK_MAKE_API_VERSION(
+            self.variant as u32,
+            self.major as u32,
+            self.minor as u32,
+            self.patch as u32,
+        )
     }
 }
 
@@ -46,20 +55,57 @@ impl Default for Version {
             major: 1,
             minor: 0,
             patch: 0,
-            variant: 0
+            variant: 0,
         }
     }
 }
 
 impl Display for Version {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), std::fmt::Error> {
-        write!(f, "{}.{}.{}.{}", self.major, self.minor, self.patch, self.variant)
+        write!(
+            f,
+            "{}.{}.{}.{}",
+            self.major, self.minor, self.patch, self.variant
+        )
     }
 }
 
 /// Constructs a Vulkan API version number
 #[allow(non_snake_case)]
-pub const fn VK_MAKE_API_VERSION(variant: u8, major:u8, minor:u8, patch:u8) -> u32 {
+pub const fn VK_MAKE_API_VERSION(variant: u32, major: u32, minor: u32, patch: u32) -> u32 {
     ((variant as u32) << 29) | ((major as u32) << 22) | ((minor as u32) << 12) | (patch as u32)
 }
 
+#[allow(non_snake_case)]
+pub const fn VK_API_VERSION_MAJOR(version: u32) -> u32 {
+    (version >> 22u32) & 0x7Fu32
+}
+
+#[allow(non_snake_case)]
+pub const fn VK_API_VERSION_MINOR(version: u32) -> u32 {
+    (version >> 12u32) & 0x3FFu32
+}
+
+#[allow(non_snake_case)]
+pub const fn VK_API_VERSION_PATCH(version: u32) -> u32 {
+    version & 0xFFFu32
+}
+
+pub const fn VK_API_VERSION_VARIANT(version: u32) -> u32 {
+    version >> 29u32
+}
+
+// (major, minor, patch, variant)
+pub const fn VK_API_VERSION_TUPLE(version: u32) -> (u32, u32, u32, u32) {
+    (
+        VK_API_VERSION_MAJOR(version),
+        VK_API_VERSION_MINOR(version),
+        VK_API_VERSION_PATCH(version),
+        VK_API_VERSION_VARIANT(version),
+    )
+}
+
+pub const VK_API_VERSION_1_0: u32 = VK_MAKE_API_VERSION(0, 1, 0, 0);
+pub const VK_API_VERSION_1_1: u32 = VK_MAKE_API_VERSION(0, 1, 1, 0);
+pub const VK_API_VERSION_1_2: u32 = VK_MAKE_API_VERSION(0, 1, 2, 0);
+pub const VK_API_VERSION_1_3: u32 = VK_MAKE_API_VERSION(0, 1, 3, 0);

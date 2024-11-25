@@ -8,4 +8,4 @@ authors = ["Maresia <https://github.com/onlymaresia>"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-bindgen = "0.59.1"
+bindgen = "0.70.1"

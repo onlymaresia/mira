@@ -1,0 +1,9 @@
+.idea/
+/.vscode/
+target/
+debug/
+Cargo.lock
+
+**/*.rs.bk
+*.pdb
+issues.md

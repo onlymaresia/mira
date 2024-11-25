@@ -5,35 +5,6 @@ use std::path::PathBuf;
 use std::process::Command;
 
 fn main() {
-    // vulkan memory allocator
-    let bindings = bindgen::Builder::default()
-        .layout_tests(false)
-        .clang_arg("-I../extra/VulkanMemoryAllocator/include")
-        .header("wrapper_vma.h")
-        .generate_comments(false)
-        .parse_callbacks(Box::new(bindgen::CargoCallbacks))
-        .generate()
-        .expect("Unable to generate bindings");
-
-    let out_path = PathBuf::from("../src/");
-    bindings
-        .write_to_file(out_path.join("bindings.rs"))
-        .expect("Couldn't write bindings!");
-
-    let mut commands = Command::new("sh");
-    commands.arg("-c");
-    commands.arg(format!(
-        "cat {} | ./vma.sh && mv vulkan_memory_allocator.rs {} && rm {}",
-        out_path.join("bindings.rs").to_str().unwrap(),
-        out_path.to_str().unwrap(),
-        out_path.join("bindings.rs").to_str().unwrap()
-    ));
-
-    let output = commands.output().expect("failed to execute stream");
-    println!("status: {}", output.status);
-    io::stdout().write_all(&output.stdout).unwrap();
-    io::stderr().write_all(&output.stderr).unwrap();
-
     // vulkan
     let bindings = bindgen::Builder::default()
         .layout_tests(false)
